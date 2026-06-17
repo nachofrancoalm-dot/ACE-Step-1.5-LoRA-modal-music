@@ -23,7 +23,6 @@ UPM ETSISI, 2026).
 | `scripts/rank_checkpoints_per_experiment.py` | Ranking determinista de checkpoints por experimento |
 | `scripts/prepare_manual_eval_shortlist.py` | Selección de candidatos para evaluación manual |
 | `scripts/prepare_modes_dataset.py` | Construcción del dataset modal (105 clips, 7 modos) |
-| `scripts/demo_modal_lora.py` | Demo Gradio con clasificador LLM (Groq) para inferencia interactiva |
 | `scripts/regenerate_top_audios.py` | Regeneración de audios de los mejores checkpoints |
 | `scripts/_one_shot/` | Scripts auxiliares de un solo uso (recálculo, backfill, generación de xlsx, orquestación de la segunda tanda); conservados por trazabilidad |
 | `prompts_modal_sound.txt` | Protocolo de evaluación: prompts fijos por modo (Bloques A–E) |
@@ -45,7 +44,7 @@ UPM ETSISI, 2026).
 | `acestep/ui/gradio/events/training/lokr_training.py` | Soporte LoKr en la UI |
 | `acestep/ui/gradio/events/wiring/training_run_wiring.py` | Cableado de eventos actualizado |
 | `acestep/ui/gradio/events/wiring/training_lokr_wiring.py` | Cableado LoKr en UI |
-| `pyproject.toml` | Dependencias añadidas: pandas, matplotlib, seaborn, groq |
+| `pyproject.toml` | Dependencias añadidas: pandas, matplotlib, seaborn, openpyxl |
 
 ---
 
@@ -80,12 +79,6 @@ uv run python scripts/modal_eval_pipeline.py --help
 uv run python scripts/modal_hparam_analysis.py \
   --results-csv hparam_sweep/stage1_results.csv \
   --output-dir hparam_sweep/analysis_output
-```
-
-### 7. Demo interactivo
-```bash
-# Con servidor ACE-Step corriendo en :7860
-uv run python scripts/demo_modal_lora.py --api-url http://127.0.0.1:7860
 ```
 
 ---

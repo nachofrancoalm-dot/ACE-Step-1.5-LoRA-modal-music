@@ -56,7 +56,6 @@ dependencies = [
     "tensorboard>=2.20.0",
     "typer-slim>=0.21.1",
     "openpyxl>=3.1.5",
-    "groq>=1.2.0",
 ]
 
 [[tool.uv.index]]

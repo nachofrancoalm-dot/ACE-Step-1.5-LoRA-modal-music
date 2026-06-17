@@ -110,13 +110,6 @@ uv run python scripts/modal_hparam_analysis.py \
 
 Manual evaluation scores are in `docs/manual_eval_Scoring.csv`. The rubric (tonal center, modal color, non-modulation, musical coherence — each 1–5) is described in `docs/manual_eval_Leyenda.csv` and in the thesis (`memoria/`).
 
-### 7. Interactive demo (with LLM classifier)
-
-```bash
-# Requires ACE-Step server running on :7860 and a GROQ_API_KEY env var
-uv run python scripts/demo_modal_lora.py --api-url http://127.0.0.1:7860
-```
-
 ---
 
 ## Repository Structure
@@ -137,7 +130,6 @@ uv run python scripts/demo_modal_lora.py --api-url http://127.0.0.1:7860
 │   ├── prepare_manual_eval_shortlist.py
 │   ├── modal_hparam_analysis.py
 │   ├── regenerate_top_audios.py
-│   ├── demo_modal_lora.py
 │   └── _one_shot/              # Single-use auxiliary scripts (kept for traceability)
 │
 ├── docs/
