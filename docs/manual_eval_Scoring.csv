@@ -1,423 +1,335 @@
-﻿Run;Tipo;Checkpoint;Modo;Seed;Centro_tonal_1_5;Color_modal_1_5;No_modulacion_1_5;Coherencia_1_5;Total_0_20;Prom_ckpt_total;Prom_ckpt_modo_total;Decision_ckpt;Notas
-r128_a256_d005;escucha;epoch_20_loss_0.1982;ionian;1111;5;4;5;3,5;17,5;10,78571429;14,25;;En C todo el tiempo, falta la séptima maj porque no suena en ningún momento del audio pero no está mal
-r128_a256_d005;escucha;epoch_20_loss_0.1982;ionian;2222;3,5;3;2,5;2;11;10,78571429;14,25;;Está en F y la coherencia no es muy buena, demasiados cambios extraños
-r128_a256_d005;escucha;epoch_20_loss_0.1982;dorian;1111;3;1;1;3;8;10,78571429;9;;Está en D mayor no en menor, progresión D-A (I-V)
-r128_a256_d005;escucha;epoch_20_loss_0.1982;dorian;2222;2;3;3;2;10;10,78571429;9;;Comienza en F# dórico pero luego se pierde y se va por las ramas
-r128_a256_d005;escucha;epoch_20_loss_0.1982;phrygian;1111;2;3;2;2;9;10,78571429;8,5;;Extraño alguna traza de sonido intrigante pero pilla el Am como menor tónica no el Em
-r128_a256_d005;escucha;epoch_20_loss_0.1982;phrygian;2222;1;3;1;3;8;10,78571429;8,5;;Se va de tonalidades muchos cambios de tono
-r128_a256_d005;escucha;epoch_20_loss_0.1982;lydian;1111;4;1;1;3;9;10,78571429;10,25;;
-r128_a256_d005;escucha;epoch_20_loss_0.1982;lydian;2222;5;1;1;4,5;11,5;10,78571429;10,25;;
-r128_a256_d005;escucha;epoch_20_loss_0.1982;mixolydian;1111;4;2;2;3;11;10,78571429;9,5;;En C Ionian, Audio muy parecido alguna variacion pq el modelo nota el otro modo pero no es bueno
-r128_a256_d005;escucha;epoch_20_loss_0.1982;mixolydian;2222;2;3;2;1;8;10,78571429;9,5;;
-r128_a256_d005;escucha;epoch_20_loss_0.1982;aeolian;1111;5;2;3;4;14;10,78571429;15,5;;
-r128_a256_d005;escucha;epoch_20_loss_0.1982;aeolian;2222;5;4;4;4;17;10,78571429;15,5;;
-r128_a256_d005;escucha;epoch_20_loss_0.1982;locrian;1111;3;3;2;2;10;10,78571429;8,5;;
-r128_a256_d005;escucha;epoch_20_loss_0.1982;locrian;2222;1;2;3;1;7;10,78571429;8,5;;
-r128_a256_d005;escucha;epoch_100_loss_0.1788;ionian;1111;3;2;2;1;8;5,821428571;7,5;;Está en C mayor pero no tiene ni pies ni cabeza, notas muy difuminadas que apenas se identifican, demasiado entrenamiento
-r128_a256_d005;escucha;epoch_100_loss_0.1788;ionian;2222;3;2;1;1;7;5,821428571;7,5;;Este audio cambia incluso de escala de C mayor  a otra y al igual que el anterior está fuera de onda, no tiene coherencia ninguna
-r128_a256_d005;escucha;epoch_100_loss_0.1788;dorian;1111;1;1;1;1;4;5,821428571;4;;Ruido
-r128_a256_d005;escucha;epoch_100_loss_0.1788;dorian;2222;1;1;1;1;4;5,821428571;4;;Ruido x2
-r128_a256_d005;escucha;epoch_100_loss_0.1788;phrygian;1111;2;1;2;2;7;5,821428571;5,5;;Es Raro pero está en mi menor, al menos es melodía salvable no como el resto de modos pero cogido muy con pinzas. Em normal, no frigio
-r128_a256_d005;escucha;epoch_100_loss_0.1788;phrygian;2222;1;1;1;1;4;5,821428571;5,5;;Está en Am y mal
-r128_a256_d005;escucha;epoch_100_loss_0.1788;lydian;1111;1;2;1;1;5;5,821428571;5;;Se escucha como la esencia del lidio pero el audio es muy malo, claramente este LoRA está sobreentrenado
-r128_a256_d005;escucha;epoch_100_loss_0.1788;lydian;2222;1;1;2;1;5;5,821428571;5;;Se pierde de la escala totalmente
-r128_a256_d005;escucha;epoch_100_loss_0.1788;mixolydian;1111;1;1;1;2;5;5,821428571;4,5;;No se escucha nada de melodía y la instrumental es muy difuminada como si fuera ruido de fondo
-r128_a256_d005;escucha;epoch_100_loss_0.1788;mixolydian;2222;1;1;1;1;4;5,821428571;4,5;;Fatal, indistinguible tambien
-r128_a256_d005;escucha;epoch_100_loss_0.1788;aeolian;1111;3,5;4;3;1;11,5;5,821428571;9,75;;"Am, pero muy extraña la instrumental quizá ha ""desaprendido"" el modelo. Mete el F caracteristico. Se puede escuchar como parece que intenta meter la tercera mayor del A pero no lo consolida, por lo que se va del tono menor ligeramente."
-r128_a256_d005;escucha;epoch_100_loss_0.1788;aeolian;2222;2;3;2;1;8;5,821428571;9,75;;Audio más extraño aún, Se siente eólico pero no es muy distinguible los acordes. Demasiados epochs en esta configuración tan agresiva de LoRA para este modo
-r128_a256_d005;escucha;epoch_100_loss_0.1788;locrian;1111;2;1;1;1;5;5,821428571;4,5;;Audio indistinguible aunque se puede escuchar alguna nota de la escala pero muy mínimamente
-r128_a256_d005;escucha;epoch_100_loss_0.1788;locrian;2222;1;1;1;1;4;5,821428571;4,5;;Audio deplorable
-r128_a256_d005;escucha;epoch_140_loss_0.1714;ionian;1111;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;ionian;2222;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;dorian;1111;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;dorian;2222;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;phrygian;1111;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;phrygian;2222;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;lydian;1111;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;lydian;2222;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;mixolydian;1111;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;mixolydian;2222;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;aeolian;1111;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;aeolian;2222;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;locrian;1111;;;;;;;;;
-r128_a256_d005;escucha;epoch_140_loss_0.1714;locrian;2222;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;ionian;1111;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;ionian;2222;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;dorian;1111;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;dorian;2222;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;phrygian;1111;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;phrygian;2222;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;lydian;1111;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;lydian;2222;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;mixolydian;1111;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;mixolydian;2222;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;aeolian;1111;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;aeolian;2222;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;locrian;1111;;;;;;;;;
-r128_a256_d005;reserva;epoch_180_loss_0.1603;locrian;2222;;;;;;;;;
-r64_a128_d0;escucha;epoch_160_loss_0.1725;ionian;1111;2;2;3;3;10;9,375;9;;Empieza en G o C lidio pero a mitad de audio cambia la verdad que no está del todo claro
-r64_a128_d0;escucha;epoch_160_loss_0.1725;ionian;2222;2;2;1;3;8;9,375;9;;Empieza en C muy bien y luego hace un cambio de tono a un D# muy interesante no termina de sonar mal pero claramente no es jónico que es lo que se requiere en este estudio
-r64_a128_d0;escucha;epoch_160_loss_0.1725;dorian;1111;2;1;2;2,5;7,5;9,375;6,5;;Está en D mayor, no aprende que el dórico es un modo menor
-r64_a128_d0;escucha;epoch_160_loss_0.1725;dorian;2222;2;1;1;1,5;5,5;9,375;6,5;;Peor que el anterior, D mayor pero la coherencia menor
-r64_a128_d0;escucha;epoch_160_loss_0.1725;phrygian;1111;2,5;1,75;2;1,5;7,75;9,375;9,625;;Está en Em pero no da la segunda disminuida (tampoco suena la segunda a secas asi que no se puede desmentir) la coherencia es rara pero por lo menos esta en E menor
-r64_a128_d0;escucha;epoch_160_loss_0.1725;phrygian;2222;3;4;3;1,5;11,5;9,375;9,625;;Sorprendente resultado, remarca la segunda disminuida bastante aunque la coherencia no es buena y al final cambia un poco la modulación, pero gran ejemplo!
-r64_a128_d0;escucha;epoch_160_loss_0.1725;lydian;1111;4;1;3;3;11;9,375;10,5;;Se queda todo el rato en C pero no cambia ni pasa por la 4ª aumentada en ningún momento. No suena mal pero no identifica al modo.
-r64_a128_d0;escucha;epoch_160_loss_0.1725;lydian;2222;4;1;2,5;2,5;10;9,375;10,5;;"Igual que en el ejemplo anterior pero con un pelín de coherencia menos, intenta meter voces cuando en el prompt se le exige ""Instrumental"" (Esto pasa en muchos otros ejemplos también)."
-r64_a128_d0;escucha;epoch_160_loss_0.1725;mixolydian;1111;4;1;2;4;11;9,375;9,5;;Está en G mayor, no mete nada de mixolidio, la coherencia es buena pero no hay nada de modo aquí
-r64_a128_d0;escucha;epoch_160_loss_0.1725;mixolydian;2222;3;1;2;2;8;9,375;9,5;;Mucha menos nitidez en las notas, no se sabe muy bien que esta sonando, ademas no se escucha trazas de lidio 
-r64_a128_d0;escucha;epoch_160_loss_0.1725;aeolian;1111;4,5;2,5;4;4;15;9,375;13,25;;Buen ejemplo, se mantiene en Am, buena coherencia, alguna disonancia en el ritmo pero a nivel melódico bien. Falta la 6 menor característica del eólico pero por el resto bien.
-r64_a128_d0;escucha;epoch_160_loss_0.1725;aeolian;2222;3,5;2;3;3;11,5;9,375;13,25;;Peor que el anterior, audio más extraño en Am pero tampoco juega con la 6 menor
-r64_a128_d0;escucha;epoch_160_loss_0.1725;locrian;1111;2;2;2;2;8;9,375;7,25;;Poca melodía muy dificil de distinguir
-r64_a128_d0;escucha;epoch_160_loss_0.1725;locrian;2222;1,5;1;2;2;6,5;9,375;7,25;;Dificil de distinguir tambien, ademas empieza en la tercera mayor de B por lo que el B disminuido no se cumple
-r64_a128_d0;escucha;epoch_180_loss_0.1748;ionian;1111;3;3,5;2,5;2,5;11,5;9,285714286;10,25;;Se desvía hacia un G mayor en algunos tramos (al principio y al final) y en algún momento pierde coherencia el ritmo de la canción pero C está presente gran parte del audio
-r64_a128_d0;escucha;epoch_180_loss_0.1748;ionian;2222;2;3;2;2;9;9,285714286;10,25;;Comienza muy bien a gran nivel pero mete un G# con el que se va de la tonalidad y empieza a derivar a otra escala empeorando la coherencia.
-r64_a128_d0;escucha;epoch_180_loss_0.1748;dorian;1111;2,5;1;3;4;10,5;9,285714286;9;;Otra vez en D mayor, no termina de entender que es menor
-r64_a128_d0;escucha;epoch_180_loss_0.1748;dorian;2222;2,5;1;2;2;7,5;9,285714286;9;;
-r64_a128_d0;escucha;epoch_180_loss_0.1748;phrygian;1111;1;1,5;1,5;1;5;9,285714286;8,375;;Audio bastante escandaloso y poco informatuvo, no tiene mucho sentido, está en Em pero repite constantemente la 5ª y la 3ª menor por lo que no hay informacion de que este en frigio
-r64_a128_d0;escucha;epoch_180_loss_0.1748;phrygian;2222;3,5;3,75;3;1,5;11,75;9,285714286;8,375;;Un ejemplo bastante esperanzador, se escucha la segunda disminuida en algunas ocasiones, aunque la coherencia brilla por su ausencia pero el modo frigio parece que si lo detecta
-r64_a128_d0;escucha;epoch_180_loss_0.1748;lydian;1111;3;2;1,5;2;8,5;9,285714286;8,5;;Lo hace en G natural, no juega con la 4ª aumentada. 
-r64_a128_d0;escucha;epoch_180_loss_0.1748;lydian;2222;3;1,5;1,5;2,5;8,5;9,285714286;8,5;;Igual que antes, lo hace en G natural, no utiliza la 4ª aumentada
-r64_a128_d0;escucha;epoch_180_loss_0.1748;mixolydian;1111;3;2,5;2,5;3;11;9,285714286;10,25;;Hace G - Am - D y la tónica del La puede cuadrar con la 3ª mayor del F porque no está muy marcado el acorde pero no es mixolidio
-r64_a128_d0;escucha;epoch_180_loss_0.1748;mixolydian;2222;3,5;1;1;4;9,5;9,285714286;10,25;;Está en G natural, claramente enfatiza esa 7ª mayor pero el audio en cuanto a coherencia está muy bien
-r64_a128_d0;escucha;epoch_180_loss_0.1748;aeolian;1111;2,5;2;3;4;11,5;9,285714286;10,75;;Juega con la 3ª mayor de A, cambiando de A - Am - F - G. La coherencia es buena y podria ser una buena progresión (Under the bridge - RHCP) pero no es lo que se busca
-r64_a128_d0;escucha;epoch_180_loss_0.1748;aeolian;2222;3;2;2;3;10;9,285714286;10,75;;Un poco difuminado la nitidez de las notas lo que hace más dificil la identificación del modo. Además, mete la 4ª aumentada y hace cambios de acordes un tanto extraño fuera de lugar.
-r64_a128_d0;escucha;epoch_180_loss_0.1748;locrian;1111;1,5;1;1,5;3,75;7,75;9,285714286;7,875;;El audio está en C#m pasando por B mayor por lo que no tiene mucho de locrio
-r64_a128_d0;escucha;epoch_180_loss_0.1748;locrian;2222;3;1;1;3;8;9,285714286;7,875;;"Audio bueno,  coherente pero no tiene nada de locrio, progresion típica ""Tipo T"""
-r64_a128_d0;escucha;epoch_80_loss_0.1921;ionian;1111;4;4,5;4;3,5;16;9,571428571;12,5;;
-r64_a128_d0;escucha;epoch_80_loss_0.1921;ionian;2222;2;2;3;2;9;9,571428571;12,5;;Especie de jazz extraño con ddemasiados cambios de tonalidad que hace muy dificil de seguir el adio
-r64_a128_d0;escucha;epoch_80_loss_0.1921;dorian;1111;2;1;1,5;3;7,5;9,571428571;7;;Sigue sin captar que el D dórico es un modo menor.
-r64_a128_d0;escucha;epoch_80_loss_0.1921;dorian;2222;2;1;1;2,5;6,5;9,571428571;7;;Audio con coherencia pero en A utilizando D mayor.
-r64_a128_d0;escucha;epoch_80_loss_0.1921;phrygian;1111;4;1;3;2;10;9,571428571;11,625;;Está en Em y se mantiene muy bien ahí pero mete la segunda natural a lo largo de todo el audio
-r64_a128_d0;escucha;epoch_80_loss_0.1921;phrygian;2222;4;3,5;2,75;3;13,25;9,571428571;11,625;;Buen ejemplo, jugando con la 6ª menor aunque no se llega a distinguir muy bien si se utiliza la 2 natural o la 2ª menor, pero la sonoridad parece frigia.
-r64_a128_d0;escucha;epoch_80_loss_0.1921;lydian;1111;3,75;3,75;2;4;13,5;9,571428571;11,875;;Comienza con un F remarcando la 4ª aumentada, sin duda el mejor modelo hasta ahora en lidio.
-r64_a128_d0;escucha;epoch_80_loss_0.1921;lydian;2222;1,5;3,75;3;2;10,25;9,571428571;11,875;;Ha hecho un cambio de F a B disminuido precioso remarcando el bajo en la 4ª aumentada, sin embargo era un poco diverso el audio mezclando muchas sonoridades y la nitidez de las notas no era destacable
-r64_a128_d0;escucha;epoch_80_loss_0.1921;mixolydian;1111;3;1;1,5;3;8,5;9,571428571;7,25;;Buen audio pero no tiene nada de mixolidio, cambia de G a Am en g natural, no mete la 7ª menor en ningun momento
-r64_a128_d0;escucha;epoch_80_loss_0.1921;mixolydian;2222;1,5;1;2;1,5;6;9,571428571;7,25;;Ejemplo bastante malo, notas totalmente fuera de la escala y una progresión de acordes que no sigue ninguna estructura ni corresponde con nada de un G mixolidio
-r64_a128_d0;escucha;epoch_80_loss_0.1921;aeolian;1111;3;1,5;2,5;3;10;9,571428571;9,75;;Audio coherente pero no juega con la 6ª menor del eólico, ha habido ejemplos bastante mejores de eólico en otros checkpoints 
-r64_a128_d0;escucha;epoch_80_loss_0.1921;aeolian;2222;2;3;3;1,5;9,5;9,571428571;9,75;;Menor coherencia pero se puede escuchar en alguna ocasión algo de la 6ª menor, sin embargo no es un gran ejemplo ya uqe se pierde en cuanto a tempo y desvaría de la escala de Am
-r64_a128_d0;escucha;epoch_80_loss_0.1921;locrian;1111;2,5;1;1;3;7,5;9,571428571;7;;No tiene nada de locrio, audio parecido al de ionian seed 1111 sin distinción de locrio de ningun tipo
-r64_a128_d0;escucha;epoch_80_loss_0.1921;locrian;2222;1;2;2;1,5;6,5;9,571428571;7;;Se escucha como si se mezclaran dos audios distintos, sin embargo hay muchos cambios de tono y en alguno, suena la 5ª disminuida
-r64_a128_d0;reserva;epoch_200_loss_0.1704;ionian;1111;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;ionian;2222;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;dorian;1111;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;dorian;2222;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;phrygian;1111;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;phrygian;2222;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;lydian;1111;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;lydian;2222;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;mixolydian;1111;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;mixolydian;2222;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;aeolian;1111;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;aeolian;2222;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;locrian;1111;;;;;;;;;
-r64_a128_d0;reserva;epoch_200_loss_0.1704;locrian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_160_loss_0.1766;ionian;1111;1,5;2;1,5;1;6;5,090909091;5;;Rudio tambien
-r64_a128_d005;escucha;epoch_160_loss_0.1766;ionian;2222;1;1;1;1;4;5,090909091;5;;Ruido
-r64_a128_d005;escucha;epoch_160_loss_0.1766;dorian;1111;1;1;1;1;4;5,090909091;4;;Ruido
-r64_a128_d005;escucha;epoch_160_loss_0.1766;dorian;2222;1;1;1;1;4;5,090909091;4;;Ruido x2
-r64_a128_d005;escucha;epoch_160_loss_0.1766;phrygian;1111;2,5;1;1;1;5,5;5,090909091;5,25;;Mi mayor y audio muy poco coherente
-r64_a128_d005;escucha;epoch_160_loss_0.1766;phrygian;2222;2;1;1;1;5;5,090909091;5,25;;Audio horroroso en mi mayor
-r64_a128_d005;escucha;epoch_160_loss_0.1766;lydian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_160_loss_0.1766;lydian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_160_loss_0.1766;mixolydian;1111;2,5;1;1;1;5,5;5,090909091;5,5;;No aparece la 7ª menor
-r64_a128_d005;escucha;epoch_160_loss_0.1766;mixolydian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_160_loss_0.1766;aeolian;1111;1,5;3,5;2,5;1,5;9;5,090909091;7;;Audio muy ilegible pero se escucha que esta en la menor y la 6 menor se detecta tambien
-r64_a128_d005;escucha;epoch_160_loss_0.1766;aeolian;2222;1;1,5;1,5;1;5;5,090909091;7;;Mucho ruido, mas ileglible que el anterior
-r64_a128_d005;escucha;epoch_160_loss_0.1766;locrian;1111;1;1;1;1;4;5,090909091;4;;Rudio
-r64_a128_d005;escucha;epoch_160_loss_0.1766;locrian;2222;1;1;1;1;4;5,090909091;4;;Ruido
-r64_a128_d005;escucha;epoch_100_loss_0.1843;ionian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;ionian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;dorian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;dorian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;phrygian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;phrygian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;lydian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;lydian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;mixolydian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;mixolydian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;aeolian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;aeolian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;locrian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_100_loss_0.1843;locrian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;ionian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;ionian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;dorian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;dorian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;phrygian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;phrygian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;lydian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;lydian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;mixolydian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;mixolydian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;aeolian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;aeolian;2222;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;locrian;1111;;;;;;;;;
-r64_a128_d005;escucha;epoch_200_loss_0.1701;locrian;2222;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;ionian;1111;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;ionian;2222;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;dorian;1111;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;dorian;2222;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;phrygian;1111;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;phrygian;2222;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;lydian;1111;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;lydian;2222;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;mixolydian;1111;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;mixolydian;2222;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;aeolian;1111;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;aeolian;2222;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;locrian;1111;;;;;;;;;
-r64_a128_d005;reserva;epoch_120_loss_0.1808;locrian;2222;;;;;;;;;
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;ionian;1111;3,5;4;4;4;15,5;12,41071429;17,75;;Buen audio, muy coherente, aunque al principio comienza con un G mayor, en seguida te das cuenta de que realemnte es un V grado y esta en C mayor.
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;ionian;2222;5;5;5;5;20;12,41071429;17,75;;Muy buen ejemplo, modo jónico perfecto
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;dorian;1111;3;1;4;5;13;12,41071429;11,75;;Muy bonito el adio, calidad en la instrumental pero está en D mayor, sigue sin captar el menor este modo
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;dorian;2222;2,5;1;3;4;10,5;12,41071429;11,75;;Hay un cambio de acorde extraño pero la calidad y coherencia del aduio es sorprendente, aun asi no ha detectado que es un modo menor y está en D mayor
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;phrygian;1111;4;1;2,5;4,5;12;12,41071429;11;;E mayor, no capta el menor Aún así buen audio
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;phrygian;2222;4;1;1;4;10;12,41071429;11;;E mayor, no capta el menor Aún así buen audio
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;lydian;1111;5;5;3;5;18;12,41071429;15,5;;Increible audio en lidio, Cambia de F a G, pasando por Em (no tan típico pero correcto), Es verdad que al final resuelve en C pero lo anterior esel mejor audio en lidio hasta ahora
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;lydian;2222;4,5;2;2;4,5;13;12,41071429;15,5;;Buen audio en cuanto a calidad, pero esta en F major normal, al principio si que suena a lidio pero en seguida cambia y se pierde la cuarta aumentada.
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;mixolydian;1111;4;1,5;2,5;4;12;12,41071429;12;;Suena la 7ª mayor de sol, no cae en el modo mixolidio pero audio muy bueno, gran salto de calidad respecto a los otros LoRA
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;mixolydian;2222;4;1;3;4;12;12,41071429;12;;Audio bueno pero no está en G mixolidio, está en C, todo recae en C
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;aeolian;1111;3;2;3;4,5;12,5;12,41071429;11,375;;Buen audio, juega con Am pero desde G, por lo que la 6ª no es menor
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;aeolian;2222;2,5;1,75;2,5;3,5;10,25;12,41071429;11,375;;La 6ª vuelve a ser mayor pero la calidad del audio y lso cambios de acordes son sorprendentes, fuera de lo comun y suenan bien
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;locrian;1111;2;2,75;2;1,75;8,5;12,41071429;7,5;;El audio está en E mayor pero cambia bastante de tonalidad, sin embargo en algunos puntos juega con B y su 2ª menor lo cual es bastante sorprendente y puede que esté cogiendo algo del modo locrio
-r64_a128_d005_lr5e-5;escucha;epoch_100_loss_0.1965;locrian;2222;1;2;2;1,5;6,5;12,41071429;7,5;;Peor audio que el anterior, menos coherente y más diverso 
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;ionian;1111;4,5;2;2;4,5;13;10,33928571;13,75;;G - F - C, pero recae constantemente en G y suena la 7ª mayor de G/ cuarta aumentada de C, lo cual hace que no sea jónico.
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;ionian;2222;3,5;4;4;3;14,5;10,33928571;13,75;;Audio menos coherente pero en C jónico, auqneu los acordes no estén del todo marcados, la melodía se basa en C jónico
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;dorian;1111;3,5;1;2;3;9,5;10,33928571;9,5;;Buen audio pero está en D mayor de nuevo
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;dorian;2222;3;1;2;3,5;9,5;10,33928571;9,5;;Buen audio igual, calidad de sonido pero está en D mayor
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;phrygian;1111;4;1;1;4;10;10,33928571;9,75;;Audio en E mayor, Progresión E - B - A comun. Nada de menor ui de frigio mucho menos
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;phrygian;2222;3,5;1;1;4;9,5;10,33928571;9,75;;Otra vez, audio en E mayor.
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;lydian;1111;2;4;4;2,5;12,5;10,33928571;10,25;;Buen audio pero quizá está sobreentrenado, a veces se escucha progresión lidia F -G pero se pierde un poco y cambia a otras cosas distintas perdiendo coherencia
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;lydian;2222;2;2;2;2;8;10,33928571;10,25;;
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;mixolydian;1111;4;3;1,5;4;12,5;10,33928571;11,75;;Progresión G - F, pero resuelve repetidas veces en C lo cual hace que pierda esa sonoridad mixolidia, sin embargo juega con la 7ª menor de G y se pueden conseguir resultados coherentes
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;mixolydian;2222;4;1;2;4;11;10,33928571;11,75;;Progresión G - D y sonando en repetidas ocasiones la 7ª mayor de sol
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;aeolian;1111;3,75;1,5;2;2,5;9,75;10,33928571;9,125;;Comienza con Am pero el problema es que está en G, ya que pasa por D, V grado
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;aeolian;2222;1,5;2;3;2;8,5;10,33928571;9,125;;Audio peor, no guarda mucha relación con el modo Eólico a pesar de contener y empezar en Am ambos. Cambios de acordes extraños e incoherentes
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;locrian;1111;2;1;2;3,5;8,5;10,33928571;8,25;;Está en Mi mayor y juega con una 5ª aumentada, claramente no capta el modo locrio.
-r64_a128_d005_lr5e-5;escucha;epoch_160_loss_0.1952;locrian;2222;2;2;2;2;8;10,33928571;8,25;;Este audio está en F#m  y cambia a B mayor metiendo la nota C de ve en cuando para dar tensión pero la coherencia es rara y no comprende que B tiene que ser la raiz de la cancion 
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;ionian;1111;3,5;2,5;3;4;13;9,964285714;13,625;;Recae todo en G mayor aunque la progresion sea G - F - C y el ultimo acorde resuelve en C mayor, sin embargo no capta que tiene que caer en C siempre
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;ionian;2222;4;3,75;2,5;4;14,25;9,964285714;13,625;;Audio en C - F, no recalca la 7ª mayor pero caen muchos fraseos en C, haciendo entender que es C jónico. Audio con gran coherencia
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;dorian;1111;2;1;2;3;8;9,964285714;7,75;;Audio en D mayor, sin embargo la coherencia es buena pero no hace caso al prompt de D dorian
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;dorian;2222;2;1;1;3,5;7,5;9,964285714;7,75;;Otro audio en D mayor, con mejor coherencia pero sin captar la esencia del dórico
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;phrygian;1111;4;1,5;1;4;10,5;9,964285714;11,25;;Audio en E mayor, sin embargo, a veces mete la 6 menor y por ello he puesto un 1,5 de calificación de color modal.
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;phrygian;2222;4;1;3;4;12;9,964285714;11,25;;Quiza el audio más bonito y de gran calidad del estudio. Sin embargo en E mayor y no tiene nada de frigio.
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;lydian;1111;4;4;3,75;3,5;15,25;9,964285714;10,625;;Gran audio en lidio, resuelve en C al final del todo pero durante el resto va progresando sobre F - G, pasando por algun acorde mas como Am, Em con buen criterio y coherencia
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;lydian;2222;1;1,5;2;1,5;6;9,964285714;10,625;;Ejemplo bastante malo, nada de coherencia y muy dificil de seguir, cambios muy bruscos de tonalidad y no hay apenas indicios de modo lidio
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;mixolydian;1111;4;2,75;2,5;3,5;12,75;9,964285714;11,625;;Buen ejemplo, cambia entre G - F - C, con lo que mete la 7ª mayor al meter el C pero con F se puede escuchar un poco de G mixolidio aunque predomina el G natural
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;mixolydian;2222;3;2;3;2,5;10,5;9,964285714;11,625;;No es mal ejemplo, pero suena la 7ª mayor de G en varias ocasiones aunque en otras se intuye la 7ª menor, de nota que la coherencia es menor.
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;aeolian;1111;2;2;2;2;8;9,964285714;7,625;;Audio en E menor algo inestable, mete un la menor como acorde pero la sexta no es disminudia ya que cuenta con la 2ª de mi menor (que euivale a la sexta aumentada de Lam)
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;aeolian;2222;2;1,5;2;1,75;7,25;9,964285714;7,625;;Audio similar al anterior pero algo más inestable e incoherente metiendo ademas la 7ª mayor de Lam, sin estar ni siquiera en Lam (Está en Em en gran parte del audio)
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;locrian;1111;2,5;1;3;1,5;8;9,964285714;7,25;;En E mayor, pasanmdo por B menor pero no es una progresión de locrio,  además la coherencia no es buena y no contiene ninguna nota característica del modo
-r64_a128_d005_lr5e-5;escucha;epoch_140_loss_0.1960;locrian;2222;1,5;2;2;1;6,5;9,964285714;7,25;;Parece que en este audio alguna nota característuca del locrio sí suena pero es muy inestable y cambiante cada acorde. En momentos está en locrio como que cambia a otra tonalidad completamente distinta. No termina de consolidar.
-RUN_D;escucha;epoch_40_loss_0.8457;ionian;1111;4,5;4,5;3,5;4;16,5;10,19642857;17,25;;Muy buen ejemplo de C jónico, En C natural cambiando a F y G y melodía sobre C jónico
-RUN_D;escucha;epoch_40_loss_0.8457;ionian;2222;5;4,5;4;4,5;18;10,19642857;17,25;;Buen ejemplo, bastante coherente con el prompt de jazz-fusion y melodía muy dentro de C jónico con C y F como acordes principales
-RUN_D;escucha;epoch_40_loss_0.8457;dorian;1111;1,5;1;2;3,75;8,25;10,19642857;7,375;;Sigue sin captar el D menor, lo hace en D mayor.
-RUN_D;escucha;epoch_40_loss_0.8457;dorian;2222;1,5;1;2;2;6,5;10,19642857;7,375;;Audio mucho menos coherente, inestable y parece que en D mayor pero no se distingue muy bien
-RUN_D;escucha;epoch_40_loss_0.8457;phrygian;1111;2;1;2;1,5;6,5;10,19642857;6;;E mayor aunque se distorsiona un poco, no se si porque necesita más epochs pero pinta a que esta modificandose, aun asi de momento es E mayor
-RUN_D;escucha;epoch_40_loss_0.8457;phrygian;2222;2;1;1;1,5;5,5;10,19642857;6;;E mayor también, audio inestable y poca cordura
-RUN_D;escucha;epoch_40_loss_0.8457;lydian;1111;3,5;2;2;3,5;11;10,19642857;10,75;;Está en C jónico, a veces se escucha el paso de F a G pero no es lo que se espera de un audio lidio, quizá con más epochs se pueden lograr mejores resultados
-RUN_D;escucha;epoch_40_loss_0.8457;lydian;2222;3,5;1,5;1,5;4;10,5;10,19642857;10,75;;Audio en F natura, no en F lidio. Ademas cambia bastante a C mayor por lo que la modulacion es baja
-RUN_D;escucha;epoch_40_loss_0.8457;mixolydian;1111;4;2;1;3;10;10,19642857;12,25;;Buen audio, se escuchan trazas de mixolidio pero mayoritariamente es la 7ª mayor de G la que predomina
-RUN_D;escucha;epoch_40_loss_0.8457;mixolydian;2222;4;3,5;3;4;14,5;10,19642857;12,25;;Buen aduio en G mixolidio acorde con el prompt. Se escucha de vez en cuando la 7ª menor como las frases acaban ahí en el principio del audio.
-RUN_D;escucha;epoch_40_loss_0.8457;aeolian;1111;2;2,5;3;3;10,5;10,19642857;11,25;;Audio un tanto extraño, aunque hay que admitir que hay partes que suena bien y está en lam pero no es muy remarcado, se confunde con Em muchas veces y tocar alguna nota de Lam a veces suena mal
-RUN_D;escucha;epoch_40_loss_0.8457;aeolian;2222;3,5;3,5;3;2;12;10,19642857;11,25;;La coherencia no es la mejor pero si que está en Am eólico por lo que es un avance
-RUN_D;escucha;epoch_40_loss_0.8457;locrian;1111;2;2;2;1,5;7,5;10,19642857;6,5;;No está del todo mal, suena alguna quinta natural y es bastante inestable el audio pero porque el locrio es inestable en si. Se puede escuchar algun acorde perteneciente a B locrio pero hay muchos desvarios y todavia hay mucho margen.
-RUN_D;escucha;epoch_40_loss_0.8457;locrian;2222;1,5;1,5;1;1,5;5,5;10,19642857;6,5;;Menos parecido al locrio pero quiza mas agradable al oido. Sin embargo todavia esta lejos de ser una progresion y un audio en locrio
-RUN_D;escucha;epoch_100_loss_0.8379;ionian;1111;4,5;4;3,75;4;16,25;10,48076923;17,375;;Buen audio, cambiando de G - F - C marcando la 7ª mayor y finalizando fraseos en c mayor
-RUN_D;escucha;epoch_100_loss_0.8379;ionian;2222;4,5;4,5;4,5;5;18,5;10,48076923;17,375;;Buen ejemplo, bastante coherente con el prompt de jazz-fusion y melodía muy dentro de C jónico con C y F como acordes principales
-RUN_D;escucha;epoch_100_loss_0.8379;dorian;1111;4;1;2;4;11;10,48076923;9;;Buen audio pero el D mayor, no hay manera de que mejore
-RUN_D;escucha;epoch_100_loss_0.8379;dorian;2222;2;1;2;2;7;10,48076923;9;;No tiene mucho sentido este audio, no se sabe en que tonalidad esta
-RUN_D;escucha;epoch_100_loss_0.8379;phrygian;1111;2;1;2;1,5;6,5;10,48076923;6;;E mayor aunque se distorsiona un poco, no se si porque necesita más epochs pero pinta a que esta modificandose, aun asi de momento es E mayor
-RUN_D;escucha;epoch_100_loss_0.8379;phrygian;2222;2;1;1;1,5;5,5;10,48076923;6;;E mayor también, audio inestable y poca cordura
-RUN_D;escucha;epoch_100_loss_0.8379;lydian;1111;3,5;2;2;3,5;11;10,48076923;10,75;;Está en C jónico, a veces se escucha el paso de F a G pero no es lo que se espera de un audio lidio, quizá con más epochs se pueden lograr mejores resultados
-RUN_D;escucha;epoch_100_loss_0.8379;lydian;2222;3,5;1,5;1,5;4;10,5;10,48076923;10,75;;Audio en F natura, no en F lidio. Ademas cambia bastante a C mayor por lo que la modulacion es baja
-RUN_D;escucha;epoch_100_loss_0.8379;mixolydian;1111;4;2;1;3;10;10,48076923;12,25;;Buen audio, se escuchan trazas de mixolidio pero mayoritariamente es la 7ª mayor de G la que predomina
-RUN_D;escucha;epoch_100_loss_0.8379;mixolydian;2222;4;3,5;3;4;14,5;10,48076923;12,25;;Buen aduio en G mixolidio acorde con el prompt. Se escucha de vez en cuando la 7ª menor como las frases acaban ahí en el principio del audio.
-RUN_D;escucha;epoch_100_loss_0.8379;aeolian;1111;;;;;;;;;No
-RUN_D;escucha;epoch_100_loss_0.8379;aeolian;2222;4;2,5;3;3;12,5;10,48076923;12,5;;En Am pero con 
-RUN_D;escucha;epoch_100_loss_0.8379;locrian;1111;2;1,5;2;1,5;7;10,48076923;6,5;;Audio un poco malo en cuanto a sonoridad, poco diferenciable y con alguna nota que no tiene nada que ver con B locrio
-RUN_D;escucha;epoch_100_loss_0.8379;locrian;2222;2;1;2;1;6;10,48076923;6,5;;Muy raro el audio
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;ionian;1111;4,5;4,5;4;4;17;10,51785714;16,5;;Muy buen ejemplo, el bajo pasando por gran cantidad de notas de C jónico mientras suena un C mayor pasando por F omo instrumental y melodía en C jónico
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;ionian;2222;4;4;4;4;16;10,51785714;16,5;;Buen ejemplo, quizá el más diferente hasta ahora de los jónicos, está en C jónico a pesar de no estar indicada la tonalidad en el prompt
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;dorian;1111;3;1;2;3,5;9,5;10,51785714;7,75;;Sigue sin captar el D menor, lo hace en D mayor.
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;dorian;2222;1,5;1;2;1,5;6;10,51785714;7,75;;Audio mucho menos coherente, inestable y parece que en D mayor pero no se distingue muy bien
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;phrygian;1111;3;1,75;2;2;8,75;10,51785714;8,625;;E mayor, sin embargo en algun fragmento se oye disonancia con la segunda menor pero es muy poco, no es frigio
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;phrygian;2222;3;1;2;2,5;8,5;10,51785714;8,625;;E mayor y encima juega con la 7ª mayor de E, dando a entender que no tiene nada de frigio, sino que es E jónico.
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;lydian;1111;3,5;2;2;3,5;11;10,51785714;9,5;;No es un gran audio en lidio, mucho que desear, parece C jónico mas que otra cosa y alguna nota se escucha extraña
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;lydian;2222;3;1,5;1,5;2;8;10,51785714;9,5;;En F natural pero a veces mete la 3 menor y poco coherente
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;mixolydian;1111;4,5;4;2;4;14,5;10,51785714;14;;Buen audio pero pasa a menudo por el C mayor cuando cambia entre F y G lo que hace que pierda un poco la esencia del modo pero por lo gnereal muy bien
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;mixolydian;2222;4;4;2;3,5;13,5;10,51785714;14;;Muy similar al audio anterior pero un pelin menos coherente, sigue pasando por C pero las notas son las correctas en G mixolidio
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;aeolian;1111;3;2,5;2;3,5;11;10,51785714;11,5;;Ahora lo está haciendo en Em bastante claro, se escapa alguna nota pero por lo general bastante bien aunque juega con el G mayor en más de alguna ocasión lo cual le quita sonido modal y es tendencia de la musica tonal
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;aeolian;2222;3,5;3,5;3;2;12;10,51785714;11,5;;
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;locrian;1111;2;1,5;1,5;1,5;6,5;10,51785714;5,75;;Audio Inestable aunque no incoherente del todo, sin embargo está en una especie de B mayor con alguna nota extraña difícil de identificar. No es locrio.
-Prompt solo modo + instrumento;escucha;epoch_80_loss_0.8378;locrian;2222;1;1,5;1,5;1;5;10,51785714;5,75;;Difícil de evaluar, muchos cambios de tonalidad aunque no es mala la coherencia
-Prompt solo modo;escucha;epoch_100_loss_0.8379;ionian;1111;5;4;2;4,5;15,5;10,78571429;16,25;;Buen audio, finaliza en C mayor y todo basa en torno a ese C, pero cambia constantemente de C a G (relación I -V), no está mal pq es el modo jónico pero estaría mejor un poco de variedad.
-Prompt solo modo;escucha;epoch_100_loss_0.8379;ionian;2222;5;4;4;4;17;10,78571429;16,25;;Aquí modifica más entre acordes,  metiendo F y Am, mucho más completo y buen ejemplo
-Prompt solo modo;escucha;epoch_100_loss_0.8379;dorian;1111;4;4;2;2,5;12,5;10,78571429;9,75;;Gran diferencia, el audio está en E dórico, coge muy bien la relación de Em - A (contiene la 6ª mayor), pero pasa a menudo por D mayor haciendo que suene a mñusica tonal más que modal. Sin embargo, el mejor audio del estudio en dórico
-Prompt solo modo;escucha;epoch_100_loss_0.8379;dorian;2222;1,5;2;2;1,5;7;10,78571429;9,75;;Audio un tanto ilegible, dificil de detectar algo coherente
-Prompt solo modo;escucha;epoch_100_loss_0.8379;phrygian;1111;3,5;2;2;2;9,5;10,78571429;9,5;;El audio está en E mayor, pasa a B ayor y cuando va al A, parece que mete una 6ª bemol muy sutil haciendo disonancia.
-Prompt solo modo;escucha;epoch_100_loss_0.8379;phrygian;2222;2,5;2;2;3;9,5;10,78571429;9,5;;E mayor también, itera entre E y Am lo cual hace que tambien parezca la 6 bemol pero está en mayor y no suena la segunda bemol.
-Prompt solo modo;escucha;epoch_100_loss_0.8379;lydian;1111;4;3,75;4;4;15,75;10,78571429;12,625;;Comienza con  F suspendido en la cuarta aumentada sonido muy lidio y pasa a G (EXCELENTE), sin embargo resuelve en C el final del audio pero el resto es bastante bueno
-Prompt solo modo;escucha;epoch_100_loss_0.8379;lydian;2222;2;2;2;3,5;9,5;10,78571429;12,625;;Audio en F mixolidio, Comienza con F y cambia a Eb con esa sonoridad mixolidia 
-Prompt solo modo;escucha;epoch_100_loss_0.8379;mixolydian;1111;3,5;3,75;3;3;13,25;10,78571429;10,375;;Audio en G mixolidio aunque al final varía un poco y 
-Prompt solo modo;escucha;epoch_100_loss_0.8379;mixolydian;2222;2;1,5;2;2;7,5;10,78571429;10,375;;Audio que parece que itera sobre C y Dm7 o F pero que no juega con el mixolidio mucho
-Prompt solo modo;escucha;epoch_100_loss_0.8379;aeolian;1111;3;3;3;3,5;12,5;10,78571429;10,5;;Resuelve en Cmaj7 pero el audio está en Am aunque no suena la 6 menor en ningun momento. Identifica bien y es estable el audio pese a una 5ª disminuida fuera de lugar en un momento puntual
-Prompt solo modo;escucha;epoch_100_loss_0.8379;aeolian;2222;2;1,5;3;2;8,5;10,78571429;10,5;;Audio un tanto exxtraño en Am con su 5ª disminuida, ha debido de confundir durante el entrenamiento algo con esa nota. Deberia ser un tono más (6ª menor)
-Prompt solo modo;escucha;epoch_100_loss_0.8379;locrian;1111;1;2;2;1,5;6,5;10,78571429;6,5;;Audio dificil de evaluar, poca cordura y coherencia 
-Prompt solo modo;escucha;epoch_100_loss_0.8379;locrian;2222;1;2;2;1,5;6,5;10,78571429;6,5;;Me chirría qe mezcle alguna tercera mayor y tantos cambios de tono hace my complicado evaluar el audio
-Exp_01;escucha;epoch_40_loss_0.5428;ionian;1111;3;2;2;2,5;9,5;8,303571429;7,625;;Audio muy parecido al eólico, esta en Em pero a mitad cambia a G mayor. Sin embargo, el ultimo acorde de la progresion es un acorde un tanto extrañoñ que no he logrado identificar 
-Exp_01;escucha;epoch_40_loss_0.5428;ionian;2222;1,5;1,25;1,5;1,5;5,75;8,303571429;7,625;;Audio muy incoherente, extraño y sin sonoridad jónica por ningún lado
-Exp_01;escucha;epoch_40_loss_0.5428;dorian;1111;3;1,5;2;1,75;8,25;8,303571429;7,375;;Ejemplo bastante malo, es verdad que está en E menor al menos pero tiene la 6ª menor la cual es precisamente la nota caracteristica del eólico y no del dórico
-Exp_01;escucha;epoch_40_loss_0.5428;dorian;2222;2,5;1;2;1;6,5;8,303571429;7,375;;Mal ejemplo, no juega con la 6 aumentada y la coherencia es pésima
-Exp_01;escucha;epoch_40_loss_0.5428;phrygian;1111;3;2;2;2;9;8,303571429;9,25;;En mi menor pero con la 2ª natural, por lo que no cumple con el frigio. Sin embargo la coherencia no es mala y es bastante en E menor salvo al final que realiza un cambio de tono
-Exp_01;escucha;epoch_40_loss_0.5428;phrygian;2222;2,5;2;2;3;9,5;8,303571429;9,25;;Gran parte del audio está en Am eólico, sin embargo al final se puede escuhar una 2ª disminuida la cual hace un poco la sonoridad frigia
-Exp_01;escucha;epoch_40_loss_0.5428;lydian;1111;3,5;1;2;3;9,5;8,303571429;8;;
-Exp_01;escucha;epoch_40_loss_0.5428;lydian;2222;2;1;2;1,5;6,5;8,303571429;8;;Am-F5ªb El audio es inestable a mas no poder, de hehcho podria asemejarse mas al locrio que el propio audio locrio. No tiene ningun destello de la 4ª aumentada del lidio.
-Exp_01;escucha;epoch_40_loss_0.5428;mixolydian;1111;3,5;2,5;2;3,75;11,75;8,303571429;9,125;;Es interante, porque la melodía recae constantemente en Gª (5ª grado de C), sin embargo los acordes no siguen una progresión de mixolidio sino que es progresión tonal pero estable en C.
-Exp_01;escucha;epoch_40_loss_0.5428;mixolydian;2222;1,5;1;2,5;1,5;6,5;8,303571429;9,125;;Está en menor, parecido al locrio, no tiene signos de la 7ª dominante del mixolidio.
-Exp_01;escucha;epoch_40_loss_0.5428;aeolian;1111;3;3,75;3,5;2,5;12,75;8,303571429;10,75;;Está en E eólico y se nota la 6 menor en algun que otro momento lo cual indica gran comprensión del modo eólico
-Exp_01;escucha;epoch_40_loss_0.5428;aeolian;2222;2;2,5;3;1,25;8,75;8,303571429;10,75;;Está en A eólico, al principio suena alguna 6 menor pero la coherencia es bastante mala pero va por buen camino
-Exp_01;escucha;epoch_40_loss_0.5428;locrian;1111;2;1,5;1,25;1,5;6,25;8,303571429;6;;Se detecta cierta inestabilidad caracteristica del locrio pero los intervalos no tienen nada que ver, quintas naturales e incluso 3ª mayor en algun momento. Ademas hay como un ca,bio de tonalidad a mitad de audio.
-Exp_01;escucha;epoch_40_loss_0.5428;locrian;2222;1,5;1,5;1,5;1,25;5,75;8,303571429;6;;Audio bastante inestable, se nota menos coherencia que el anterior en cuanto a ritmpo y fluidez. En cuanto a la sonoridad, se escuchan cambios cromáticos entre notas y se nota que quiere hacer cosas diferentes el modelo pero no son exactamente los intervalos y las notas del locrio
-Exp_01;escucha;epoch_80_loss_0.5770;ionian;1111;3;2;2;2,5;9,5;8,482142857;8,25;;Probablemente de los peores hasta ahora en cuanto a jónico. Está en Em natural, es verdad que pasado mitad del audio cambia a G mayor y es G jónico pero comienza menor total.
-Exp_01;escucha;epoch_80_loss_0.5770;ionian;2222;2,75;1;2;1,25;7;8,482142857;8,25;;Está en Am frigio bastante claro, no solo está en menor sino que además juega con la 2ª disminuida por lo que mal ejemplo
-Exp_01;escucha;epoch_80_loss_0.5770;dorian;1111;2;1;1,5;3;7,5;8,482142857;7,25;;Audio coherente, pero no juega con nada del dórico, está en Em eólico, no mete la 6ª ni natural ni aumentada. Ademas la progresion juega mucho con la sonoridad tonal.
-Exp_01;escucha;epoch_80_loss_0.5770;dorian;2222;2,5;1;2;1,5;7;8,482142857;7,25;;Otra vez un audio bastante similar a un audio en frigio, poca presencia del dórico, la 2ª aumentada tiene mucha fuerza
-Exp_01;escucha;epoch_80_loss_0.5770;phrygian;1111;2;1,5;2;3;8,5;8,482142857;9,375;;Audio coherente pero no tiene nada que ver con el frigio. Esta en E eólico
-Exp_01;escucha;epoch_80_loss_0.5770;phrygian;2222;2;3,25;3,5;1,5;10,25;8,482142857;9,375;;La coherencia es terrible pero es un audio que altera de Am-A# con hincapié en la 2ª disminuida de A
-Exp_01;escucha;epoch_80_loss_0.5770;lydian;1111;3;1;1;2,5;7,5;8,482142857;7;;Audio coherente pero en Em, a mitad cambia a G mayor y no tiene buenos resultados
-Exp_01;escucha;epoch_80_loss_0.5770;lydian;2222;2;1;2;1,5;6,5;8,482142857;7;;Menos coherente que la otra semilla y ademas no contiene nada de dorico esta en menor pero en natural y una progresion de Am-A#
-Exp_01;escucha;epoch_80_loss_0.5770;mixolydian;1111;3;1;2;2,5;8,5;8,482142857;8,125;;Audio en Em sin ningun signo de Mixolidio, a mitad cambia a G jonico
-Exp_01;escucha;epoch_80_loss_0.5770;mixolydian;2222;2;1;2,25;2,5;7,75;8,482142857;8,125;;Está en menor, parecido al locrio, no tiene signos de la 7ª dominante del mixolidio.
-Exp_01;escucha;epoch_80_loss_0.5770;aeolian;1111;4;3,75;3;3,25;14;8,482142857;12,625;;Audio bastante bueno de E eólico. Juega con la 6ª menor, se mantiene en E y después pasa a mayor con un G-C-D
-Exp_01;escucha;epoch_80_loss_0.5770;aeolian;2222;3,5;2,5;3,75;1,5;11,25;8,482142857;12,625;;Comienza con una buena melodia con la 6 menor  con los acordes Am y Dm pero en los siguientes compases mete la 2ª disminuida haciendo que parezca más frigio que eólico
-Exp_01;escucha;epoch_80_loss_0.5770;locrian;1111;2;1;1,5;1,5;6;8,482142857;6,75;;Audio en E menor, no tiene nada de disminuido ni en la 5ª ni en la 2ª. 
-Exp_01;escucha;epoch_80_loss_0.5770;locrian;2222;2,5;1,75;2;1,25;7,5;8,482142857;6,75;;Am con 2ª menor, pero no tiene la 5 disminuida, la coherencia es bastante mala pero es un avance.
-Exp_02;escucha;epoch_40_loss_0.5428;ionian;1111;3;2;2;2,5;9,5;8,303571429;7,625;;Audio muy parecido al eólico, esta en Em pero a mitad cambia a G mayor. Sin embargo, el ultimo acorde de la progresion es un acorde un tanto extrañoñ que no he logrado identificar 
-Exp_02;escucha;epoch_40_loss_0.5428;ionian;2222;1,5;1,25;1,5;1,5;5,75;8,303571429;7,625;;Audio muy incoherente, extraño y sin sonoridad jónica por ningún lado
-Exp_02;escucha;epoch_40_loss_0.5428;dorian;1111;3;1,5;2;1,75;8,25;8,303571429;7,375;;Ejemplo bastante malo, es verdad que está en E menor al menos pero tiene la 6ª menor la cual es precisamente la nota caracteristica del eólico y no del dórico
-Exp_02;escucha;epoch_40_loss_0.5428;dorian;2222;2,5;1;2;1;6,5;8,303571429;7,375;;Mal ejemplo, no juega con la 6 aumentada y la coherencia es pésima
-Exp_02;escucha;epoch_40_loss_0.5428;phrygian;1111;3;2;2;2;9;8,303571429;9,25;;En mi menor pero con la 2ª natural, por lo que no cumple con el frigio. Sin embargo la coherencia no es mala y es bastante en E menor salvo al final que realiza un cambio de tono
-Exp_02;escucha;epoch_40_loss_0.5428;phrygian;2222;2,5;2;2;3;9,5;8,303571429;9,25;;Gran parte del audio está en Am eólico, sin embargo al final se puede escuhar una 2ª disminuida la cual hace un poco la sonoridad frigia
-Exp_02;escucha;epoch_40_loss_0.5428;lydian;1111;3,5;1;2;3;9,5;8,303571429;8;;
-Exp_02;escucha;epoch_40_loss_0.5428;lydian;2222;2;1;2;1,5;6,5;8,303571429;8;;Am-F5ªb El audio es inestable a mas no poder, de hehcho podria asemejarse mas al locrio que el propio audio locrio. No tiene ningun destello de la 4ª aumentada del lidio.
-Exp_02;escucha;epoch_40_loss_0.5428;mixolydian;1111;3,5;2,5;2;3,75;11,75;8,303571429;9,125;;Es interante, porque la melodía recae constantemente en Gª (5ª grado de C), sin embargo los acordes no siguen una progresión de mixolidio sino que es progresión tonal pero estable en C.
-Exp_02;escucha;epoch_40_loss_0.5428;mixolydian;2222;1,5;1;2,5;1,5;6,5;8,303571429;9,125;;Está en menor, parecido al locrio, no tiene signos de la 7ª dominante del mixolidio.
-Exp_02;escucha;epoch_40_loss_0.5428;aeolian;1111;3;3,75;3,5;2,5;12,75;8,303571429;10,75;;Está en E eólico y se nota la 6 menor en algun que otro momento lo cual indica gran comprensión del modo eólico
-Exp_02;escucha;epoch_40_loss_0.5428;aeolian;2222;2;2,5;3;1,25;8,75;8,303571429;10,75;;Está en A eólico, al principio suena alguna 6 menor pero la coherencia es bastante mala pero va por buen camino
-Exp_02;escucha;epoch_40_loss_0.5428;locrian;1111;2;1,5;1,25;1,5;6,25;8,303571429;6;;Se detecta cierta inestabilidad caracteristica del locrio pero los intervalos no tienen nada que ver, quintas naturales e incluso 3ª mayor en algun momento. Ademas hay como un ca,bio de tonalidad a mitad de audio.
-Exp_02;escucha;epoch_40_loss_0.5428;locrian;2222;1,5;1,5;1,5;1,25;5,75;8,303571429;6;;Audio bastante inestable, se nota menos coherencia que el anterior en cuanto a ritmpo y fluidez. En cuanto a la sonoridad, se escuchan cambios cromáticos entre notas y se nota que quiere hacer cosas diferentes el modelo pero no son exactamente los intervalos y las notas del locrio
-Exp_02;escucha;epoch_80_loss_0.5770;ionian;1111;3;2;2;2,5;9,5;8,482142857;8,25;;Probablemente de los peores hasta ahora en cuanto a jónico. Está en Em natural, es verdad que pasado mitad del audio cambia a G mayor y es G jónico pero comienza menor total.
-Exp_02;escucha;epoch_80_loss_0.5770;ionian;2222;2,75;1;2;1,25;7;8,482142857;8,25;;Está en Am frigio bastante claro, no solo está en menor sino que además juega con la 2ª disminuida por lo que mal ejemplo
-Exp_02;escucha;epoch_80_loss_0.5770;dorian;1111;2;1;1,5;3;7,5;8,482142857;7,25;;Audio coherente, pero no juega con nada del dórico, está en Em eólico, no mete la 6ª ni natural ni aumentada. Ademas la progresion juega mucho con la sonoridad tonal.
-Exp_02;escucha;epoch_80_loss_0.5770;dorian;2222;2,5;1;2;1,5;7;8,482142857;7,25;;Otra vez un audio bastante similar a un audio en frigio, poca presencia del dórico, la 2ª aumentada tiene mucha fuerza
-Exp_02;escucha;epoch_80_loss_0.5770;phrygian;1111;2;1,5;2;3;8,5;8,482142857;9,375;;Audio coherente pero no tiene nada que ver con el frigio. Esta en E eólico
-Exp_02;escucha;epoch_80_loss_0.5770;phrygian;2222;2;3,25;3,5;1,5;10,25;8,482142857;9,375;;La coherencia es terrible pero es un audio que altera de Am-A# con hincapié en la 2ª disminuida de A
-Exp_02;escucha;epoch_80_loss_0.5770;lydian;1111;3;1;1;2,5;7,5;8,482142857;7;;Audio coherente pero en Em, a mitad cambia a G mayor y no tiene buenos resultados
-Exp_02;escucha;epoch_80_loss_0.5770;lydian;2222;2;1;2;1,5;6,5;8,482142857;7;;Menos coherente que la otra semilla y ademas no contiene nada de dorico esta en menor pero en natural y una progresion de Am-A#
-Exp_02;escucha;epoch_80_loss_0.5770;mixolydian;1111;3;1;2;2,5;8,5;#¡DIV/0!;#¡DIV/0!;;Audio en Em sin ningun signo de Mixolidio, a mitad cambia a G jonico
-Exp_02;escucha;epoch_80_loss_0.5770;mixolydian;2222;2;1;2,25;2,5;7,75;8,482142857;8,125;;Está en menor, parecido al locrio, no tiene signos de la 7ª dominante del mixolidio.
-Exp_02;escucha;epoch_80_loss_0.5770;aeolian;1111;4;3,75;3;3,25;14;8,482142857;12,625;;Audio bastante bueno de E eólico. Juega con la 6ª menor, se mantiene en E y después pasa a mayor con un G-C-D
-Exp_02;escucha;epoch_80_loss_0.5770;aeolian;2222;3,5;2,5;3,75;1,5;11,25;8,482142857;12,625;;Comienza con una buena melodia con la 6 menor  con los acordes Am y Dm pero en los siguientes compases mete la 2ª disminuida haciendo que parezca más frigio que eólico
-Exp_02;escucha;epoch_80_loss_0.5770;locrian;1111;2;1;1,5;1,5;6;8,482142857;6,75;;Audio en E menor, no tiene nada de disminuido ni en la 5ª ni en la 2ª. 
-Exp_02;escucha;epoch_80_loss_0.5770;locrian;2222;2,5;1,75;2;1,25;7,5;8,482142857;6,75;;Am con 2ª menor, pero no tiene la 5 disminuida, la coherencia es bastante mala pero es un avance.
-Exp_09;escucha;epoch_60_loss_0.5960;ionian;1111;2,75;2;1,75;1,5;8;8,660714286;7,125;;Audio en Em que a mitad cambia a G a mitad de audio, pero el incio es en E eólico clarisimo
-Exp_09;escucha;epoch_60_loss_0.5960;ionian;2222;2;1;2;1,25;6,25;8,660714286;7,125;;Audio en Am, nada de jónico
-Exp_09;escucha;epoch_60_loss_0.5960;dorian;1111;3;1;2;3,5;9,5;8,660714286;9;;A nivel modal no tiene nada que ver con el dorico, esta en Em natural, sin embargo la bateria es muy marchosa y acompaña bastante bien la cancion por lo que creo que es importante de mencionar ya que no sucede en muchos casos
-Exp_09;escucha;epoch_60_loss_0.5960;dorian;2222;3;1;2;2,5;8,5;8,660714286;9;;Está en A frigio, pero otra vez sorprende la batería, un ritmo muy estable y marchoso
-Exp_09;escucha;epoch_60_loss_0.5960;phrygian;1111;2,75;2;2;2;8,75;8,660714286;8,5;;Audio en E menor eólico con cambio a G mayor
-Exp_09;escucha;epoch_60_loss_0.5960;phrygian;2222;2;3,25;2;1;8,25;8,660714286;8,5;;El color modal se nota y es lo que más destaca porque la coherencia brilla por sua usencia y no es un audio muy estable. Sin embargo se escucha ese sonido caracterisitco de la 2ª menor del frigio
-Exp_09;escucha;epoch_60_loss_0.5960;lydian;1111;3;1;1;3;8;8,660714286;7,5;;Está en E menor eólico
-Exp_09;escucha;epoch_60_loss_0.5960;lydian;2222;3;1;1;2;7;8,660714286;7,5;;A menor, no guarda relacion con el lidio
-Exp_09;escucha;epoch_60_loss_0.5960;mixolydian;1111;3;1;2;2,5;8,5;8,660714286;8;;Audio en E menor con calidad pero sin nada de mixolidio
-Exp_09;escucha;epoch_60_loss_0.5960;mixolydian;2222;2,5;1;2;2;7,5;8,660714286;8;;A menor paando por A#, no uega con el mixolidio
-Exp_09;escucha;epoch_60_loss_0.5960;aeolian;1111;4;4;3,5;4,25;15,75;8,660714286;13;;Buen ejemplo en Em eólio, jugano con la 6ª menor, muy parecido al del experimento anterior
-Exp_09;escucha;epoch_60_loss_0.5960;aeolian;2222;3;2,5;3;1,75;10,25;8,660714286;13;;A eólico acabando fraseos en la 6ª menor, sin embargo, mete una 2ª dismu¡inuida en momentos puntuales que hace que se vaya a A frigio
-Exp_09;escucha;epoch_60_loss_0.5960;locrian;1111;2;1;2;2,5;7,5;8,660714286;7,5;;No tiene nadad de locrio, es verdad que quizá ligeramente mejor que el anterior experiemento pero mucho margen por delante
-Exp_09;escucha;epoch_60_loss_0.5960;locrian;2222;2;2;2;1,5;7,5;8,660714286;7,5;;La coherencia es bastante mala pero tiene un toque locrio ligero con alguna 2ª menor. La 5ª disminuida no suena pero tampoco la 5ª natural por lo que no se identifica del todo.
-Exp_09;escucha;epoch_80_loss_0.5371;ionian;1111;2,75;2;1,75;1,5;8;8,410714286;7,125;;Bateria sorprendente, pero no mucho en cuanto a tonalidad si que es verdad que cambia de e eólico a G mayor y cuando mete el G mayor es G jónico.
-Exp_09;escucha;epoch_80_loss_0.5371;ionian;2222;2;1;2;1,25;6,25;8,410714286;7,125;;Audio en Am frigio, no en jónico
-Exp_09;escucha;epoch_80_loss_0.5371;dorian;1111;3;1;2;3;9;8,410714286;8,75;;Buenos drums pero pierde un poco de coherencia al final del audio, en cuanto al modo nada que ver, no tiene la 6ª mayor caracteristica del dórico
-Exp_09;escucha;epoch_80_loss_0.5371;dorian;2222;3;1;2;2,5;8,5;8,410714286;8,75;;Sorprendente batería pero es A frigio.
-Exp_09;escucha;epoch_80_loss_0.5371;phrygian;1111;2,75;2;2;2;8,75;8,410714286;8,5;;
-Exp_09;escucha;epoch_80_loss_0.5371;phrygian;2222;2;3,25;2;1;8,25;8,410714286;8,5;;
-Exp_09;escucha;epoch_80_loss_0.5371;lydian;1111;3;1;1;3;8;8,410714286;7,5;;
-Exp_09;escucha;epoch_80_loss_0.5371;lydian;2222;3;1;1;2;7;8,410714286;7,5;;
-Exp_09;escucha;epoch_80_loss_0.5371;mixolydian;1111;3;1;2;2,5;8,5;8,410714286;8;;
-Exp_09;escucha;epoch_80_loss_0.5371;mixolydian;2222;2,5;1;2;2;7,5;8,410714286;8;;
-Exp_09;escucha;epoch_80_loss_0.5371;aeolian;1111;4;3,75;4;3,25;15;8,410714286;11,5;;Em, con insinstencia en la 6ª menor,buen ejemplo
-Exp_09;escucha;epoch_80_loss_0.5371;aeolian;2222;3;1,5;2;1,5;8;8,410714286;11,5;;Buen ejemplo de frigio pero no de eólico
-Exp_09;escucha;epoch_80_loss_0.5371;locrian;1111;2;1;2;2,5;7,5;8,410714286;7,5;;
-Exp_09;escucha;epoch_80_loss_0.5371;locrian;2222;2;2;2;1,5;7,5;8,410714286;7,5;;
-Exp_10;escucha;epoch_60_loss_0.5961;ionian;1111;2,75;2;1,75;1,5;8;8,696428571;8;;
-Exp_10;escucha;epoch_60_loss_0.5961;ionian;2222;2,75;2;1,75;1,5;8;8,696428571;8;;
-Exp_10;escucha;epoch_60_loss_0.5961;dorian;1111;2;1;2;1,25;6,25;8,696428571;7,875;;
-Exp_10;escucha;epoch_60_loss_0.5961;dorian;2222;3;1;2;3,5;9,5;8,696428571;7,875;;
-Exp_10;escucha;epoch_60_loss_0.5961;phrygian;1111;3;1;2;2,5;8,5;8,696428571;8,625;;
-Exp_10;escucha;epoch_60_loss_0.5961;phrygian;2222;2,75;2;2;2;8,75;8,696428571;8,625;;
-Exp_10;escucha;epoch_60_loss_0.5961;lydian;1111;2;3,25;2;1;8,25;8,696428571;8,125;;
-Exp_10;escucha;epoch_60_loss_0.5961;lydian;2222;3;1;1;3;8;8,696428571;8,125;;
-Exp_10;escucha;epoch_60_loss_0.5961;mixolydian;1111;3;1;1;2;7;8,696428571;7,75;;
-Exp_10;escucha;epoch_60_loss_0.5961;mixolydian;2222;3;1;2;2,5;8,5;8,696428571;7,75;;
-Exp_10;escucha;epoch_60_loss_0.5961;aeolian;1111;2,5;1;2;2;7,5;8,696428571;11,625;;
-Exp_10;escucha;epoch_60_loss_0.5961;aeolian;2222;4;4;3,5;4,25;15,75;8,696428571;11,625;;
-Exp_10;escucha;epoch_60_loss_0.5961;locrian;1111;3;2,5;3;1,75;10,25;8,696428571;8,875;;
-Exp_10;escucha;epoch_60_loss_0.5961;locrian;2222;2;1;2;2,5;7,5;8,696428571;8,875;;
-Exp_10;escucha;epoch_80_loss_0.5371;ionian;1111;2;2;2;1,5;7,5;8,410714286;7,75;;
-Exp_10;escucha;epoch_80_loss_0.5371;ionian;2222;2,75;2;1,75;1,5;8;8,410714286;7,75;;
-Exp_10;escucha;epoch_80_loss_0.5371;dorian;1111;2;1;2;1,25;6,25;8,410714286;7,625;;
-Exp_10;escucha;epoch_80_loss_0.5371;dorian;2222;3;1;2;3;9;8,410714286;7,625;;
-Exp_10;escucha;epoch_80_loss_0.5371;phrygian;1111;3;1;2;2,5;8,5;8,410714286;8,625;;
-Exp_10;escucha;epoch_80_loss_0.5371;phrygian;2222;2,75;2;2;2;8,75;8,410714286;8,625;;
-Exp_10;escucha;epoch_80_loss_0.5371;lydian;1111;2;3,25;2;1;8,25;8,410714286;8,125;;
-Exp_10;escucha;epoch_80_loss_0.5371;lydian;2222;3;1;1;3;8;8,410714286;8,125;;
-Exp_10;escucha;epoch_80_loss_0.5371;mixolydian;1111;3;1;1;2;7;#¡DIV/0!;#¡DIV/0!;;
-Exp_10;escucha;epoch_80_loss_0.5371;mixolydian;2222;3;1;2;2,5;8,5;8,410714286;7,75;;
-Exp_10;escucha;epoch_80_loss_0.5371;aeolian;1111;2,5;1;2;2;7,5;8,410714286;11,25;;
-Exp_10;escucha;epoch_80_loss_0.5371;aeolian;2222;4;3,75;4;3,25;15;8,410714286;11,25;;
-Exp_10;escucha;epoch_80_loss_0.5371;locrian;1111;3;1,5;2;1,5;8;8,410714286;7,75;;
-Exp_10;escucha;epoch_80_loss_0.5371;locrian;2222;2;1;2;2,5;7,5;8,410714286;7,75;;
-Exp_18;escucha;epoch_40_loss_0.5727;ionian;1111;2;2;2;1,5;7,5;7,75;7,75;;
-Exp_18;escucha;epoch_40_loss_0.5727;ionian;2222;2,75;2;1,75;1,5;8;7,75;7,75;;
-Exp_18;escucha;epoch_120_loss_0.6101;ionian;1111;3,5;3,75;1,75;2,5;11,5;9,892857143;12,125;;Buen color, sin embargo hay cambio de C a G (I-V) lo cual se va más a lo tonal que a lo modal pero siendo jónico no está tan mal
-Exp_18;escucha;epoch_120_loss_0.6101;ionian;2222;3,5;2,75;3,5;3;12,75;9,892857143;12,125;;Está en Am, sin embargo no es un sonido apagado porque en seguida cambia a mayor y el audio acaba con C mayor. 
-Exp_18;escucha;epoch_120_loss_0.6101;dorian;1111;2;1,5;2;2,5;8;#¡DIV/0!;#¡DIV/0!;;Se nota que quiere hacer un cambio, pero está en E menor y juega con la 6ª menor, por lo que pierde toda esa sonoridad dórica
-Exp_18;escucha;epoch_120_loss_0.6101;dorian;2222;3;1,5;2;3;9,5;#¡DIV/0!;#¡DIV/0!;;Muy parecido al anterior, se siente un cambio de Em a A pero no esta muy marcao y realmente creo que es otro acorde porque al tocar la 3ª mayor de A por encima suena disonante. Sin embargo se nota progreso.
-Exp_18;escucha;epoch_120_loss_0.6101;phrygian;1111;2,5;1,5;2;1,5;7,5;#¡DIV/0!;#¡DIV/0!;;Eaudio en Em eólico, no mete la 2ª menor que tanto caracteriza al frigio
-Exp_18;escucha;epoch_120_loss_0.6101;phrygian;2222;2,5;2,5;2;3;10;#¡DIV/0!;#¡DIV/0!;;Audio curioso, Em- Am- A#. El frigio se oye con el cmbio de Am a A#
-Exp_18;escucha;epoch_120_loss_0.6101;lydian;1111;2,5;2,25;2;3;9,75;#¡DIV/0!;#¡DIV/0!;;Está en E menor, pero no está mal el audio poruqe hay un momento que pasa de C a D y en la melodía suena la 4ª aumentada del C haciendo sonar el lidio. 
-Exp_18;escucha;epoch_120_loss_0.6101;lydian;2222;3;1,75;3,5;3;11,25;#¡DIV/0!;#¡DIV/0!;;Audio precioso pero la tonalidad es extraña, parece una mezcla de A frigio con lidio pero no se logra identificar ninguna nota dórica
-Exp_18;escucha;epoch_120_loss_0.6101;mixolydian;1111;2,75;2;1,5;3;9,25;#¡DIV/0!;#¡DIV/0!;;está en C mayor-F-G. Coherencia buena pero es bastante tonal
-Exp_18;escucha;epoch_120_loss_0.6101;mixolydian;2222;2,5;1,5;2;2,5;8,5;#¡DIV/0!;#¡DIV/0!;;Audio en A menor, buena coherencia pero no es lo que se busca de un prompt mixolidio
-Exp_18;escucha;epoch_120_loss_0.6101;aeolian;1111;4;4,25;3,5;3,75;15,5;#¡DIV/0!;#¡DIV/0!;;Gran ejemplo, realmente se vio la diferencia con el resto de experimentos y epochs
-Exp_18;escucha;epoch_120_loss_0.6101;aeolian;2222;3;2,5;2;1,5;9;#¡DIV/0!;#¡DIV/0!;;Tiende a parecerse al audio frigio que sonaba antes pero ahora sale mucho más regulado y que intenta evitar la 2ª menor aunque se sigue notando cierta sonoridad frigia.
-Exp_18;escucha;epoch_120_loss_0.6101;locrian;1111;2,5;1;2;3;8,5;#¡DIV/0!;#¡DIV/0!;;Demasiado mayor este audio, es básicamente C mayor, no tiene nada de locio
-Exp_18;escucha;epoch_120_loss_0.6101;locrian;2222;2;1,5;2;2;7,5;#¡DIV/0!;#¡DIV/0!;;Am pero no tiene mucho que ver con lociro.
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;ionian;1111;4,5;4,5;2;4,5;15,5;#¡DIV/0!;#¡DIV/0!;;C jónico, gran ejemplo pasando el bajo por muchas notas de la escala C jónica, sin embargo le bajo en modulación poruqe la progresión principal es C-F-G-C, el paso de G a C (I-V) lo convierte más en tonal que en modal.
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;ionian;2222;5;4,5;3,5;4;17;11,14285714;16,25;;Gran audio, en C mayor, F, Am, igual de bueno que el anterior solo que no pasa por G tanto y lo cambia por el relativo menor de C lo cual convierte el audio en más modal.
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;dorian;1111;3,75;3;2,5;4,5;13,75;11,14285714;14,125;;Audio bastante interesante, en Bm y metiendo un E mayor en un momento sonando dórico TOTAL. Sin embargo hay mucha parte del audio que va de B menor a A mayor y luego a G mayor, haciendo entender que es B eólico pero ese destello dórico es muy buena señal
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;dorian;2222;4;3,5;3;4;14,5;11,14285714;14,125;;Buen ejemplo dórico. Se consiguen buenos resultados con B dórico pasando en algunos momentos por E mayor.
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;phrygian;1111;3;1;2;3,25;9,25;11,14285714;9,375;;Ejemplo en E mayor total, además mete una 5ª aumentada en algún momento que no tiene mucho sentido con el modo frigio así que en cuanto a color modal bastante incorrecto.
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;phrygian;2222;3,5;1;1;4;9,5;11,14285714;9,375;;Audio clarísimo en E mayor, además una progresión típica de IV-V-I-VI. Nada que ver con el modo frigio.
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;lydian;1111;3,5;2,5;2;4;12;11,14285714;11;;Audio coherente pero no termina de definir bien los acordes y melodía por lo que es un poco difuso. Sin embargo, 
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;lydian;2222;2;1;3;4;10;11,14285714;11;;Buena calidad de audio, sin embargo, no juega con la 4ª aumentada, está en F jónico y mete un Fm en un instnante donde se descontrola toda la melodía de la canción.
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;mixolydian;1111;3,5;1,75;3;3;11,25;11,14285714;10,5;;Audio un poco flojo, la coherencia no es mala pero el audio está principalmente en G jonico. Sin embargo, hay instantes en los que parece que cambia a F mayor metiendo la 7ª menor de G pero es algo muy sutil que no define al audio ni mucho menos
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;mixolydian;2222;2,5;2,25;2;3;9,75;11,14285714;10,5;;Audio un pelin flojete tambien, coherencia buena pero se pierde mucho en la tonalidad inicial. Sin embargo, si que parece que juega más con el sonido mixolidio que el audio anterior auqneu no está del todo claro. Suena en ocasiones alternaciones de G-F-Dm pero se mezcla con las cosas y no se determina muy bien en qué situación modal está.
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;aeolian;1111;3;3;2,5;3,25;11,75;11,14285714;10;;No está nada mal este audio, comienza con Em-Am-D, dando lugar a E eólico, sin embargo poco después mete el G mayor pasando a a musica tonal. Pero no es par nada un mal ejemplo
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;aeolian;2222;2,5;1,25;2;2,5;8,25;11,14285714;10;;Está el A dórico, ya que marca bastante la 6ª aumentada y ademas mete un E mayor por lo que pasa a la menor armónica pero con la 6ª aumetada.
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;locrian;1111;2;1,5;2;2;7,5;11,14285714;6,75;;audio complicado de evaluar pero tiene algunos signos de inestabilidad que parece Locrio, sin embargo al analizar melodías y acordes, hay gran parte del audio que corresponde a un E mayor natural por lo que se pierde esa sensacion de locrio la mayor parte del tiempo.
-confirm_r32_a32_lr1e-4;escucha;epoch_140_loss_0_1952;locrian;2222;1,5;1,5;1,5;1,5;6;11,14285714;6,75;;Dificil de evaluar tambien, parece que intenta locrio pero no estoy del todo seguro debido a la complejidad de los intervalos continuos. Lo que si es destacable es la coherencia del audio a pesar de ser tan cambiante e inestable. El sonido es bastante bueno para ser locrio que en otros experimento ha sido notablemente peor.
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;ionian;1111;4,5;3,5;2;4,5;14,5;11,07142857;16;;Muy parecido al epoch 140 pero he bajado un punto el color modal debido a que ahora comienza la progresión de acordes en G mayor haciendo parecer que puede ser G mixolidio al principio. Sin embargo el resto del audio estña muy bien y en seguida te das cuenta que está en C jónico pero el primer acorde produce confusión
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;ionian;2222;5;4,5;3,5;4,5;17,5;11,07142857;16;;Audio muy top, probablemente de los mejores. Muy similar al audio del epoch 140 pero se nota mayor claridad en el sonido 
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;dorian;1111;3,75;3;2,5;4,5;13,75;11,07142857;14,125;;Notas muy similares y audio muy similar al epoch 140
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;dorian;2222;4;3,5;3;4;14,5;11,07142857;14,125;;Apenas diferencias con el ejemplo de inferencia del epoch 140, notas y evaluación prácticamente idéntica
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;phrygian;1111;3;1;2;3,25;9,25;11,07142857;9,375;;Identico al del epoch 140
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;phrygian;2222;3,5;1;1;4;9,5;11,07142857;9,375;;Identico al del epoch 140
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;lydian;1111;3,5;2,5;2;4;12;11,07142857;11;;Muy similar al epoch 140, nada que añadir
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;lydian;2222;2;1;3;4;10;11,07142857;11;;Al igual que el otro seed, este audio es idéntico al del epoch 140
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;mixolydian;1111;3,5;1,75;3;3;11,25;#¡DIV/0!;#¡DIV/0!;;Identico al del epoch 140
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;mixolydian;2222;2,5;2,25;2;3;9,75;11,07142857;10,5;;Identico al del epoch 140
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;aeolian;1111;3;3;2,5;3,25;11,75;11,07142857;10;;La verdad audio prácticamente idéntico al evaluado en el epoch 140 por lo que no hay mcuha diferencia ni información para aportar
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;aeolian;2222;2,5;1,25;2;2,5;8,25;11,07142857;10;;Audio muy similar al del epoch 140, apenas cambia, las conclusioes y notas son las mismas
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;locrian;1111;2;1,25;2;1,75;7;11,07142857;6,5;;Audio en un E mayor extraño pasando por B menor y después en acordes inestables y dificilmente identificables donde se distinguen notas como una 5ª aumnetada o una 4ª aumentada. No tiene mucho sentido y es muy parecido al audio del epoch 140.
-confirm_r32_a32_lr1e-4;escucha;epoch_160_loss_0_1968;locrian;2222;1,5;1,5;1,5;1,5;6;11,07142857;6,5;;Audio muy similar al del epoch 140. Muy inestable y ligeramente peor que el audio del seed 1111
+Run,Tipo,Checkpoint,Modo,Seed,Centro_tonal_1_5,Color_modal_1_5,No_modulacion_1_5,Coherencia_1_5,Total_0_20,Prom_ckpt_total,Prom_ckpt_modo_total,Decision_ckpt,Notas
+r128_a256_d005,escucha,epoch_20_loss_0.1982,ionian,1111,5,4,5,3.5,17.5,10.7857,14.25,,"En C todo el tiempo, falta la séptima maj porque no suena en ningún momento del audio pero no está mal"
+r128_a256_d005,escucha,epoch_20_loss_0.1982,ionian,2222,3.5,3,2.5,2,11,10.7857,14.25,,"Está en F y la coherencia no es muy buena, demasiados cambios extraños"
+r128_a256_d005,escucha,epoch_20_loss_0.1982,dorian,1111,3,1,1,3,8,10.7857,9,,"Está en D mayor no en menor, progresión D-A (I-V)"
+r128_a256_d005,escucha,epoch_20_loss_0.1982,dorian,2222,2,3,3,2,10,10.7857,9,,Comienza en F# dórico pero luego se pierde y se va por las ramas
+r128_a256_d005,escucha,epoch_20_loss_0.1982,phrygian,1111,2,3,2,2,9,10.7857,8.5,,Extraño alguna traza de sonido intrigante pero pilla el Am como menor tónica no el Em
+r128_a256_d005,escucha,epoch_20_loss_0.1982,phrygian,2222,1,3,1,3,8,10.7857,8.5,,Se va de tonalidades muchos cambios de tono
+r128_a256_d005,escucha,epoch_20_loss_0.1982,lydian,1111,4,1,1,3,9,10.7857,10.25,,
+r128_a256_d005,escucha,epoch_20_loss_0.1982,lydian,2222,5,1,1,4.5,11.5,10.7857,10.25,,
+r128_a256_d005,escucha,epoch_20_loss_0.1982,mixolydian,1111,4,2,2,3,11,10.7857,9.5,,"En C Ionian, Audio muy parecido alguna variacion pq el modelo nota el otro modo pero no es bueno"
+r128_a256_d005,escucha,epoch_20_loss_0.1982,mixolydian,2222,2,3,2,1,8,10.7857,9.5,,
+r128_a256_d005,escucha,epoch_20_loss_0.1982,aeolian,1111,5,2,3,4,14,10.7857,15.5,,
+r128_a256_d005,escucha,epoch_20_loss_0.1982,aeolian,2222,5,4,4,4,17,10.7857,15.5,,
+r128_a256_d005,escucha,epoch_20_loss_0.1982,locrian,1111,3,3,2,2,10,10.7857,8.5,,
+r128_a256_d005,escucha,epoch_20_loss_0.1982,locrian,2222,1,2,3,1,7,10.7857,8.5,,
+r128_a256_d005,escucha,epoch_100_loss_0.1788,ionian,1111,3,2,2,1,8,5.8214,7.5,,"Está en C mayor pero no tiene ni pies ni cabeza, notas muy difuminadas que apenas se identifican, demasiado entrenamiento"
+r128_a256_d005,escucha,epoch_100_loss_0.1788,ionian,2222,3,2,1,1,7,5.8214,7.5,,"Este audio cambia incluso de escala de C mayor  a otra y al igual que el anterior está fuera de onda, no tiene coherencia ninguna"
+r128_a256_d005,escucha,epoch_100_loss_0.1788,dorian,1111,1,1,1,1,4,5.8214,4,,Ruido
+r128_a256_d005,escucha,epoch_100_loss_0.1788,dorian,2222,1,1,1,1,4,5.8214,4,,Ruido x2
+r128_a256_d005,escucha,epoch_100_loss_0.1788,phrygian,1111,2,1,2,2,7,5.8214,5.5,,"Es Raro pero está en mi menor, al menos es melodía salvable no como el resto de modos pero cogido muy con pinzas. Em normal, no frigio"
+r128_a256_d005,escucha,epoch_100_loss_0.1788,phrygian,2222,1,1,1,1,4,5.8214,5.5,,Está en Am y mal
+r128_a256_d005,escucha,epoch_100_loss_0.1788,lydian,1111,1,2,1,1,5,5.8214,5,,"Se escucha como la esencia del lidio pero el audio es muy malo, claramente este LoRA está sobreentrenado"
+r128_a256_d005,escucha,epoch_100_loss_0.1788,lydian,2222,1,1,2,1,5,5.8214,5,,Se pierde de la escala totalmente
+r128_a256_d005,escucha,epoch_100_loss_0.1788,mixolydian,1111,1,1,1,2,5,5.8214,4.5,,No se escucha nada de melodía y la instrumental es muy difuminada como si fuera ruido de fondo
+r128_a256_d005,escucha,epoch_100_loss_0.1788,mixolydian,2222,1,1,1,1,4,5.8214,4.5,,"Fatal, indistinguible tambien"
+r128_a256_d005,escucha,epoch_100_loss_0.1788,aeolian,1111,3.5,4,3,1,11.5,5.8214,9.75,,"Am, pero muy extraña la instrumental quizá ha ""desaprendido"" el modelo. Mete el F caracteristico. Se puede escuchar como parece que intenta meter la tercera mayor del A pero no lo consolida, por lo que se va del tono menor ligeramente."
+r128_a256_d005,escucha,epoch_100_loss_0.1788,aeolian,2222,2,3,2,1,8,5.8214,9.75,,"Audio más extraño aún, Se siente eólico pero no es muy distinguible los acordes. Demasiados epochs en esta configuración tan agresiva de LoRA para este modo"
+r128_a256_d005,escucha,epoch_100_loss_0.1788,locrian,1111,2,1,1,1,5,5.8214,4.5,,Audio indistinguible aunque se puede escuchar alguna nota de la escala pero muy mínimamente
+r128_a256_d005,escucha,epoch_100_loss_0.1788,locrian,2222,1,1,1,1,4,5.8214,4.5,,Audio deplorable
+r64_a128_d0,escucha,epoch_160_loss_0.1725,ionian,1111,2,2,3,3,10,9.375,9,,Empieza en G o C lidio pero a mitad de audio cambia la verdad que no está del todo claro
+r64_a128_d0,escucha,epoch_160_loss_0.1725,ionian,2222,2,2,1,3,8,9.375,9,,Empieza en C muy bien y luego hace un cambio de tono a un D# muy interesante no termina de sonar mal pero claramente no es jónico que es lo que se requiere en este estudio
+r64_a128_d0,escucha,epoch_160_loss_0.1725,dorian,1111,2,1,2,2.5,7.5,9.375,6.5,,"Está en D mayor, no aprende que el dórico es un modo menor"
+r64_a128_d0,escucha,epoch_160_loss_0.1725,dorian,2222,2,1,1,1.5,5.5,9.375,6.5,,"Peor que el anterior, D mayor pero la coherencia menor"
+r64_a128_d0,escucha,epoch_160_loss_0.1725,phrygian,1111,2.5,1.75,2,1.5,7.75,9.375,9.625,,Está en Em pero no da la segunda disminuida (tampoco suena la segunda a secas asi que no se puede desmentir) la coherencia es rara pero por lo menos esta en E menor
+r64_a128_d0,escucha,epoch_160_loss_0.1725,phrygian,2222,3,4,3,1.5,11.5,9.375,9.625,,"Sorprendente resultado, remarca la segunda disminuida bastante aunque la coherencia no es buena y al final cambia un poco la modulación, pero gran ejemplo!"
+r64_a128_d0,escucha,epoch_160_loss_0.1725,lydian,1111,4,1,3,3,11,9.375,10.5,,Se queda todo el rato en C pero no cambia ni pasa por la 4ª aumentada en ningún momento. No suena mal pero no identifica al modo.
+r64_a128_d0,escucha,epoch_160_loss_0.1725,lydian,2222,4,1,2.5,2.5,10,9.375,10.5,,"Igual que en el ejemplo anterior pero con un pelín de coherencia menos, intenta meter voces cuando en el prompt se le exige ""Instrumental"" (Esto pasa en muchos otros ejemplos también)."
+r64_a128_d0,escucha,epoch_160_loss_0.1725,mixolydian,1111,4,1,2,4,11,9.375,9.5,,"Está en G mayor, no mete nada de mixolidio, la coherencia es buena pero no hay nada de modo aquí"
+r64_a128_d0,escucha,epoch_160_loss_0.1725,mixolydian,2222,3,1,2,2,8,9.375,9.5,,"Mucha menos nitidez en las notas, no se sabe muy bien que esta sonando, ademas no se escucha trazas de lidio "
+r64_a128_d0,escucha,epoch_160_loss_0.1725,aeolian,1111,4.5,2.5,4,4,15,9.375,13.25,,"Buen ejemplo, se mantiene en Am, buena coherencia, alguna disonancia en el ritmo pero a nivel melódico bien. Falta la 6 menor característica del eólico pero por el resto bien."
+r64_a128_d0,escucha,epoch_160_loss_0.1725,aeolian,2222,3.5,2,3,3,11.5,9.375,13.25,,"Peor que el anterior, audio más extraño en Am pero tampoco juega con la 6 menor"
+r64_a128_d0,escucha,epoch_160_loss_0.1725,locrian,1111,2,2,2,2,8,9.375,7.25,,Poca melodía muy dificil de distinguir
+r64_a128_d0,escucha,epoch_160_loss_0.1725,locrian,2222,1.5,1,2,2,6.5,9.375,7.25,,"Dificil de distinguir tambien, ademas empieza en la tercera mayor de B por lo que el B disminuido no se cumple"
+r64_a128_d0,escucha,epoch_180_loss_0.1748,ionian,1111,3,3.5,2.5,2.5,11.5,9.2857,10.25,,Se desvía hacia un G mayor en algunos tramos (al principio y al final) y en algún momento pierde coherencia el ritmo de la canción pero C está presente gran parte del audio
+r64_a128_d0,escucha,epoch_180_loss_0.1748,ionian,2222,2,3,2,2,9,9.2857,10.25,,Comienza muy bien a gran nivel pero mete un G# con el que se va de la tonalidad y empieza a derivar a otra escala empeorando la coherencia.
+r64_a128_d0,escucha,epoch_180_loss_0.1748,dorian,1111,2.5,1,3,4,10.5,9.2857,9,,"Otra vez en D mayor, no termina de entender que es menor"
+r64_a128_d0,escucha,epoch_180_loss_0.1748,dorian,2222,2.5,1,2,2,7.5,9.2857,9,,
+r64_a128_d0,escucha,epoch_180_loss_0.1748,phrygian,1111,1,1.5,1.5,1,5,9.2857,8.375,,"Audio bastante escandaloso y poco informatuvo, no tiene mucho sentido, está en Em pero repite constantemente la 5ª y la 3ª menor por lo que no hay informacion de que este en frigio"
+r64_a128_d0,escucha,epoch_180_loss_0.1748,phrygian,2222,3.5,3.75,3,1.5,11.75,9.2857,8.375,,"Un ejemplo bastante esperanzador, se escucha la segunda disminuida en algunas ocasiones, aunque la coherencia brilla por su ausencia pero el modo frigio parece que si lo detecta"
+r64_a128_d0,escucha,epoch_180_loss_0.1748,lydian,1111,3,2,1.5,2,8.5,9.2857,8.5,,"Lo hace en G natural, no juega con la 4ª aumentada. "
+r64_a128_d0,escucha,epoch_180_loss_0.1748,lydian,2222,3,1.5,1.5,2.5,8.5,9.2857,8.5,,"Igual que antes, lo hace en G natural, no utiliza la 4ª aumentada"
+r64_a128_d0,escucha,epoch_180_loss_0.1748,mixolydian,1111,3,2.5,2.5,3,11,9.2857,10.25,,Hace G - Am - D y la tónica del La puede cuadrar con la 3ª mayor del F porque no está muy marcado el acorde pero no es mixolidio
+r64_a128_d0,escucha,epoch_180_loss_0.1748,mixolydian,2222,3.5,1,1,4,9.5,9.2857,10.25,,"Está en G natural, claramente enfatiza esa 7ª mayor pero el audio en cuanto a coherencia está muy bien"
+r64_a128_d0,escucha,epoch_180_loss_0.1748,aeolian,1111,2.5,2,3,4,11.5,9.2857,10.75,,"Juega con la 3ª mayor de A, cambiando de A - Am - F - G. La coherencia es buena y podria ser una buena progresión (Under the bridge - RHCP) pero no es lo que se busca"
+r64_a128_d0,escucha,epoch_180_loss_0.1748,aeolian,2222,3,2,2,3,10,9.2857,10.75,,"Un poco difuminado la nitidez de las notas lo que hace más dificil la identificación del modo. Además, mete la 4ª aumentada y hace cambios de acordes un tanto extraño fuera de lugar."
+r64_a128_d0,escucha,epoch_180_loss_0.1748,locrian,1111,1.5,1,1.5,3.75,7.75,9.2857,7.875,,El audio está en C#m pasando por B mayor por lo que no tiene mucho de locrio
+r64_a128_d0,escucha,epoch_180_loss_0.1748,locrian,2222,3,1,1,3,8,9.2857,7.875,,"Audio bueno,  coherente pero no tiene nada de locrio, progresion típica ""Tipo T"""
+r64_a128_d0,escucha,epoch_80_loss_0.1921,ionian,1111,4,4.5,4,3.5,16,9.5714,12.5,,
+r64_a128_d0,escucha,epoch_80_loss_0.1921,ionian,2222,2,2,3,2,9,9.5714,12.5,,Especie de jazz extraño con ddemasiados cambios de tonalidad que hace muy dificil de seguir el adio
+r64_a128_d0,escucha,epoch_80_loss_0.1921,dorian,1111,2,1,1.5,3,7.5,9.5714,7,,Sigue sin captar que el D dórico es un modo menor.
+r64_a128_d0,escucha,epoch_80_loss_0.1921,dorian,2222,2,1,1,2.5,6.5,9.5714,7,,Audio con coherencia pero en A utilizando D mayor.
+r64_a128_d0,escucha,epoch_80_loss_0.1921,phrygian,1111,4,1,3,2,10,9.5714,11.625,,Está en Em y se mantiene muy bien ahí pero mete la segunda natural a lo largo de todo el audio
+r64_a128_d0,escucha,epoch_80_loss_0.1921,phrygian,2222,4,3.5,2.75,3,13.25,9.5714,11.625,,"Buen ejemplo, jugando con la 6ª menor aunque no se llega a distinguir muy bien si se utiliza la 2 natural o la 2ª menor, pero la sonoridad parece frigia."
+r64_a128_d0,escucha,epoch_80_loss_0.1921,lydian,1111,3.75,3.75,2,4,13.5,9.5714,11.875,,"Comienza con un F remarcando la 4ª aumentada, sin duda el mejor modelo hasta ahora en lidio."
+r64_a128_d0,escucha,epoch_80_loss_0.1921,lydian,2222,1.5,3.75,3,2,10.25,9.5714,11.875,,"Ha hecho un cambio de F a B disminuido precioso remarcando el bajo en la 4ª aumentada, sin embargo era un poco diverso el audio mezclando muchas sonoridades y la nitidez de las notas no era destacable"
+r64_a128_d0,escucha,epoch_80_loss_0.1921,mixolydian,1111,3,1,1.5,3,8.5,9.5714,7.25,,"Buen audio pero no tiene nada de mixolidio, cambia de G a Am en g natural, no mete la 7ª menor en ningun momento"
+r64_a128_d0,escucha,epoch_80_loss_0.1921,mixolydian,2222,1.5,1,2,1.5,6,9.5714,7.25,,"Ejemplo bastante malo, notas totalmente fuera de la escala y una progresión de acordes que no sigue ninguna estructura ni corresponde con nada de un G mixolidio"
+r64_a128_d0,escucha,epoch_80_loss_0.1921,aeolian,1111,3,1.5,2.5,3,10,9.5714,9.75,,"Audio coherente pero no juega con la 6ª menor del eólico, ha habido ejemplos bastante mejores de eólico en otros checkpoints "
+r64_a128_d0,escucha,epoch_80_loss_0.1921,aeolian,2222,2,3,3,1.5,9.5,9.5714,9.75,,"Menor coherencia pero se puede escuchar en alguna ocasión algo de la 6ª menor, sin embargo no es un gran ejemplo ya uqe se pierde en cuanto a tempo y desvaría de la escala de Am"
+r64_a128_d0,escucha,epoch_80_loss_0.1921,locrian,1111,2.5,1,1,3,7.5,9.5714,7,,"No tiene nada de locrio, audio parecido al de ionian seed 1111 sin distinción de locrio de ningun tipo"
+r64_a128_d0,escucha,epoch_80_loss_0.1921,locrian,2222,1,2,2,1.5,6.5,9.5714,7,,"Se escucha como si se mezclaran dos audios distintos, sin embargo hay muchos cambios de tono y en alguno, suena la 5ª disminuida"
+r64_a128_d005,escucha,epoch_160_loss_0.1766,ionian,1111,1.5,2,1.5,1,6,5.0909,5,,Rudio tambien
+r64_a128_d005,escucha,epoch_160_loss_0.1766,ionian,2222,1,1,1,1,4,5.0909,5,,Ruido
+r64_a128_d005,escucha,epoch_160_loss_0.1766,dorian,1111,1,1,1,1,4,5.0909,4,,Ruido
+r64_a128_d005,escucha,epoch_160_loss_0.1766,dorian,2222,1,1,1,1,4,5.0909,4,,Ruido x2
+r64_a128_d005,escucha,epoch_160_loss_0.1766,phrygian,1111,2.5,1,1,1,5.5,5.0909,5.25,,Mi mayor y audio muy poco coherente
+r64_a128_d005,escucha,epoch_160_loss_0.1766,phrygian,2222,2,1,1,1,5,5.0909,5.25,,Audio horroroso en mi mayor
+r64_a128_d005,escucha,epoch_160_loss_0.1766,mixolydian,1111,2.5,1,1,1,5.5,5.0909,5.5,,No aparece la 7ª menor
+r64_a128_d005,escucha,epoch_160_loss_0.1766,aeolian,1111,1.5,3.5,2.5,1.5,9,5.0909,7,,Audio muy ilegible pero se escucha que esta en la menor y la 6 menor se detecta tambien
+r64_a128_d005,escucha,epoch_160_loss_0.1766,aeolian,2222,1,1.5,1.5,1,5,5.0909,7,,"Mucho ruido, mas ileglible que el anterior"
+r64_a128_d005,escucha,epoch_160_loss_0.1766,locrian,1111,1,1,1,1,4,5.0909,4,,Rudio
+r64_a128_d005,escucha,epoch_160_loss_0.1766,locrian,2222,1,1,1,1,4,5.0909,4,,Ruido
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,ionian,1111,3.5,4,4,4,15.5,12.4107,17.75,,"Buen audio, muy coherente, aunque al principio comienza con un G mayor, en seguida te das cuenta de que realemnte es un V grado y esta en C mayor."
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,ionian,2222,5,5,5,5,20,12.4107,17.75,,"Muy buen ejemplo, modo jónico perfecto"
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,dorian,1111,3,1,4,5,13,12.4107,11.75,,"Muy bonito el adio, calidad en la instrumental pero está en D mayor, sigue sin captar el menor este modo"
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,dorian,2222,2.5,1,3,4,10.5,12.4107,11.75,,"Hay un cambio de acorde extraño pero la calidad y coherencia del aduio es sorprendente, aun asi no ha detectado que es un modo menor y está en D mayor"
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,phrygian,1111,4,1,2.5,4.5,12,12.4107,11,,"E mayor, no capta el menor Aún así buen audio"
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,phrygian,2222,4,1,1,4,10,12.4107,11,,"E mayor, no capta el menor Aún así buen audio"
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,lydian,1111,5,5,3,5,18,12.4107,15.5,,"Increible audio en lidio, Cambia de F a G, pasando por Em (no tan típico pero correcto), Es verdad que al final resuelve en C pero lo anterior esel mejor audio en lidio hasta ahora"
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,lydian,2222,4.5,2,2,4.5,13,12.4107,15.5,,"Buen audio en cuanto a calidad, pero esta en F major normal, al principio si que suena a lidio pero en seguida cambia y se pierde la cuarta aumentada."
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,mixolydian,1111,4,1.5,2.5,4,12,12.4107,12,,"Suena la 7ª mayor de sol, no cae en el modo mixolidio pero audio muy bueno, gran salto de calidad respecto a los otros LoRA"
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,mixolydian,2222,4,1,3,4,12,12.4107,12,,"Audio bueno pero no está en G mixolidio, está en C, todo recae en C"
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,aeolian,1111,3,2,3,4.5,12.5,12.4107,11.375,,"Buen audio, juega con Am pero desde G, por lo que la 6ª no es menor"
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,aeolian,2222,2.5,1.75,2.5,3.5,10.25,12.4107,11.375,,"La 6ª vuelve a ser mayor pero la calidad del audio y lso cambios de acordes son sorprendentes, fuera de lo comun y suenan bien"
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,locrian,1111,2,2.75,2,1.75,8.5,12.4107,7.5,,"El audio está en E mayor pero cambia bastante de tonalidad, sin embargo en algunos puntos juega con B y su 2ª menor lo cual es bastante sorprendente y puede que esté cogiendo algo del modo locrio"
+r64_a128_d005_lr5e-5,escucha,epoch_100_loss_0.1965,locrian,2222,1,2,2,1.5,6.5,12.4107,7.5,,"Peor audio que el anterior, menos coherente y más diverso "
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,ionian,1111,4.5,2,2,4.5,13,10.3393,13.75,,"G - F - C, pero recae constantemente en G y suena la 7ª mayor de G/ cuarta aumentada de C, lo cual hace que no sea jónico."
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,ionian,2222,3.5,4,4,3,14.5,10.3393,13.75,,"Audio menos coherente pero en C jónico, auqneu los acordes no estén del todo marcados, la melodía se basa en C jónico"
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,dorian,1111,3.5,1,2,3,9.5,10.3393,9.5,,Buen audio pero está en D mayor de nuevo
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,dorian,2222,3,1,2,3.5,9.5,10.3393,9.5,,"Buen audio igual, calidad de sonido pero está en D mayor"
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,phrygian,1111,4,1,1,4,10,10.3393,9.75,,"Audio en E mayor, Progresión E - B - A comun. Nada de menor ui de frigio mucho menos"
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,phrygian,2222,3.5,1,1,4,9.5,10.3393,9.75,,"Otra vez, audio en E mayor."
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,lydian,1111,2,4,4,2.5,12.5,10.3393,10.25,,"Buen audio pero quizá está sobreentrenado, a veces se escucha progresión lidia F -G pero se pierde un poco y cambia a otras cosas distintas perdiendo coherencia"
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,lydian,2222,2,2,2,2,8,10.3393,10.25,,
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,mixolydian,1111,4,3,1.5,4,12.5,10.3393,11.75,,"Progresión G - F, pero resuelve repetidas veces en C lo cual hace que pierda esa sonoridad mixolidia, sin embargo juega con la 7ª menor de G y se pueden conseguir resultados coherentes"
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,mixolydian,2222,4,1,2,4,11,10.3393,11.75,,Progresión G - D y sonando en repetidas ocasiones la 7ª mayor de sol
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,aeolian,1111,3.75,1.5,2,2.5,9.75,10.3393,9.125,,"Comienza con Am pero el problema es que está en G, ya que pasa por D, V grado"
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,aeolian,2222,1.5,2,3,2,8.5,10.3393,9.125,,"Audio peor, no guarda mucha relación con el modo Eólico a pesar de contener y empezar en Am ambos. Cambios de acordes extraños e incoherentes"
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,locrian,1111,2,1,2,3.5,8.5,10.3393,8.25,,"Está en Mi mayor y juega con una 5ª aumentada, claramente no capta el modo locrio."
+r64_a128_d005_lr5e-5,escucha,epoch_160_loss_0.1952,locrian,2222,2,2,2,2,8,10.3393,8.25,,Este audio está en F#m  y cambia a B mayor metiendo la nota C de ve en cuando para dar tensión pero la coherencia es rara y no comprende que B tiene que ser la raiz de la cancion 
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,ionian,1111,3.5,2.5,3,4,13,9.9643,13.625,,"Recae todo en G mayor aunque la progresion sea G - F - C y el ultimo acorde resuelve en C mayor, sin embargo no capta que tiene que caer en C siempre"
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,ionian,2222,4,3.75,2.5,4,14.25,9.9643,13.625,,"Audio en C - F, no recalca la 7ª mayor pero caen muchos fraseos en C, haciendo entender que es C jónico. Audio con gran coherencia"
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,dorian,1111,2,1,2,3,8,9.9643,7.75,,"Audio en D mayor, sin embargo la coherencia es buena pero no hace caso al prompt de D dorian"
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,dorian,2222,2,1,1,3.5,7.5,9.9643,7.75,,"Otro audio en D mayor, con mejor coherencia pero sin captar la esencia del dórico"
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,phrygian,1111,4,1.5,1,4,10.5,9.9643,11.25,,"Audio en E mayor, sin embargo, a veces mete la 6 menor y por ello he puesto un 1,5 de calificación de color modal."
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,phrygian,2222,4,1,3,4,12,9.9643,11.25,,Quiza el audio más bonito y de gran calidad del estudio. Sin embargo en E mayor y no tiene nada de frigio.
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,lydian,1111,4,4,3.75,3.5,15.25,9.9643,10.625,,"Gran audio en lidio, resuelve en C al final del todo pero durante el resto va progresando sobre F - G, pasando por algun acorde mas como Am, Em con buen criterio y coherencia"
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,lydian,2222,1,1.5,2,1.5,6,9.9643,10.625,,"Ejemplo bastante malo, nada de coherencia y muy dificil de seguir, cambios muy bruscos de tonalidad y no hay apenas indicios de modo lidio"
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,mixolydian,1111,4,2.75,2.5,3.5,12.75,9.9643,11.625,,"Buen ejemplo, cambia entre G - F - C, con lo que mete la 7ª mayor al meter el C pero con F se puede escuchar un poco de G mixolidio aunque predomina el G natural"
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,mixolydian,2222,3,2,3,2.5,10.5,9.9643,11.625,,"No es mal ejemplo, pero suena la 7ª mayor de G en varias ocasiones aunque en otras se intuye la 7ª menor, de nota que la coherencia es menor."
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,aeolian,1111,2,2,2,2,8,9.9643,7.625,,"Audio en E menor algo inestable, mete un la menor como acorde pero la sexta no es disminudia ya que cuenta con la 2ª de mi menor (que euivale a la sexta aumentada de Lam)"
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,aeolian,2222,2,1.5,2,1.75,7.25,9.9643,7.625,,"Audio similar al anterior pero algo más inestable e incoherente metiendo ademas la 7ª mayor de Lam, sin estar ni siquiera en Lam (Está en Em en gran parte del audio)"
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,locrian,1111,2.5,1,3,1.5,8,9.9643,7.25,,"En E mayor, pasanmdo por B menor pero no es una progresión de locrio,  además la coherencia no es buena y no contiene ninguna nota característica del modo"
+r64_a128_d005_lr5e-5,escucha,epoch_140_loss_0.1960,locrian,2222,1.5,2,2,1,6.5,9.9643,7.25,,Parece que en este audio alguna nota característuca del locrio sí suena pero es muy inestable y cambiante cada acorde. En momentos está en locrio como que cambia a otra tonalidad completamente distinta. No termina de consolidar.
+RUN_D,escucha,epoch_40_loss_0.8457,ionian,1111,4.5,4.5,3.5,4,16.5,10.1964,17.25,,"Muy buen ejemplo de C jónico, En C natural cambiando a F y G y melodía sobre C jónico"
+RUN_D,escucha,epoch_40_loss_0.8457,ionian,2222,5,4.5,4,4.5,18,10.1964,17.25,,"Buen ejemplo, bastante coherente con el prompt de jazz-fusion y melodía muy dentro de C jónico con C y F como acordes principales"
+RUN_D,escucha,epoch_40_loss_0.8457,dorian,1111,1.5,1,2,3.75,8.25,10.1964,7.375,,"Sigue sin captar el D menor, lo hace en D mayor."
+RUN_D,escucha,epoch_40_loss_0.8457,dorian,2222,1.5,1,2,2,6.5,10.1964,7.375,,"Audio mucho menos coherente, inestable y parece que en D mayor pero no se distingue muy bien"
+RUN_D,escucha,epoch_40_loss_0.8457,phrygian,1111,2,1,2,1.5,6.5,10.1964,6,,"E mayor aunque se distorsiona un poco, no se si porque necesita más epochs pero pinta a que esta modificandose, aun asi de momento es E mayor"
+RUN_D,escucha,epoch_40_loss_0.8457,phrygian,2222,2,1,1,1.5,5.5,10.1964,6,,"E mayor también, audio inestable y poca cordura"
+RUN_D,escucha,epoch_40_loss_0.8457,lydian,1111,3.5,2,2,3.5,11,10.1964,10.75,,"Está en C jónico, a veces se escucha el paso de F a G pero no es lo que se espera de un audio lidio, quizá con más epochs se pueden lograr mejores resultados"
+RUN_D,escucha,epoch_40_loss_0.8457,lydian,2222,3.5,1.5,1.5,4,10.5,10.1964,10.75,,"Audio en F natura, no en F lidio. Ademas cambia bastante a C mayor por lo que la modulacion es baja"
+RUN_D,escucha,epoch_40_loss_0.8457,mixolydian,1111,4,2,1,3,10,10.1964,12.25,,"Buen audio, se escuchan trazas de mixolidio pero mayoritariamente es la 7ª mayor de G la que predomina"
+RUN_D,escucha,epoch_40_loss_0.8457,mixolydian,2222,4,3.5,3,4,14.5,10.1964,12.25,,Buen aduio en G mixolidio acorde con el prompt. Se escucha de vez en cuando la 7ª menor como las frases acaban ahí en el principio del audio.
+RUN_D,escucha,epoch_40_loss_0.8457,aeolian,1111,2,2.5,3,3,10.5,10.1964,11.25,,"Audio un tanto extraño, aunque hay que admitir que hay partes que suena bien y está en lam pero no es muy remarcado, se confunde con Em muchas veces y tocar alguna nota de Lam a veces suena mal"
+RUN_D,escucha,epoch_40_loss_0.8457,aeolian,2222,3.5,3.5,3,2,12,10.1964,11.25,,La coherencia no es la mejor pero si que está en Am eólico por lo que es un avance
+RUN_D,escucha,epoch_40_loss_0.8457,locrian,1111,2,2,2,1.5,7.5,10.1964,6.5,,"No está del todo mal, suena alguna quinta natural y es bastante inestable el audio pero porque el locrio es inestable en si. Se puede escuchar algun acorde perteneciente a B locrio pero hay muchos desvarios y todavia hay mucho margen."
+RUN_D,escucha,epoch_40_loss_0.8457,locrian,2222,1.5,1.5,1,1.5,5.5,10.1964,6.5,,Menos parecido al locrio pero quiza mas agradable al oido. Sin embargo todavia esta lejos de ser una progresion y un audio en locrio
+RUN_D,escucha,epoch_100_loss_0.8379,ionian,1111,4.5,4,3.75,4,16.25,10.4808,17.375,,"Buen audio, cambiando de G - F - C marcando la 7ª mayor y finalizando fraseos en c mayor"
+RUN_D,escucha,epoch_100_loss_0.8379,ionian,2222,4.5,4.5,4.5,5,18.5,10.4808,17.375,,"Buen ejemplo, bastante coherente con el prompt de jazz-fusion y melodía muy dentro de C jónico con C y F como acordes principales"
+RUN_D,escucha,epoch_100_loss_0.8379,dorian,1111,4,1,2,4,11,10.4808,9,,"Buen audio pero el D mayor, no hay manera de que mejore"
+RUN_D,escucha,epoch_100_loss_0.8379,dorian,2222,2,1,2,2,7,10.4808,9,,"No tiene mucho sentido este audio, no se sabe en que tonalidad esta"
+RUN_D,escucha,epoch_100_loss_0.8379,phrygian,1111,2,1,2,1.5,6.5,10.4808,6,,"E mayor aunque se distorsiona un poco, no se si porque necesita más epochs pero pinta a que esta modificandose, aun asi de momento es E mayor"
+RUN_D,escucha,epoch_100_loss_0.8379,phrygian,2222,2,1,1,1.5,5.5,10.4808,6,,"E mayor también, audio inestable y poca cordura"
+RUN_D,escucha,epoch_100_loss_0.8379,lydian,1111,3.5,2,2,3.5,11,10.4808,10.75,,"Está en C jónico, a veces se escucha el paso de F a G pero no es lo que se espera de un audio lidio, quizá con más epochs se pueden lograr mejores resultados"
+RUN_D,escucha,epoch_100_loss_0.8379,lydian,2222,3.5,1.5,1.5,4,10.5,10.4808,10.75,,"Audio en F natura, no en F lidio. Ademas cambia bastante a C mayor por lo que la modulacion es baja"
+RUN_D,escucha,epoch_100_loss_0.8379,mixolydian,1111,4,2,1,3,10,10.4808,12.25,,"Buen audio, se escuchan trazas de mixolidio pero mayoritariamente es la 7ª mayor de G la que predomina"
+RUN_D,escucha,epoch_100_loss_0.8379,mixolydian,2222,4,3.5,3,4,14.5,10.4808,12.25,,Buen aduio en G mixolidio acorde con el prompt. Se escucha de vez en cuando la 7ª menor como las frases acaban ahí en el principio del audio.
+RUN_D,escucha,epoch_100_loss_0.8379,aeolian,2222,4,2.5,3,3,12.5,10.4808,12.5,,En Am pero con 
+RUN_D,escucha,epoch_100_loss_0.8379,locrian,1111,2,1.5,2,1.5,7,10.4808,6.5,,"Audio un poco malo en cuanto a sonoridad, poco diferenciable y con alguna nota que no tiene nada que ver con B locrio"
+RUN_D,escucha,epoch_100_loss_0.8379,locrian,2222,2,1,2,1,6,10.4808,6.5,,Muy raro el audio
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,ionian,1111,4.5,4.5,4,4,17,10.5179,16.5,,"Muy buen ejemplo, el bajo pasando por gran cantidad de notas de C jónico mientras suena un C mayor pasando por F omo instrumental y melodía en C jónico"
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,ionian,2222,4,4,4,4,16,10.5179,16.5,,"Buen ejemplo, quizá el más diferente hasta ahora de los jónicos, está en C jónico a pesar de no estar indicada la tonalidad en el prompt"
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,dorian,1111,3,1,2,3.5,9.5,10.5179,7.75,,"Sigue sin captar el D menor, lo hace en D mayor."
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,dorian,2222,1.5,1,2,1.5,6,10.5179,7.75,,"Audio mucho menos coherente, inestable y parece que en D mayor pero no se distingue muy bien"
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,phrygian,1111,3,1.75,2,2,8.75,10.5179,8.625,,"E mayor, sin embargo en algun fragmento se oye disonancia con la segunda menor pero es muy poco, no es frigio"
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,phrygian,2222,3,1,2,2.5,8.5,10.5179,8.625,,"E mayor y encima juega con la 7ª mayor de E, dando a entender que no tiene nada de frigio, sino que es E jónico."
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,lydian,1111,3.5,2,2,3.5,11,10.5179,9.5,,"No es un gran audio en lidio, mucho que desear, parece C jónico mas que otra cosa y alguna nota se escucha extraña"
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,lydian,2222,3,1.5,1.5,2,8,10.5179,9.5,,En F natural pero a veces mete la 3 menor y poco coherente
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,mixolydian,1111,4.5,4,2,4,14.5,10.5179,14,,Buen audio pero pasa a menudo por el C mayor cuando cambia entre F y G lo que hace que pierda un poco la esencia del modo pero por lo gnereal muy bien
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,mixolydian,2222,4,4,2,3.5,13.5,10.5179,14,,"Muy similar al audio anterior pero un pelin menos coherente, sigue pasando por C pero las notas son las correctas en G mixolidio"
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,aeolian,1111,3,2.5,2,3.5,11,10.5179,11.5,,"Ahora lo está haciendo en Em bastante claro, se escapa alguna nota pero por lo general bastante bien aunque juega con el G mayor en más de alguna ocasión lo cual le quita sonido modal y es tendencia de la musica tonal"
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,aeolian,2222,3.5,3.5,3,2,12,10.5179,11.5,,
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,locrian,1111,2,1.5,1.5,1.5,6.5,10.5179,5.75,,"Audio Inestable aunque no incoherente del todo, sin embargo está en una especie de B mayor con alguna nota extraña difícil de identificar. No es locrio."
+Prompt solo modo + instrumento,escucha,epoch_80_loss_0.8378,locrian,2222,1,1.5,1.5,1,5,10.5179,5.75,,"Difícil de evaluar, muchos cambios de tonalidad aunque no es mala la coherencia"
+Prompt solo modo,escucha,epoch_100_loss_0.8379,ionian,1111,5,4,2,4.5,15.5,10.7857,16.25,,"Buen audio, finaliza en C mayor y todo basa en torno a ese C, pero cambia constantemente de C a G (relación I -V), no está mal pq es el modo jónico pero estaría mejor un poco de variedad."
+Prompt solo modo,escucha,epoch_100_loss_0.8379,ionian,2222,5,4,4,4,17,10.7857,16.25,,"Aquí modifica más entre acordes,  metiendo F y Am, mucho más completo y buen ejemplo"
+Prompt solo modo,escucha,epoch_100_loss_0.8379,dorian,1111,4,4,2,2.5,12.5,10.7857,9.75,,"Gran diferencia, el audio está en E dórico, coge muy bien la relación de Em - A (contiene la 6ª mayor), pero pasa a menudo por D mayor haciendo que suene a mñusica tonal más que modal. Sin embargo, el mejor audio del estudio en dórico"
+Prompt solo modo,escucha,epoch_100_loss_0.8379,dorian,2222,1.5,2,2,1.5,7,10.7857,9.75,,"Audio un tanto ilegible, dificil de detectar algo coherente"
+Prompt solo modo,escucha,epoch_100_loss_0.8379,phrygian,1111,3.5,2,2,2,9.5,10.7857,9.5,,"El audio está en E mayor, pasa a B ayor y cuando va al A, parece que mete una 6ª bemol muy sutil haciendo disonancia."
+Prompt solo modo,escucha,epoch_100_loss_0.8379,phrygian,2222,2.5,2,2,3,9.5,10.7857,9.5,,"E mayor también, itera entre E y Am lo cual hace que tambien parezca la 6 bemol pero está en mayor y no suena la segunda bemol."
+Prompt solo modo,escucha,epoch_100_loss_0.8379,lydian,1111,4,3.75,4,4,15.75,10.7857,12.625,,"Comienza con  F suspendido en la cuarta aumentada sonido muy lidio y pasa a G (EXCELENTE), sin embargo resuelve en C el final del audio pero el resto es bastante bueno"
+Prompt solo modo,escucha,epoch_100_loss_0.8379,lydian,2222,2,2,2,3.5,9.5,10.7857,12.625,,"Audio en F mixolidio, Comienza con F y cambia a Eb con esa sonoridad mixolidia "
+Prompt solo modo,escucha,epoch_100_loss_0.8379,mixolydian,1111,3.5,3.75,3,3,13.25,10.7857,10.375,,Audio en G mixolidio aunque al final varía un poco y 
+Prompt solo modo,escucha,epoch_100_loss_0.8379,mixolydian,2222,2,1.5,2,2,7.5,10.7857,10.375,,Audio que parece que itera sobre C y Dm7 o F pero que no juega con el mixolidio mucho
+Prompt solo modo,escucha,epoch_100_loss_0.8379,aeolian,1111,3,3,3,3.5,12.5,10.7857,10.5,,Resuelve en Cmaj7 pero el audio está en Am aunque no suena la 6 menor en ningun momento. Identifica bien y es estable el audio pese a una 5ª disminuida fuera de lugar en un momento puntual
+Prompt solo modo,escucha,epoch_100_loss_0.8379,aeolian,2222,2,1.5,3,2,8.5,10.7857,10.5,,"Audio un tanto exxtraño en Am con su 5ª disminuida, ha debido de confundir durante el entrenamiento algo con esa nota. Deberia ser un tono más (6ª menor)"
+Prompt solo modo,escucha,epoch_100_loss_0.8379,locrian,1111,1,2,2,1.5,6.5,10.7857,6.5,,"Audio dificil de evaluar, poca cordura y coherencia "
+Prompt solo modo,escucha,epoch_100_loss_0.8379,locrian,2222,1,2,2,1.5,6.5,10.7857,6.5,,Me chirría qe mezcle alguna tercera mayor y tantos cambios de tono hace my complicado evaluar el audio
+Exp_01,escucha,epoch_40_loss_0.5428,ionian,1111,3,2,2,2.5,9.5,8.3036,7.625,,"Audio muy parecido al eólico, esta en Em pero a mitad cambia a G mayor. Sin embargo, el ultimo acorde de la progresion es un acorde un tanto extrañoñ que no he logrado identificar "
+Exp_01,escucha,epoch_40_loss_0.5428,ionian,2222,1.5,1.25,1.5,1.5,5.75,8.3036,7.625,,"Audio muy incoherente, extraño y sin sonoridad jónica por ningún lado"
+Exp_01,escucha,epoch_40_loss_0.5428,dorian,1111,3,1.5,2,1.75,8.25,8.3036,7.375,,"Ejemplo bastante malo, es verdad que está en E menor al menos pero tiene la 6ª menor la cual es precisamente la nota caracteristica del eólico y no del dórico"
+Exp_01,escucha,epoch_40_loss_0.5428,dorian,2222,2.5,1,2,1,6.5,8.3036,7.375,,"Mal ejemplo, no juega con la 6 aumentada y la coherencia es pésima"
+Exp_01,escucha,epoch_40_loss_0.5428,phrygian,1111,3,2,2,2,9,8.3036,9.25,,"En mi menor pero con la 2ª natural, por lo que no cumple con el frigio. Sin embargo la coherencia no es mala y es bastante en E menor salvo al final que realiza un cambio de tono"
+Exp_01,escucha,epoch_40_loss_0.5428,phrygian,2222,2.5,2,2,3,9.5,8.3036,9.25,,"Gran parte del audio está en Am eólico, sin embargo al final se puede escuhar una 2ª disminuida la cual hace un poco la sonoridad frigia"
+Exp_01,escucha,epoch_40_loss_0.5428,lydian,1111,3.5,1,2,3,9.5,8.3036,8,,
+Exp_01,escucha,epoch_40_loss_0.5428,lydian,2222,2,1,2,1.5,6.5,8.3036,8,,"Am-F5ªb El audio es inestable a mas no poder, de hehcho podria asemejarse mas al locrio que el propio audio locrio. No tiene ningun destello de la 4ª aumentada del lidio."
+Exp_01,escucha,epoch_40_loss_0.5428,mixolydian,1111,3.5,2.5,2,3.75,11.75,8.3036,9.125,,"Es interante, porque la melodía recae constantemente en Gª (5ª grado de C), sin embargo los acordes no siguen una progresión de mixolidio sino que es progresión tonal pero estable en C."
+Exp_01,escucha,epoch_40_loss_0.5428,mixolydian,2222,1.5,1,2.5,1.5,6.5,8.3036,9.125,,"Está en menor, parecido al locrio, no tiene signos de la 7ª dominante del mixolidio."
+Exp_01,escucha,epoch_40_loss_0.5428,aeolian,1111,3,3.75,3.5,2.5,12.75,8.3036,10.75,,Está en E eólico y se nota la 6 menor en algun que otro momento lo cual indica gran comprensión del modo eólico
+Exp_01,escucha,epoch_40_loss_0.5428,aeolian,2222,2,2.5,3,1.25,8.75,8.3036,10.75,,"Está en A eólico, al principio suena alguna 6 menor pero la coherencia es bastante mala pero va por buen camino"
+Exp_01,escucha,epoch_40_loss_0.5428,locrian,1111,2,1.5,1.25,1.5,6.25,8.3036,6,,"Se detecta cierta inestabilidad caracteristica del locrio pero los intervalos no tienen nada que ver, quintas naturales e incluso 3ª mayor en algun momento. Ademas hay como un ca,bio de tonalidad a mitad de audio."
+Exp_01,escucha,epoch_40_loss_0.5428,locrian,2222,1.5,1.5,1.5,1.25,5.75,8.3036,6,,"Audio bastante inestable, se nota menos coherencia que el anterior en cuanto a ritmpo y fluidez. En cuanto a la sonoridad, se escuchan cambios cromáticos entre notas y se nota que quiere hacer cosas diferentes el modelo pero no son exactamente los intervalos y las notas del locrio"
+Exp_01,escucha,epoch_80_loss_0.5770,ionian,1111,3,2,2,2.5,9.5,8.4821,8.25,,"Probablemente de los peores hasta ahora en cuanto a jónico. Está en Em natural, es verdad que pasado mitad del audio cambia a G mayor y es G jónico pero comienza menor total."
+Exp_01,escucha,epoch_80_loss_0.5770,ionian,2222,2.75,1,2,1.25,7,8.4821,8.25,,"Está en Am frigio bastante claro, no solo está en menor sino que además juega con la 2ª disminuida por lo que mal ejemplo"
+Exp_01,escucha,epoch_80_loss_0.5770,dorian,1111,2,1,1.5,3,7.5,8.4821,7.25,,"Audio coherente, pero no juega con nada del dórico, está en Em eólico, no mete la 6ª ni natural ni aumentada. Ademas la progresion juega mucho con la sonoridad tonal."
+Exp_01,escucha,epoch_80_loss_0.5770,dorian,2222,2.5,1,2,1.5,7,8.4821,7.25,,"Otra vez un audio bastante similar a un audio en frigio, poca presencia del dórico, la 2ª aumentada tiene mucha fuerza"
+Exp_01,escucha,epoch_80_loss_0.5770,phrygian,1111,2,1.5,2,3,8.5,8.4821,9.375,,Audio coherente pero no tiene nada que ver con el frigio. Esta en E eólico
+Exp_01,escucha,epoch_80_loss_0.5770,phrygian,2222,2,3.25,3.5,1.5,10.25,8.4821,9.375,,La coherencia es terrible pero es un audio que altera de Am-A# con hincapié en la 2ª disminuida de A
+Exp_01,escucha,epoch_80_loss_0.5770,lydian,1111,3,1,1,2.5,7.5,8.4821,7,,"Audio coherente pero en Em, a mitad cambia a G mayor y no tiene buenos resultados"
+Exp_01,escucha,epoch_80_loss_0.5770,lydian,2222,2,1,2,1.5,6.5,8.4821,7,,Menos coherente que la otra semilla y ademas no contiene nada de dorico esta en menor pero en natural y una progresion de Am-A#
+Exp_01,escucha,epoch_80_loss_0.5770,mixolydian,1111,3,1,2,2.5,8.5,8.4821,8.125,,"Audio en Em sin ningun signo de Mixolidio, a mitad cambia a G jonico"
+Exp_01,escucha,epoch_80_loss_0.5770,mixolydian,2222,2,1,2.25,2.5,7.75,8.4821,8.125,,"Está en menor, parecido al locrio, no tiene signos de la 7ª dominante del mixolidio."
+Exp_01,escucha,epoch_80_loss_0.5770,aeolian,1111,4,3.75,3,3.25,14,8.4821,12.625,,"Audio bastante bueno de E eólico. Juega con la 6ª menor, se mantiene en E y después pasa a mayor con un G-C-D"
+Exp_01,escucha,epoch_80_loss_0.5770,aeolian,2222,3.5,2.5,3.75,1.5,11.25,8.4821,12.625,,Comienza con una buena melodia con la 6 menor  con los acordes Am y Dm pero en los siguientes compases mete la 2ª disminuida haciendo que parezca más frigio que eólico
+Exp_01,escucha,epoch_80_loss_0.5770,locrian,1111,2,1,1.5,1.5,6,8.4821,6.75,,"Audio en E menor, no tiene nada de disminuido ni en la 5ª ni en la 2ª. "
+Exp_01,escucha,epoch_80_loss_0.5770,locrian,2222,2.5,1.75,2,1.25,7.5,8.4821,6.75,,"Am con 2ª menor, pero no tiene la 5 disminuida, la coherencia es bastante mala pero es un avance."
+Exp_02,escucha,epoch_40_loss_0.5428,ionian,1111,3,2,2,2.5,9.5,8.3036,7.625,,"Audio muy parecido al eólico, esta en Em pero a mitad cambia a G mayor. Sin embargo, el ultimo acorde de la progresion es un acorde un tanto extrañoñ que no he logrado identificar "
+Exp_02,escucha,epoch_40_loss_0.5428,ionian,2222,1.5,1.25,1.5,1.5,5.75,8.3036,7.625,,"Audio muy incoherente, extraño y sin sonoridad jónica por ningún lado"
+Exp_02,escucha,epoch_40_loss_0.5428,dorian,1111,3,1.5,2,1.75,8.25,8.3036,7.375,,"Ejemplo bastante malo, es verdad que está en E menor al menos pero tiene la 6ª menor la cual es precisamente la nota caracteristica del eólico y no del dórico"
+Exp_02,escucha,epoch_40_loss_0.5428,dorian,2222,2.5,1,2,1,6.5,8.3036,7.375,,"Mal ejemplo, no juega con la 6 aumentada y la coherencia es pésima"
+Exp_02,escucha,epoch_40_loss_0.5428,phrygian,1111,3,2,2,2,9,8.3036,9.25,,"En mi menor pero con la 2ª natural, por lo que no cumple con el frigio. Sin embargo la coherencia no es mala y es bastante en E menor salvo al final que realiza un cambio de tono"
+Exp_02,escucha,epoch_40_loss_0.5428,phrygian,2222,2.5,2,2,3,9.5,8.3036,9.25,,"Gran parte del audio está en Am eólico, sin embargo al final se puede escuhar una 2ª disminuida la cual hace un poco la sonoridad frigia"
+Exp_02,escucha,epoch_40_loss_0.5428,lydian,1111,3.5,1,2,3,9.5,8.3036,8,,
+Exp_02,escucha,epoch_40_loss_0.5428,lydian,2222,2,1,2,1.5,6.5,8.3036,8,,"Am-F5ªb El audio es inestable a mas no poder, de hehcho podria asemejarse mas al locrio que el propio audio locrio. No tiene ningun destello de la 4ª aumentada del lidio."
+Exp_02,escucha,epoch_40_loss_0.5428,mixolydian,1111,3.5,2.5,2,3.75,11.75,8.3036,9.125,,"Es interante, porque la melodía recae constantemente en Gª (5ª grado de C), sin embargo los acordes no siguen una progresión de mixolidio sino que es progresión tonal pero estable en C."
+Exp_02,escucha,epoch_40_loss_0.5428,mixolydian,2222,1.5,1,2.5,1.5,6.5,8.3036,9.125,,"Está en menor, parecido al locrio, no tiene signos de la 7ª dominante del mixolidio."
+Exp_02,escucha,epoch_40_loss_0.5428,aeolian,1111,3,3.75,3.5,2.5,12.75,8.3036,10.75,,Está en E eólico y se nota la 6 menor en algun que otro momento lo cual indica gran comprensión del modo eólico
+Exp_02,escucha,epoch_40_loss_0.5428,aeolian,2222,2,2.5,3,1.25,8.75,8.3036,10.75,,"Está en A eólico, al principio suena alguna 6 menor pero la coherencia es bastante mala pero va por buen camino"
+Exp_02,escucha,epoch_40_loss_0.5428,locrian,1111,2,1.5,1.25,1.5,6.25,8.3036,6,,"Se detecta cierta inestabilidad caracteristica del locrio pero los intervalos no tienen nada que ver, quintas naturales e incluso 3ª mayor en algun momento. Ademas hay como un ca,bio de tonalidad a mitad de audio."
+Exp_02,escucha,epoch_40_loss_0.5428,locrian,2222,1.5,1.5,1.5,1.25,5.75,8.3036,6,,"Audio bastante inestable, se nota menos coherencia que el anterior en cuanto a ritmpo y fluidez. En cuanto a la sonoridad, se escuchan cambios cromáticos entre notas y se nota que quiere hacer cosas diferentes el modelo pero no son exactamente los intervalos y las notas del locrio"
+Exp_02,escucha,epoch_80_loss_0.5770,ionian,1111,3,2,2,2.5,9.5,8.4821,8.25,,"Probablemente de los peores hasta ahora en cuanto a jónico. Está en Em natural, es verdad que pasado mitad del audio cambia a G mayor y es G jónico pero comienza menor total."
+Exp_02,escucha,epoch_80_loss_0.5770,ionian,2222,2.75,1,2,1.25,7,8.4821,8.25,,"Está en Am frigio bastante claro, no solo está en menor sino que además juega con la 2ª disminuida por lo que mal ejemplo"
+Exp_02,escucha,epoch_80_loss_0.5770,dorian,1111,2,1,1.5,3,7.5,8.4821,7.25,,"Audio coherente, pero no juega con nada del dórico, está en Em eólico, no mete la 6ª ni natural ni aumentada. Ademas la progresion juega mucho con la sonoridad tonal."
+Exp_02,escucha,epoch_80_loss_0.5770,dorian,2222,2.5,1,2,1.5,7,8.4821,7.25,,"Otra vez un audio bastante similar a un audio en frigio, poca presencia del dórico, la 2ª aumentada tiene mucha fuerza"
+Exp_02,escucha,epoch_80_loss_0.5770,phrygian,1111,2,1.5,2,3,8.5,8.4821,9.375,,Audio coherente pero no tiene nada que ver con el frigio. Esta en E eólico
+Exp_02,escucha,epoch_80_loss_0.5770,phrygian,2222,2,3.25,3.5,1.5,10.25,8.4821,9.375,,La coherencia es terrible pero es un audio que altera de Am-A# con hincapié en la 2ª disminuida de A
+Exp_02,escucha,epoch_80_loss_0.5770,lydian,1111,3,1,1,2.5,7.5,8.4821,7,,"Audio coherente pero en Em, a mitad cambia a G mayor y no tiene buenos resultados"
+Exp_02,escucha,epoch_80_loss_0.5770,lydian,2222,2,1,2,1.5,6.5,8.4821,7,,Menos coherente que la otra semilla y ademas no contiene nada de dorico esta en menor pero en natural y una progresion de Am-A#
+Exp_02,escucha,epoch_80_loss_0.5770,mixolydian,1111,3,1,2,2.5,8.5,8.4821,8.125,,"Audio en Em sin ningun signo de Mixolidio, a mitad cambia a G jonico"
+Exp_02,escucha,epoch_80_loss_0.5770,mixolydian,2222,2,1,2.25,2.5,7.75,8.4821,8.125,,"Está en menor, parecido al locrio, no tiene signos de la 7ª dominante del mixolidio."
+Exp_02,escucha,epoch_80_loss_0.5770,aeolian,1111,4,3.75,3,3.25,14,8.4821,12.625,,"Audio bastante bueno de E eólico. Juega con la 6ª menor, se mantiene en E y después pasa a mayor con un G-C-D"
+Exp_02,escucha,epoch_80_loss_0.5770,aeolian,2222,3.5,2.5,3.75,1.5,11.25,8.4821,12.625,,Comienza con una buena melodia con la 6 menor  con los acordes Am y Dm pero en los siguientes compases mete la 2ª disminuida haciendo que parezca más frigio que eólico
+Exp_02,escucha,epoch_80_loss_0.5770,locrian,1111,2,1,1.5,1.5,6,8.4821,6.75,,"Audio en E menor, no tiene nada de disminuido ni en la 5ª ni en la 2ª. "
+Exp_02,escucha,epoch_80_loss_0.5770,locrian,2222,2.5,1.75,2,1.25,7.5,8.4821,6.75,,"Am con 2ª menor, pero no tiene la 5 disminuida, la coherencia es bastante mala pero es un avance."
+Exp_09,escucha,epoch_60_loss_0.5960,ionian,1111,2.75,2,1.75,1.5,8,8.6607,7.125,,"Audio en Em que a mitad cambia a G a mitad de audio, pero el incio es en E eólico clarisimo"
+Exp_09,escucha,epoch_60_loss_0.5960,ionian,2222,2,1,2,1.25,6.25,8.6607,7.125,,"Audio en Am, nada de jónico"
+Exp_09,escucha,epoch_60_loss_0.5960,dorian,1111,3,1,2,3.5,9.5,8.6607,9,,"A nivel modal no tiene nada que ver con el dorico, esta en Em natural, sin embargo la bateria es muy marchosa y acompaña bastante bien la cancion por lo que creo que es importante de mencionar ya que no sucede en muchos casos"
+Exp_09,escucha,epoch_60_loss_0.5960,dorian,2222,3,1,2,2.5,8.5,8.6607,9,,"Está en A frigio, pero otra vez sorprende la batería, un ritmo muy estable y marchoso"
+Exp_09,escucha,epoch_60_loss_0.5960,phrygian,1111,2.75,2,2,2,8.75,8.6607,8.5,,Audio en E menor eólico con cambio a G mayor
+Exp_09,escucha,epoch_60_loss_0.5960,phrygian,2222,2,3.25,2,1,8.25,8.6607,8.5,,El color modal se nota y es lo que más destaca porque la coherencia brilla por sua usencia y no es un audio muy estable. Sin embargo se escucha ese sonido caracterisitco de la 2ª menor del frigio
+Exp_09,escucha,epoch_60_loss_0.5960,lydian,1111,3,1,1,3,8,8.6607,7.5,,Está en E menor eólico
+Exp_09,escucha,epoch_60_loss_0.5960,lydian,2222,3,1,1,2,7,8.6607,7.5,,"A menor, no guarda relacion con el lidio"
+Exp_09,escucha,epoch_60_loss_0.5960,mixolydian,1111,3,1,2,2.5,8.5,8.6607,8,,Audio en E menor con calidad pero sin nada de mixolidio
+Exp_09,escucha,epoch_60_loss_0.5960,mixolydian,2222,2.5,1,2,2,7.5,8.6607,8,,"A menor paando por A#, no uega con el mixolidio"
+Exp_09,escucha,epoch_60_loss_0.5960,aeolian,1111,4,4,3.5,4.25,15.75,8.6607,13,,"Buen ejemplo en Em eólio, jugano con la 6ª menor, muy parecido al del experimento anterior"
+Exp_09,escucha,epoch_60_loss_0.5960,aeolian,2222,3,2.5,3,1.75,10.25,8.6607,13,,"A eólico acabando fraseos en la 6ª menor, sin embargo, mete una 2ª dismu¡inuida en momentos puntuales que hace que se vaya a A frigio"
+Exp_09,escucha,epoch_60_loss_0.5960,locrian,1111,2,1,2,2.5,7.5,8.6607,7.5,,"No tiene nadad de locrio, es verdad que quizá ligeramente mejor que el anterior experiemento pero mucho margen por delante"
+Exp_09,escucha,epoch_60_loss_0.5960,locrian,2222,2,2,2,1.5,7.5,8.6607,7.5,,La coherencia es bastante mala pero tiene un toque locrio ligero con alguna 2ª menor. La 5ª disminuida no suena pero tampoco la 5ª natural por lo que no se identifica del todo.
+Exp_09,escucha,epoch_80_loss_0.5371,ionian,1111,2.75,2,1.75,1.5,8,8.4107,7.125,,"Bateria sorprendente, pero no mucho en cuanto a tonalidad si que es verdad que cambia de e eólico a G mayor y cuando mete el G mayor es G jónico."
+Exp_09,escucha,epoch_80_loss_0.5371,ionian,2222,2,1,2,1.25,6.25,8.4107,7.125,,"Audio en Am frigio, no en jónico"
+Exp_09,escucha,epoch_80_loss_0.5371,dorian,1111,3,1,2,3,9,8.4107,8.75,,"Buenos drums pero pierde un poco de coherencia al final del audio, en cuanto al modo nada que ver, no tiene la 6ª mayor caracteristica del dórico"
+Exp_09,escucha,epoch_80_loss_0.5371,dorian,2222,3,1,2,2.5,8.5,8.4107,8.75,,Sorprendente batería pero es A frigio.
+Exp_09,escucha,epoch_80_loss_0.5371,phrygian,1111,2.75,2,2,2,8.75,8.4107,8.5,,
+Exp_09,escucha,epoch_80_loss_0.5371,phrygian,2222,2,3.25,2,1,8.25,8.4107,8.5,,
+Exp_09,escucha,epoch_80_loss_0.5371,lydian,1111,3,1,1,3,8,8.4107,7.5,,
+Exp_09,escucha,epoch_80_loss_0.5371,lydian,2222,3,1,1,2,7,8.4107,7.5,,
+Exp_09,escucha,epoch_80_loss_0.5371,mixolydian,1111,3,1,2,2.5,8.5,8.4107,8,,
+Exp_09,escucha,epoch_80_loss_0.5371,mixolydian,2222,2.5,1,2,2,7.5,8.4107,8,,
+Exp_09,escucha,epoch_80_loss_0.5371,aeolian,1111,4,3.75,4,3.25,15,8.4107,11.5,,"Em, con insinstencia en la 6ª menor,buen ejemplo"
+Exp_09,escucha,epoch_80_loss_0.5371,aeolian,2222,3,1.5,2,1.5,8,8.4107,11.5,,Buen ejemplo de frigio pero no de eólico
+Exp_09,escucha,epoch_80_loss_0.5371,locrian,1111,2,1,2,2.5,7.5,8.4107,7.5,,
+Exp_09,escucha,epoch_80_loss_0.5371,locrian,2222,2,2,2,1.5,7.5,8.4107,7.5,,
+Exp_10,escucha,epoch_60_loss_0.5961,ionian,1111,2.75,2,1.75,1.5,8,8.6964,8,,
+Exp_10,escucha,epoch_60_loss_0.5961,ionian,2222,2.75,2,1.75,1.5,8,8.6964,8,,
+Exp_10,escucha,epoch_60_loss_0.5961,dorian,1111,2,1,2,1.25,6.25,8.6964,7.875,,
+Exp_10,escucha,epoch_60_loss_0.5961,dorian,2222,3,1,2,3.5,9.5,8.6964,7.875,,
+Exp_10,escucha,epoch_60_loss_0.5961,phrygian,1111,3,1,2,2.5,8.5,8.6964,8.625,,
+Exp_10,escucha,epoch_60_loss_0.5961,phrygian,2222,2.75,2,2,2,8.75,8.6964,8.625,,
+Exp_10,escucha,epoch_60_loss_0.5961,lydian,1111,2,3.25,2,1,8.25,8.6964,8.125,,
+Exp_10,escucha,epoch_60_loss_0.5961,lydian,2222,3,1,1,3,8,8.6964,8.125,,
+Exp_10,escucha,epoch_60_loss_0.5961,mixolydian,1111,3,1,1,2,7,8.6964,7.75,,
+Exp_10,escucha,epoch_60_loss_0.5961,mixolydian,2222,3,1,2,2.5,8.5,8.6964,7.75,,
+Exp_10,escucha,epoch_60_loss_0.5961,aeolian,1111,2.5,1,2,2,7.5,8.6964,11.625,,
+Exp_10,escucha,epoch_60_loss_0.5961,aeolian,2222,4,4,3.5,4.25,15.75,8.6964,11.625,,
+Exp_10,escucha,epoch_60_loss_0.5961,locrian,1111,3,2.5,3,1.75,10.25,8.6964,8.875,,
+Exp_10,escucha,epoch_60_loss_0.5961,locrian,2222,2,1,2,2.5,7.5,8.6964,8.875,,
+Exp_10,escucha,epoch_80_loss_0.5371,ionian,1111,2,2,2,1.5,7.5,8.4107,7.75,,
+Exp_10,escucha,epoch_80_loss_0.5371,ionian,2222,2.75,2,1.75,1.5,8,8.4107,7.75,,
+Exp_10,escucha,epoch_80_loss_0.5371,dorian,1111,2,1,2,1.25,6.25,8.4107,7.625,,
+Exp_10,escucha,epoch_80_loss_0.5371,dorian,2222,3,1,2,3,9,8.4107,7.625,,
+Exp_10,escucha,epoch_80_loss_0.5371,phrygian,1111,3,1,2,2.5,8.5,8.4107,8.625,,
+Exp_10,escucha,epoch_80_loss_0.5371,phrygian,2222,2.75,2,2,2,8.75,8.4107,8.625,,
+Exp_10,escucha,epoch_80_loss_0.5371,lydian,1111,2,3.25,2,1,8.25,8.4107,8.125,,
+Exp_10,escucha,epoch_80_loss_0.5371,lydian,2222,3,1,1,3,8,8.4107,8.125,,
+Exp_10,escucha,epoch_80_loss_0.5371,mixolydian,1111,3,1,1,2,7,8.4107,7.75,,
+Exp_10,escucha,epoch_80_loss_0.5371,mixolydian,2222,3,1,2,2.5,8.5,8.4107,7.75,,
+Exp_10,escucha,epoch_80_loss_0.5371,aeolian,1111,2.5,1,2,2,7.5,8.4107,11.25,,
+Exp_10,escucha,epoch_80_loss_0.5371,aeolian,2222,4,3.75,4,3.25,15,8.4107,11.25,,
+Exp_10,escucha,epoch_80_loss_0.5371,locrian,1111,3,1.5,2,1.5,8,8.4107,7.75,,
+Exp_10,escucha,epoch_80_loss_0.5371,locrian,2222,2,1,2,2.5,7.5,8.4107,7.75,,
+Exp_18,escucha,epoch_40_loss_0.5727,ionian,1111,2,2,2,1.5,7.5,7.75,7.75,,
+Exp_18,escucha,epoch_40_loss_0.5727,ionian,2222,2.75,2,1.75,1.5,8,7.75,7.75,,
+Exp_18,escucha,epoch_120_loss_0.6101,ionian,1111,3.5,3.75,1.75,2.5,11.5,9.8929,12.125,,"Buen color, sin embargo hay cambio de C a G (I-V) lo cual se va más a lo tonal que a lo modal pero siendo jónico no está tan mal"
+Exp_18,escucha,epoch_120_loss_0.6101,ionian,2222,3.5,2.75,3.5,3,12.75,9.8929,12.125,,"Está en Am, sin embargo no es un sonido apagado porque en seguida cambia a mayor y el audio acaba con C mayor. "
+Exp_18,escucha,epoch_120_loss_0.6101,dorian,1111,2,1.5,2,2.5,8,9.8929,8.75,,"Se nota que quiere hacer un cambio, pero está en E menor y juega con la 6ª menor, por lo que pierde toda esa sonoridad dórica"
+Exp_18,escucha,epoch_120_loss_0.6101,dorian,2222,3,1.5,2,3,9.5,9.8929,8.75,,"Muy parecido al anterior, se siente un cambio de Em a A pero no esta muy marcao y realmente creo que es otro acorde porque al tocar la 3ª mayor de A por encima suena disonante. Sin embargo se nota progreso."
+Exp_18,escucha,epoch_120_loss_0.6101,phrygian,1111,2.5,1.5,2,1.5,7.5,9.8929,8.75,,"Eaudio en Em eólico, no mete la 2ª menor que tanto caracteriza al frigio"
+Exp_18,escucha,epoch_120_loss_0.6101,phrygian,2222,2.5,2.5,2,3,10,9.8929,8.75,,"Audio curioso, Em- Am- A#. El frigio se oye con el cmbio de Am a A#"
+Exp_18,escucha,epoch_120_loss_0.6101,lydian,1111,2.5,2.25,2,3,9.75,9.8929,10.5,,"Está en E menor, pero no está mal el audio poruqe hay un momento que pasa de C a D y en la melodía suena la 4ª aumentada del C haciendo sonar el lidio. "
+Exp_18,escucha,epoch_120_loss_0.6101,lydian,2222,3,1.75,3.5,3,11.25,9.8929,10.5,,"Audio precioso pero la tonalidad es extraña, parece una mezcla de A frigio con lidio pero no se logra identificar ninguna nota dórica"
+Exp_18,escucha,epoch_120_loss_0.6101,mixolydian,1111,2.75,2,1.5,3,9.25,9.8929,8.875,,está en C mayor-F-G. Coherencia buena pero es bastante tonal
+Exp_18,escucha,epoch_120_loss_0.6101,mixolydian,2222,2.5,1.5,2,2.5,8.5,9.8929,8.875,,"Audio en A menor, buena coherencia pero no es lo que se busca de un prompt mixolidio"
+Exp_18,escucha,epoch_120_loss_0.6101,aeolian,1111,4,4.25,3.5,3.75,15.5,9.8929,12.25,,"Gran ejemplo, realmente se vio la diferencia con el resto de experimentos y epochs"
+Exp_18,escucha,epoch_120_loss_0.6101,aeolian,2222,3,2.5,2,1.5,9,9.8929,12.25,,Tiende a parecerse al audio frigio que sonaba antes pero ahora sale mucho más regulado y que intenta evitar la 2ª menor aunque se sigue notando cierta sonoridad frigia.
+Exp_18,escucha,epoch_120_loss_0.6101,locrian,1111,2.5,1,2,3,8.5,9.8929,8,,"Demasiado mayor este audio, es básicamente C mayor, no tiene nada de locio"
+Exp_18,escucha,epoch_120_loss_0.6101,locrian,2222,2,1.5,2,2,7.5,9.8929,8,,Am pero no tiene mucho que ver con lociro.
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,ionian,1111,4.5,4.5,2,4.5,15.5,11.1429,16.25,,"C jónico, gran ejemplo pasando el bajo por muchas notas de la escala C jónica, sin embargo le bajo en modulación poruqe la progresión principal es C-F-G-C, el paso de G a C (I-V) lo convierte más en tonal que en modal."
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,ionian,2222,5,4.5,3.5,4,17,11.1429,16.25,,"Gran audio, en C mayor, F, Am, igual de bueno que el anterior solo que no pasa por G tanto y lo cambia por el relativo menor de C lo cual convierte el audio en más modal."
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,dorian,1111,3.75,3,2.5,4.5,13.75,11.1429,14.125,,"Audio bastante interesante, en Bm y metiendo un E mayor en un momento sonando dórico TOTAL. Sin embargo hay mucha parte del audio que va de B menor a A mayor y luego a G mayor, haciendo entender que es B eólico pero ese destello dórico es muy buena señal"
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,dorian,2222,4,3.5,3,4,14.5,11.1429,14.125,,Buen ejemplo dórico. Se consiguen buenos resultados con B dórico pasando en algunos momentos por E mayor.
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,phrygian,1111,3,1,2,3.25,9.25,11.1429,9.375,,"Ejemplo en E mayor total, además mete una 5ª aumentada en algún momento que no tiene mucho sentido con el modo frigio así que en cuanto a color modal bastante incorrecto."
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,phrygian,2222,3.5,1,1,4,9.5,11.1429,9.375,,"Audio clarísimo en E mayor, además una progresión típica de IV-V-I-VI. Nada que ver con el modo frigio."
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,lydian,1111,3.5,2.5,2,4,12,11.1429,11,,"Audio coherente pero no termina de definir bien los acordes y melodía por lo que es un poco difuso. Sin embargo, "
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,lydian,2222,2,1,3,4,10,11.1429,11,,"Buena calidad de audio, sin embargo, no juega con la 4ª aumentada, está en F jónico y mete un Fm en un instnante donde se descontrola toda la melodía de la canción."
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,mixolydian,1111,3.5,1.75,3,3,11.25,11.1429,10.5,,"Audio un poco flojo, la coherencia no es mala pero el audio está principalmente en G jonico. Sin embargo, hay instantes en los que parece que cambia a F mayor metiendo la 7ª menor de G pero es algo muy sutil que no define al audio ni mucho menos"
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,mixolydian,2222,2.5,2.25,2,3,9.75,11.1429,10.5,,"Audio un pelin flojete tambien, coherencia buena pero se pierde mucho en la tonalidad inicial. Sin embargo, si que parece que juega más con el sonido mixolidio que el audio anterior auqneu no está del todo claro. Suena en ocasiones alternaciones de G-F-Dm pero se mezcla con las cosas y no se determina muy bien en qué situación modal está."
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,aeolian,1111,3,3,2.5,3.25,11.75,11.1429,10,,"No está nada mal este audio, comienza con Em-Am-D, dando lugar a E eólico, sin embargo poco después mete el G mayor pasando a a musica tonal. Pero no es par nada un mal ejemplo"
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,aeolian,2222,2.5,1.25,2,2.5,8.25,11.1429,10,,"Está el A dórico, ya que marca bastante la 6ª aumentada y ademas mete un E mayor por lo que pasa a la menor armónica pero con la 6ª aumetada."
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,locrian,1111,2,1.5,2,2,7.5,11.1429,6.75,,"audio complicado de evaluar pero tiene algunos signos de inestabilidad que parece Locrio, sin embargo al analizar melodías y acordes, hay gran parte del audio que corresponde a un E mayor natural por lo que se pierde esa sensacion de locrio la mayor parte del tiempo."
+confirm_r32_a32_lr1e-4,escucha,epoch_140_loss_0_1952,locrian,2222,1.5,1.5,1.5,1.5,6,11.1429,6.75,,"Dificil de evaluar tambien, parece que intenta locrio pero no estoy del todo seguro debido a la complejidad de los intervalos continuos. Lo que si es destacable es la coherencia del audio a pesar de ser tan cambiante e inestable. El sonido es bastante bueno para ser locrio que en otros experimento ha sido notablemente peor."
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,ionian,1111,4.5,3.5,2,4.5,14.5,11.0714,16,,Muy parecido al epoch 140 pero he bajado un punto el color modal debido a que ahora comienza la progresión de acordes en G mayor haciendo parecer que puede ser G mixolidio al principio. Sin embargo el resto del audio estña muy bien y en seguida te das cuenta que está en C jónico pero el primer acorde produce confusión
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,ionian,2222,5,4.5,3.5,4.5,17.5,11.0714,16,,"Audio muy top, probablemente de los mejores. Muy similar al audio del epoch 140 pero se nota mayor claridad en el sonido "
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,dorian,1111,3.75,3,2.5,4.5,13.75,11.0714,14.125,,Notas muy similares y audio muy similar al epoch 140
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,dorian,2222,4,3.5,3,4,14.5,11.0714,14.125,,"Apenas diferencias con el ejemplo de inferencia del epoch 140, notas y evaluación prácticamente idéntica"
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,phrygian,1111,3,1,2,3.25,9.25,11.0714,9.375,,Identico al del epoch 140
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,phrygian,2222,3.5,1,1,4,9.5,11.0714,9.375,,Identico al del epoch 140
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,lydian,1111,3.5,2.5,2,4,12,11.0714,11,,"Muy similar al epoch 140, nada que añadir"
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,lydian,2222,2,1,3,4,10,11.0714,11,,"Al igual que el otro seed, este audio es idéntico al del epoch 140"
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,mixolydian,1111,3.5,1.75,3,3,11.25,11.0714,10.5,,Identico al del epoch 140
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,mixolydian,2222,2.5,2.25,2,3,9.75,11.0714,10.5,,Identico al del epoch 140
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,aeolian,1111,3,3,2.5,3.25,11.75,11.0714,10,,La verdad audio prácticamente idéntico al evaluado en el epoch 140 por lo que no hay mcuha diferencia ni información para aportar
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,aeolian,2222,2.5,1.25,2,2.5,8.25,11.0714,10,,"Audio muy similar al del epoch 140, apenas cambia, las conclusioes y notas son las mismas"
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,locrian,1111,2,1.25,2,1.75,7,11.0714,6.5,,Audio en un E mayor extraño pasando por B menor y después en acordes inestables y dificilmente identificables donde se distinguen notas como una 5ª aumnetada o una 4ª aumentada. No tiene mucho sentido y es muy parecido al audio del epoch 140.
+confirm_r32_a32_lr1e-4,escucha,epoch_160_loss_0_1968,locrian,2222,1.5,1.5,1.5,1.5,6,11.0714,6.5,,Audio muy similar al del epoch 140. Muy inestable y ligeramente peor que el audio del seed 1111

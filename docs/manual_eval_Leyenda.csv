@@ -3,4 +3,5 @@ Centro_tonal_1_5,Claridad y estabilidad de la tonica.
 Color_modal_1_5,Reconocimiento del modo objetivo.
 No_modulacion_1_5,Ausencia de cambios tonales no deseados.
 Coherencia_1_5,Continuidad musical global.
-Total_0_20,Suma de los cuatro criterios (maximo 20).
+Contraste_1_5,Diferencia perceptible frente a otros modos.
+Total_0_25,Suma de los cinco criterios (maximo 25).
