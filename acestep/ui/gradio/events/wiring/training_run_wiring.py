@@ -17,7 +17,7 @@ def _normalize_training_state(training_state: Any) -> dict[str, bool]:
     return {"is_training": False, "should_stop": False}
 
 
-def _build_training_wrapper(dit_handler: Any):
+def _build_training_wrapper(dit_handler: Any, llm_handler: Any):
     """Build the training stream wrapper bound to the current DiT handler."""
 
     def training_wrapper(
@@ -56,6 +56,7 @@ def _build_training_wrapper(dit_handler: Any):
                 lora_output_dir,
                 resume_checkpoint_dir,
                 state,
+                llm_handler=llm_handler,
             ):
                 yield progress, log_msg, plot, next_state
         except Exception as exc:  # pragma: no cover - defensive UI wrapper
@@ -69,7 +70,7 @@ def register_training_run_handlers(context: TrainingWiringContext) -> None:
     """Register training run-tab handlers with stable IO ordering."""
 
     training_section = context.training_section
-    training_wrapper = _build_training_wrapper(context.dit_handler)
+    training_wrapper = _build_training_wrapper(context.dit_handler, context.llm_handler)
 
     # ========== Training Tab Handlers ==========
     training_section["load_dataset_btn"].click(

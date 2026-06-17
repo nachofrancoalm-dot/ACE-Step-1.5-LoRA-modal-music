@@ -9,6 +9,7 @@ backward-compatible Gradio UI support.
 import math
 import os
 import tempfile
+import gc
 from typing import Optional, Union, List, Dict, Any, Tuple
 from dataclasses import dataclass, field, asdict
 from loguru import logger
@@ -16,6 +17,7 @@ import torch
 
 
 from acestep.audio_utils import AudioSaver, generate_uuid_from_params, normalize_audio, get_lora_weights_hash
+from acestep.gpu_config import get_effective_free_vram_gb
 
 # HuggingFace Space environment detection
 IS_HUGGINGFACE_SPACE = os.environ.get("SPACE_ID") is not None
@@ -575,6 +577,31 @@ def generate_music(
             dit_input_lyrics = params.lyrics if params.lyrics is not None else dit_input_lyrics
             logger.info(f"[generate_music] Repaint/Cover task: using params.caption='{params.caption}', params.lyrics='{params.lyrics}'")
             logger.info(f"[generate_music] Final inputs: dit_input_caption='{dit_input_caption}', dit_input_lyrics='{dit_input_lyrics}'")
+
+        # LM phase can leave the PT LLM resident on GPU, starving DiT VRAM.
+        # Proactively offload LM weights to CPU before entering DiT phase.
+        if use_lm and llm_handler is not None:
+            try:
+                if hasattr(llm_handler, "release_gpu_for_dit"):
+                    llm_handler.release_gpu_for_dit(reason="before DiT phase")
+                else:
+                    lm_backend = getattr(llm_handler, "llm_backend", None)
+                    lm_model = getattr(llm_handler, "llm", None)
+                    if lm_backend == "pt" and lm_model is not None and hasattr(lm_model, "to"):
+                        logger.info("[generate_music] Offloading PT LLM to CPU before DiT phase (fallback path)")
+                        lm_model.to("cpu")
+
+                # Force allocator cleanup regardless of the path used above.
+                if torch.cuda.is_available():
+                    gc.collect()
+                    torch.cuda.empty_cache()
+                    torch.cuda.synchronize()
+                    free_after_offload = get_effective_free_vram_gb()
+                    logger.info(
+                        f"[generate_music] Free VRAM after LM offload cleanup: {free_after_offload:.2f} GB"
+                    )
+            except Exception as exc:
+                logger.warning(f"[generate_music] Failed to offload LM before DiT phase: {exc}")
 
         # Phase 2: DiT music generation
         # Use seed_for_generation (from config.seed or params.seed) instead of params.seed for actual generation

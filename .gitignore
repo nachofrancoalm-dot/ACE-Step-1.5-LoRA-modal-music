@@ -246,3 +246,58 @@ lokr_output/
 
 # macOS
 .DS_Store
+
+# TFG - ficheros internos del asistente IA
+.claude/
+
+# TFG - audios generados (grandes, no se entregan)
+hparam_sweep/*/generated_audio/
+manual_eval_shortlist/**/*.flac
+manual_eval_shortlist/**/*.mp3
+manual_eval_shortlist/**/*.wav
+
+# TFG - pesos LoRA (se guardan en el servidor, no en el repo)
+lora_output/
+modal_run_*/
+
+# TFG - PDF compilado de la memoria (se entrega por separado)
+memoria/*.pdf
+memoria/*.aux
+memoria/*.log
+memoria/*.out
+memoria/*.toc
+memoria/*.bbl
+memoria/*.blg
+memoria/*.fls
+memoria/*.fdb_latexmk
+memoria/*.synctex.gz
+memoria/_minted*/
+memoria/*.glg
+memoria/*.glo
+memoria/*.gls
+memoria/*.acn
+memoria/*.acr
+memoria/*.alg
+memoria/*.ist
+memoria/*.bcf
+memoria/*.run.xml
+
+# TFG - ficheros binarios de evaluación manual
+docs/*.xlsx
+
+# TFG - dataset (no se incluye por derechos de autor)
+Dataset/
+
+# TFG - audios y assets de presentación (grandes, no necesarios en el repo)
+audios_unificados/
+presentacion_assets/
+
+# TFG - presentaciones (grandes, se entregan por separado)
+*.pptx
+
+# TFG - anteproyecto (documento preliminar)
+ANTEPROYECTO.pdf
+
+# TFG - checkpoints dentro del sweep (solo se conserva el CSV de resultados)
+hparam_sweep/exp_*/lora_output/
+hparam_sweep/exp_*/generated_audio/

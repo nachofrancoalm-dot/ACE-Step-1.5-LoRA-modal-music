@@ -10,6 +10,7 @@ from .context import TrainingWiringContext
 
 def _build_lokr_training_wrapper(
     dit_handler: Any,
+    llm_handler: Any,
     normalize_training_state: Callable[[Any], dict[str, bool]],
 ):
     """Build the LoKr training stream wrapper bound to the current DiT handler."""
@@ -56,6 +57,7 @@ def _build_lokr_training_wrapper(
                 lokr_training_seed,
                 lokr_output_dir,
                 state,
+                llm_handler=llm_handler,
             ):
                 yield progress, log_msg, plot, next_state
         except Exception as exc:  # pragma: no cover - defensive UI wrapper
@@ -75,6 +77,7 @@ def register_lokr_training_handlers(
     training_section = context.training_section
     lokr_training_wrapper = _build_lokr_training_wrapper(
         context.dit_handler,
+        context.llm_handler,
         normalize_training_state,
     )
 

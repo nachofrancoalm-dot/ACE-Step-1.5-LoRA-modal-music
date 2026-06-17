@@ -15,6 +15,7 @@ from loguru import logger
 from acestep.training.path_safety import safe_path
 from acestep.ui.gradio.i18n import t
 from .training_utils import _format_duration, _training_loss_figure
+from .lora_training import _unload_llm_for_training
 
 
 def start_lokr_training(
@@ -36,6 +37,7 @@ def start_lokr_training(
     training_seed: int,
     lokr_output_dir: str,
     training_state: Dict,
+    llm_handler=None,
     progress=None,
 ):
     """Start LoKr training from preprocessed tensors.
@@ -87,6 +89,10 @@ def start_lokr_training(
     training_state["is_training"] = True
     training_state["should_stop"] = False
     training_state["adapter_type"] = "lokr"
+
+    # Unload LLM from GPU to reclaim VRAM before training
+    for msg in _unload_llm_for_training(llm_handler):
+        yield msg, "", None, training_state
 
     try:
         from acestep.training.configs import LoKRConfig as LoKRConfigClass, TrainingConfig

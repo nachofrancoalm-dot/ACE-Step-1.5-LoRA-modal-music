@@ -4,11 +4,13 @@ Contains functions for starting LoRA training, stopping training,
 and exporting trained LoRA weights.
 """
 
+import gc
 import os
 import re
 import time
-from typing import Dict, Tuple
+from typing import Dict, Optional, Tuple
 
+import torch
 from loguru import logger
 
 from acestep.gpu_config import get_global_gpu_config
@@ -18,6 +20,70 @@ from .training_utils import (
     _format_duration,
     _training_loss_figure,
 )
+
+
+def _unload_llm_for_training(llm_handler) -> list[str]:
+    """Unload LLM from GPU before training to free VRAM.
+
+    Also enables the expandable-segments CUDA allocator to reduce
+    fragmentation OOM errors during training.
+
+    Args:
+        llm_handler: LLMHandler instance, or None.
+
+    Returns:
+        List of status messages to yield to the UI.
+    """
+    messages = []
+    # Enable expandable segments to avoid fragmentation OOM
+    current = os.environ.get("PYTORCH_ALLOC_CONF", "")
+    if "expandable_segments" not in current:
+        new_val = (current + ",expandable_segments:True").lstrip(",")
+        os.environ["PYTORCH_ALLOC_CONF"] = new_val
+        logger.info(f"Set PYTORCH_ALLOC_CONF={new_val}")
+
+    if llm_handler is None:
+        return messages
+
+    llm_initialized = getattr(llm_handler, "llm_initialized", False)
+    llm_model = getattr(llm_handler, "llm", None)
+    llm_backend = getattr(llm_handler, "llm_backend", None)
+
+    # Determine if the LM model tensors are on CUDA
+    on_cuda = False
+    if llm_initialized and llm_model is not None:
+        try:
+            if llm_backend == "pt":
+                # PyTorch HuggingFace model
+                first_param = next(iter(llm_model.parameters()), None)
+                if first_param is not None and first_param.is_cuda:
+                    on_cuda = True
+            else:
+                # nano-vllm: assume CUDA if initialized
+                on_cuda = torch.cuda.is_available()
+        except Exception:
+            on_cuda = llm_initialized and torch.cuda.is_available()
+
+    if on_cuda:
+        logger.info("Unloading LLM from GPU before training to free VRAM")
+        messages.append("🔄 Unloading LLM from GPU to free VRAM for training...")
+        llm_handler.unload()
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.synchronize()
+        free_gb = 0.0
+        if torch.cuda.is_available():
+            try:
+                free_bytes, _ = torch.cuda.mem_get_info()
+                free_gb = free_bytes / (1024 ** 3)
+            except Exception:
+                pass
+        messages.append(
+            f"✅ LLM unloaded. Free VRAM: {free_gb:.2f} GB. "
+            "Re-initialize the service after training to use music generation."
+        )
+    return messages
 
 
 def start_training(
@@ -36,6 +102,7 @@ def start_training(
     lora_output_dir: str,
     resume_checkpoint_dir: str,
     training_state: Dict,
+    llm_handler=None,
     progress=None,
 ):
     """Start LoRA training from preprocessed tensors.
@@ -104,6 +171,10 @@ def start_training(
 
     training_state["is_training"] = True
     training_state["should_stop"] = False
+
+    # Unload LLM from GPU to reclaim VRAM before training
+    for msg in _unload_llm_for_training(llm_handler):
+        yield msg, "", None, training_state
 
     try:
         from acestep.training.trainer import LoRATrainer

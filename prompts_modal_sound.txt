@@ -1,0 +1,156 @@
+================================================================================
+PROMPTS FIJOS DE EVALUACION - LoRA modal TFG
+(usar siempre los mismos prompts + seeds: 1111 y 2222)
+================================================================================
+
+INSTRUCCIONES DE USO
+--------------------
+- Negative prompt: NO existe en la UI de ACE-Step turbo. El modelo turbo no soporta
+  CFG clasico, asi que no hay forma de alejar el output de conceptos no deseados.
+  Estrategia alternativa: incluir "no modulation, no vocals" directamente en el prompt
+  positivo (como ya hacen estos prompts).
+
+- Duracion: 30 segundos (suficiente para evaluar coherencia modal)
+- Inferencia steps: 8 (turbo)
+
+================================================================================
+BLOQUE A — PROMPTS MINIMOS
+Uso: primera prueba rapida. Maxima señal del LoRA, minimo ruido de texto.
+Formato: [trigger] ionian mode + ancla tonal + instrumento.
+Sustituir [trigger] por tu trigger tag exacto (o eliminar si no usaste uno).
+================================================================================
+
+Ionian:
+[trigger] ionian mode, C ionian, instrumental, electric piano, fretless bass, brushed drums, modal vamp on C, no vocals
+
+Dorian:
+[trigger] dorian mode, D dorian, instrumental, electric piano, fretless bass, brushed drums, modal vamp on D, no vocals
+
+Phrygian:
+[trigger] phrygian mode, E phrygian, instrumental, electric piano, fretless bass, brushed drums, modal vamp on E, no vocals
+
+Lydian:
+[trigger] lydian mode, F lydian, instrumental, electric piano, fretless bass, brushed drums, modal vamp on F, no vocals
+
+Mixolydian:
+[trigger] mixolydian mode, G mixolydian, instrumental, electric piano, fretless bass, brushed drums, modal vamp on G, no vocals
+
+Aeolian:
+[trigger] aeolian mode, A aeolian, instrumental, electric piano, fretless bass, brushed drums, modal vamp on A, no vocals
+
+Locrian:
+[trigger] locrian mode, B locrian, instrumental, electric piano, fretless bass, brushed drums, modal vamp on B, no vocals
+
+================================================================================
+BLOQUE D - PROMPTS SOLO MODO 
+Uso: comparar contra Bloque A/B sin incluir la tonalidad.
+Formato: [trigger] mode + instrumento.
+================================================================================
+
+Ionian:
+[trigger] ionian mode, instrumental, electric piano, fretless bass, brushed drums, no vocals
+
+Dorian:
+[trigger] dorian mode, instrumental, electric piano, fretless bass, brushed drums, no vocals
+
+Phrygian:
+[trigger] phrygian mode, instrumental, electric piano, fretless bass, brushed drums, no vocals
+
+Lydian:
+[trigger] lydian mode, instrumental, electric piano, fretless bass, brushed drums, no vocals
+
+Mixolydian:
+[trigger] mixolydian mode, instrumental, electric piano, fretless bass, brushed drums, no vocals
+
+Aeolian:
+[trigger] aeolian mode, instrumental, electric piano, fretless bass, brushed drums, no vocals
+
+Locrian:
+[trigger] locrian mode, instrumental, electric piano, fretless bass, brushed drums, no vocals
+
+================================================================================
+BLOQUE E - SOLO NOMBRE DEL MODO
+Uso: prueba extrema sugerida por el profesor para aislar la señal modal.
+Formato: [trigger] mode
+================================================================================
+
+Ionian:
+[trigger] ionian mode
+
+Dorian:
+[trigger] dorian mode
+
+Phrygian:
+[trigger] phrygian mode
+
+Lydian:
+[trigger] lydian mode
+
+Mixolydian:
+[trigger] mixolydian mode
+
+Aeolian:
+[trigger] aeolian mode
+
+Locrian:
+[trigger] locrian mode
+
+================================================================================
+BLOQUE B — PROMPTS ESTANDAR (evaluacion principal)
+Uso: evaluacion de checkpoints segun rubrica. Incluyen caracter modal explicito
+para facilitar distincion entre modos cercanos (Ionian/Lydian, Dorian/Aeolian).
+================================================================================
+
+Ionian:
+[trigger] ionian mode, jazz-fusion instrumental, C ionian, electric piano lead, fretless bass, brushed drums, 96 BPM, bright major character, stable tonic on C, no modulation, no vocals
+
+Dorian:
+[trigger] dorian mode, jazz-fusion instrumental, D dorian, electric piano lead, fretless bass, brushed drums, 96 BPM, minor with hopeful color, natural 6th flavor, stable tonic on D, no modulation, no vocals
+
+Phrygian:
+[trigger] phrygian mode, jazz-fusion instrumental, E phrygian, electric piano lead, fretless bass, brushed drums, 96 BPM, dark minor character, flat 2nd tension, stable tonic on E, no modulation, no vocals
+
+Lydian:
+[trigger] lydian mode, jazz-fusion instrumental, F lydian, electric piano lead, fretless bass, brushed drums, 96 BPM, floating bright major character, raised 4th color, stable tonic on F, no modulation, no vocals
+
+Mixolydian:
+[trigger] mixolydian mode, jazz-fusion instrumental, G mixolydian, electric piano lead, fretless bass, brushed drums, 96 BPM, dominant bluesy major character, flat 7th flavor, stable tonic on G, no modulation, no vocals
+
+Aeolian:
+[trigger] aeolian mode, jazz-fusion instrumental, A aeolian, electric piano lead, fretless bass, brushed drums, 96 BPM, natural minor character, flat 6th and flat 7th color, stable tonic on A, no modulation, no vocals
+
+Locrian:
+[trigger] locrian mode, jazz-fusion instrumental, B locrian, electric piano lead, fretless bass, brushed drums, 96 BPM, unstable diminished character, flat 2nd and flat 5th tension, tonic on B, no modulation, no vocals
+
+================================================================================
+BLOQUE C — PARES DE CONTRASTE (prueba de discriminacion entre modos cercanos)
+Uso: lanzar par a la vez con misma seed para comparar diferencias. Son los pares
+mas dificiles de distinguir; si el modelo los diferencia, el LoRA funciona bien.
+================================================================================
+
+--- Par 1: Ionian vs Lydian (ambos mayores, diferencia en 4to grado) ---
+Ionian:
+[trigger] ionian mode, jazz-fusion instrumental, C ionian, electric piano, 96 BPM, bright stable major, perfect 4th on F, no modulation, no vocals
+Lydian:
+[trigger] lydian mode, jazz-fusion instrumental, F lydian, electric piano, 96 BPM, floating major character, raised 4th on B, no modulation, no vocals
+
+--- Par 2: Dorian vs Aeolian (ambos menores, diferencia en 6to grado) ---
+Dorian:
+[trigger] dorian mode, jazz-fusion instrumental, D dorian, electric piano, 96 BPM, minor with natural 6th brightness on B, no modulation, no vocals
+Aeolian:
+[trigger] aeolian mode, jazz-fusion instrumental, A aeolian, electric piano, 96 BPM, pure natural minor, flat 6th on F, no modulation, no vocals
+
+--- Par 3: Mixolydian vs Ionian (ambos mayores, diferencia en 7mo grado) ---
+Mixolydian:
+[trigger] mixolydian mode, jazz-fusion instrumental, G mixolydian, electric piano, 96 BPM, dominant bluesy major, flat 7th on F, no modulation, no vocals
+Ionian:
+[trigger] ionian mode, jazz-fusion instrumental, C ionian, electric piano, 96 BPM, bright resolved major, leading tone on B, no modulation, no vocals
+
+================================================================================
+NOTAS PARA LA MEMORIA DEL TFG
+================================================================================
+- Ancla tonal explicita (C ionian, D dorian...) ayuda al modelo a centrar el modo.
+- La frase "X mode" coincide exactamente con el formato de los captions de entrenamiento.
+- Los Bloques A y B son prompts fijos para toda la evaluacion (no cambiarlos entre runs).
+- El Bloque C se usa solo para verificar discriminacion fina entre modos cercanos.
+- En turbo no hay negative prompt en UI/API; el control se hace con prompt positivo (ej. "no modulation, no vocals").

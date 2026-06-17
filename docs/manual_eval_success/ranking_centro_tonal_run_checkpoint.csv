@@ -1,0 +1,26 @@
+Run,Checkpoint,n_audios,media,pct_exito_permisivo,pct_exito_estricto
+Prompt solo modo + instrumento,epoch_80_loss_0.8378,14,3.11,85.7,78.6
+r64_a128_d005_lr5e-5,epoch_100_loss_0.1965,14,3.43,92.9,71.4
+confirm_r32_a32_lr1e-4,epoch_140_loss_0_1952,14,3.16,92.9,64.3
+confirm_r32_a32_lr1e-4,epoch_160_loss_0_1968,14,3.16,92.9,64.3
+r64_a128_d005_lr5e-5,epoch_160_loss_0.1952,14,3.09,92.9,64.3
+r128_a256_d005,epoch_20_loss_0.1982,14,3.25,85.7,64.3
+RUN_D,epoch_100_loss_0.8379,13,3.23,100.0,61.5
+r64_a128_d0,epoch_180_loss_0.1748,14,2.64,85.7,57.1
+Exp_10,epoch_60_loss_0.5961,14,2.77,100.0,50.0
+Exp_09,epoch_60_loss_0.5960,14,2.71,100.0,50.0
+Exp_09,epoch_80_loss_0.5371,14,2.71,100.0,50.0
+Exp_10,epoch_80_loss_0.5371,14,2.71,100.0,50.0
+r64_a128_d0,epoch_160_loss_0.1725,14,2.86,92.9,50.0
+r64_a128_d005_lr5e-5,epoch_140_loss_0.1960,14,2.82,85.7,50.0
+RUN_D,epoch_40_loss_0.8457,14,2.89,78.6,50.0
+Prompt solo modo,epoch_100_loss_0.8379,14,2.86,78.6,50.0
+Exp_18,epoch_120_loss_0.6101,14,2.8,100.0,42.9
+r64_a128_d0,epoch_80_loss_0.1921,14,2.59,78.6,42.9
+Exp_01,epoch_40_loss_0.5428,14,2.46,78.6,42.9
+Exp_02,epoch_40_loss_0.5428,14,2.46,78.6,42.9
+Exp_01,epoch_80_loss_0.5770,14,2.59,100.0,35.7
+Exp_02,epoch_80_loss_0.5770,14,2.59,100.0,35.7
+r128_a256_d005,epoch_100_loss_0.1788,14,1.68,42.9,21.4
+Exp_18,epoch_40_loss_0.5727,2,2.38,100.0,0.0
+r64_a128_d005,epoch_160_loss_0.1766,11,1.45,27.3,0.0

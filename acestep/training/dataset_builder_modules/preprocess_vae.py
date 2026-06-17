@@ -3,6 +3,11 @@
 Provides both a simple one-shot ``vae_encode`` (kept for backward
 compatibility) and a tiled variant ``tiled_vae_encode`` that processes
 long audio in overlapping chunks to cap peak VRAM usage.
+
+Note: All encode calls use ``.latent_dist.mean`` (deterministic posterior
+mean) rather than ``.latent_dist.sample()``.  Sampling requires
+``torch.randn`` which is incompatible with ``torch.compile``/CUDA-graph
+capture used when the VAE is an ``OptimizedModule``.
 """
 
 import math
@@ -33,7 +38,7 @@ def vae_encode(vae, audio, dtype):
     if audio.device != model_device:
         audio = audio.to(model_device)
 
-    latent = vae.encode(audio).latent_dist.sample()
+    latent = vae.encode(audio).latent_dist.mean
     target_latents = latent.transpose(1, 2).to(dtype)
     return target_latents
 
@@ -84,7 +89,7 @@ def tiled_vae_encode(
     if S <= chunk_size:
         vae_input = audio.to(vae_device, dtype=vae_dtype)
         with torch.inference_mode():
-            latents = vae.encode(vae_input).latent_dist.sample()
+            latents = vae.encode(vae_input).latent_dist.mean
         return latents.transpose(1, 2).to(dtype)
 
     # Calculate stride (core region per chunk, excluding overlap)
@@ -110,7 +115,7 @@ def tiled_vae_encode(
         chunk = audio[:, :, win_start:win_end].to(vae_device, dtype=vae_dtype)
 
         with torch.inference_mode():
-            latent_chunk = vae.encode(chunk).latent_dist.sample()
+            latent_chunk = vae.encode(chunk).latent_dist.mean
 
         # Determine downsample factor from the first chunk
         if downsample_factor is None:

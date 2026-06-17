@@ -129,6 +129,81 @@ class LifecycleTests(unittest.TestCase):
         self.assertIn("adapter_config.json", message)
         self.assertIn(lifecycle.LOKR_WEIGHTS_FILENAME, message)
 
+    def test_add_lora_unwraps_compiled_decoder_before_peft_injection(self):
+        """First LoRA load should unwrap ``torch.compile`` decoder wrappers before PEFT."""
+        handler = _DummyHandler()
+
+        class _CompiledWrapper(torch.nn.Module):
+            def __init__(self, wrapped):
+                super().__init__()
+                self._orig_mod = wrapped
+
+        class _FakePeftModel(torch.nn.Module):
+            @classmethod
+            def from_pretrained(cls, decoder, _path, adapter_name=None, is_trainable=False):
+                _ = (adapter_name, is_trainable)
+                instance = cls()
+                instance._decoder_seen = decoder
+                return instance
+
+            def to(self, *_args, **_kwargs):
+                return self
+
+            def eval(self):
+                return self
+
+            def set_adapter(self, *_args, **_kwargs):
+                return None
+
+        with tempfile.TemporaryDirectory() as tmp:
+            adapter_dir = Path(tmp) / "adapter"
+            adapter_dir.mkdir(parents=True, exist_ok=True)
+            (adapter_dir / "adapter_config.json").write_text("{}", encoding="utf-8")
+
+            raw_decoder = torch.nn.Linear(4, 4, bias=False)
+            handler.model.decoder = _CompiledWrapper(raw_decoder)
+
+            fake_peft_module = SimpleNamespace(PeftModel=_FakePeftModel)
+            with patch.dict("sys.modules", {"peft": fake_peft_module}):
+                message = lifecycle.add_lora(handler, str(adapter_dir), adapter_name="adapter")
+
+        self.assertTrue(message.startswith("✅"), message)
+        self.assertIs(handler.model.decoder._decoder_seen, raw_decoder)
+
+    def test_add_lora_sanitizes_runtime_before_peft_injection(self):
+        """LoRA load should sanitize torch runtime state before PEFT layer creation."""
+        handler = _DummyHandler()
+
+        class _FakePeftModel(torch.nn.Module):
+            @classmethod
+            def from_pretrained(cls, decoder, _path, adapter_name=None, is_trainable=False):
+                _ = (decoder, adapter_name, is_trainable)
+                return cls()
+
+            def to(self, *_args, **_kwargs):
+                return self
+
+            def eval(self):
+                return self
+
+            def set_adapter(self, *_args, **_kwargs):
+                return None
+
+        with tempfile.TemporaryDirectory() as tmp:
+            adapter_dir = Path(tmp) / "adapter"
+            adapter_dir.mkdir(parents=True, exist_ok=True)
+            (adapter_dir / "adapter_config.json").write_text("{}", encoding="utf-8")
+
+            fake_peft_module = SimpleNamespace(PeftModel=_FakePeftModel)
+            with patch.dict("sys.modules", {"peft": fake_peft_module}):
+                with patch(
+                    "acestep.core.generation.handler.lora.lifecycle._sanitize_runtime_before_adapter_injection"
+                ) as mock_sanitize:
+                    message = lifecycle.add_lora(handler, str(adapter_dir), adapter_name="adapter")
+
+        self.assertTrue(message.startswith("✅"), message)
+        mock_sanitize.assert_called_once_with()
+
     def test_load_lokr_adapter_recreates_with_dora_when_weight_decompose_enabled(self):
         """Weight-decompose config should request a second LyCORIS net with DoRA enabled."""
         decoder = _DummyDecoder()

@@ -1,0 +1,153 @@
+1. Introducción
+
+- La tilde en "últimos" está al revés.
+
+1.4 Preguntas de investigación y alcance
+
+- "último párrafo un poco demasiado IA"
+
+1.5
+
+- No sé que es lo último que dice. Además es muuhy poco específico.
+
+
+2.2 
+
+- Añadir que fue elegido porque el código es accesible por lo que se podía entrenar mediante LoRA
+
+2.3
+
+- comprobar que copet2023simple = AudioCraft/MusicGen
+
+que son representaciones espectrales? musica -> Imagen??
+
+DiffSound no se entiende
+
+2.4 
+
+- No se entiende el Timbre Encoder
+
+- 2 canales (estéreo)
+
+- que es patch = 2?
+
+- la imagen corta una frase lo que dificulta seguir la lectura.
+
+2.5.1 
+
+- dice que el patron de la escala mayor son 6 tonos y dos semitonos cuando realmente son 5 tonos y dos semitonos
+
+- octávica es confuso, mejor octava
+
+2.5.3
+
+- Poner la nota de si natural sin el símbolo que solo va a confundir
+
+2.6
+
+- El segundo párrafo me pierde un poco
+
+2.7
+
+he tendio que hacer algunos fixes en los ficheros de entrenamiento. No se cuanto aporta los tres puntos esos que has añadido igual es un poco redundante.
+
+3.1 
+
+- Recalcar que no tengo gpu en mi equipo local por lo que tuve que recurrir a la máquina externa proporcionada por el tutor
+
+- lo de "equipo Windows 10" suena a IA máxima. mejor dejarlo en ordenador local o algo más simple.
+
+- Revisar lo de "de alta memoria" en la GPU del servidor Linux
+
+- Cliente SFTP no sé lo que es
+
+3.2
+
+- Aquí me gustraía recalcar que como la mayoría de la música y sobre todo lo que generan los modelos musicales es música tonal por ello he decidido poner menos ejemplos de jónico en el dataset. (de hecho justo en el modo jónico salen buenos resultados en evaluación manual, por lo que con pocos clips bien elegidos es más que suficiente) Por otro lado el locrio ha sido un modo muy difícil de encontrar ejemplos claramente descriptivos y siginficativos y es una limitación para el entrenamiento.
+
+
+3.3
+
+- Fallo en tilde de audio en "El canal ofrece aanálisis audío-musicales..."
+
+
+3.3.2 
+
+- Clarificación más exacta y sencilla de la función de pérdida
+
+3.4
+
+Las capturas de las curvas de entrenamiento corresponden a una primera fase exploratoria con muchisismos epochs que no son muy representativos (unos 5000). Ahí utilicé save_every_n_epochs = 200 y vi que desde el epoch 400 en adelante estaba el audio muy overfitteado y no era apenas legible. Las siguientes fases de experimentos fueron hasta 200 epochs y con save_every_n_epochs = 20 con lo que se consiguieron mejores resultados.
+
+Después de todo eso, comenencé con la siguiente fase donde descubrí la iteración de run_d. Posterior a eso, hice la búsqueda de hiperparámetros con el grid de 24 configuraciones. Finalmente con lo que mejor pinta tenía, hice el entrenamiento de confirmación.
+
+Creo que las capturas no tienen mucho sentido ponerlas en esa parte del texto. 
+
+el learning rate se eligió porque en experimentos anteriores al probar con 5x10^-5 se consiguieron noteblemente mejores resultados.
+
+
+3.5 
+Dice que se descarta la estrategia del uso de captions de entrenamiento excesivamente específicos cuando ese tema se desarrolla más adelante. Veo un poco incoherente que aparezcan conclusiones antes de mostrar la metodología que llevó al razonamiento final.
+
+3.6
+
+no entiendo muy bien los parseos de los que habla
+
+3.8
+
+No quedan claras como se miden las métricas automáticas, que es lo que se evalúa? el audio un espectograma del audio? hay conceptos como vector de chroma, cromagrama que no se explican. 
+
+Presencia diatónica (global y por ventana)
+
+3.9 
+
+no se si puede perder credibilidad la parte del criterio aplicado en el primer párrafo.
+
+Añadir que hay anotaciones de cada audio evaluado con la justificación de la evaluación individual
+
+
+Antes de llegar al experimento run_D hice diferentes experimentos que no aparecen nombrados y considero que sería importante hacerles referencia de alguna forma.
+
+En la tabla 3.5, los nombres de los scripts se solapan con la columna Función.
+
+no me gusta que el fichero de la búsqueda de hiperparámetros se llame modal_hparam_sweep_stage1.py, ya que da la sensación de que el trabajo está incompleto
+
+
+4.2
+
+Se menciona que "tras el parseo de bloques la comparativa dejó de ser idéntica y pasó a reflejar diferencias medibles" pero no se muestran esas diferencias hasta la sección 4.11
+
+4.3 
+
+no entiendo muy bien que pinta esta parte aquí
+
+4.4
+
+no me gusta el orden de las cosas, aquí se evalúan diferentes experimentos tomados en momentos distintos y en secciones posteriores se va analizando una a una. Debería ser al revés.
+
+4.5
+
+Se hace referencia a la figura 4.1 pero aparece al final del proyecto, debería de aparecer aquí. Pasa algo parecido con las figuras 4.2 y 4.3. se hace referencia pero aparecen al final del proyecto lo cual es un poco lioso. además, me gustaría que la tabla 4.4 apareciera en esta sección y no en la sección 4.6
+
+
+4.6
+
+Se hace referencia a la figura 4.5 y aparece bastante más abajo. no entiendo el último párrafo pero me gusta que meta conclusiones del estilo "aparece la 2ª disminuida" los comentarios que he ido haciendo durante las evaluaciones creo que pueden servir.
+
+
+4.7
+
+Se hace referencia a la figura 4.6 y aparece bastante más abajo.
+
+
+
+
+
+
+
+
+
+
+
+
+

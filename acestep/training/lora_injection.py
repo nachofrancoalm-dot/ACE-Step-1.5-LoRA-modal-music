@@ -74,19 +74,60 @@ except ImportError:
     logger.warning("PEFT library not installed. LoRA training will not be available.")
 
 
+def _unwrap_compiled(module: nn.Module) -> nn.Module:
+    """Strip a ``torch.compile`` / ``OptimizedModule`` wrapper if present.
+
+    ``torch.compile`` wraps the module in an ``OptimizedModule`` that stores
+    the original module in ``_orig_mod``.  PEFT injection must happen on the
+    raw ``nn.Module`` so that new LoRA weight tensors are initialised outside
+    any active CUDA-graph capture context.
+
+    Args:
+        module: A module that may or may not be an ``OptimizedModule``.
+
+    Returns:
+        The unwrapped raw ``nn.Module``, or *module* unchanged if it was not
+        compiled.
+    """
+    seen = {id(module)}
+    current = module
+    while True:
+        orig = getattr(current, "_orig_mod", None)
+        if orig is None or not isinstance(orig, nn.Module):
+            break
+        if id(orig) in seen:
+            break
+        seen.add(id(orig))
+        logger.debug(
+            f"Unwrapping torch.compile OptimizedModule: "
+            f"{type(current).__name__} -> {type(orig).__name__}"
+        )
+        current = orig
+    return current
+
+
 def _unwrap_decoder(module: nn.Module) -> nn.Module:
-    """Unwrap PEFT/Fabric wrappers from a model/decoder to retrieve the base DiT module.
+    """Unwrap PEFT/Fabric/torch.compile wrappers from a decoder module.
 
     This internal helper walks the wrapper chain and returns the underlying
     ``nn.Module`` that can be passed to PEFT for adapter injection.
 
+    Handles, in order:
+    - ``torch.compile`` ``OptimizedModule`` (``_orig_mod``)
+    - Lightning Fabric ``_forward_module``
+    - PEFT ``base_model`` / ``base_model.model``
+
     Args:
-        module: A model or decoder that may have PEFT/Fabric wrappers.
+        module: A model or decoder that may have wrappers.
 
     Returns:
         The unwrapped base DiT decoder module.
     """
-    decoder = module
+    # 1. Strip torch.compile wrapper first so downstream code never sees
+    #    an OptimizedModule, avoiding CUDA-graph-capture RNG conflicts.
+    decoder = _unwrap_compiled(module)
+
+    # 2. Strip Lightning Fabric _forward_module wrapper
     seen_ids = {id(decoder)}
     while True:
         next_decoder = getattr(decoder, "_forward_module", None)
@@ -98,6 +139,7 @@ def _unwrap_decoder(module: nn.Module) -> nn.Module:
         seen_ids.add(next_id)
         decoder = next_decoder
 
+    # 3. Strip PEFT base_model wrapper
     base_model = getattr(decoder, "base_model", None)
     if base_model is not None:
         inner_model = getattr(base_model, "model", None)
@@ -125,10 +167,13 @@ def get_dit_target_modules(model) -> List[str]:
     target_modules = []
 
     if hasattr(model, "decoder"):
-        for name, module in model.decoder.named_modules():
-            if any(proj in name for proj in ["q_proj", "k_proj", "v_proj", "o_proj"]):
-                if isinstance(module, nn.Linear):
-                    target_modules.append(name)
+        raw_model = _unwrap_compiled(model)
+        decoder = _unwrap_decoder(raw_model.decoder) if hasattr(raw_model, "decoder") else None
+        if decoder is not None:
+            for name, module in decoder.named_modules():
+                if any(proj in name for proj in ["q_proj", "k_proj", "v_proj", "o_proj"]):
+                    if isinstance(module, nn.Linear):
+                        target_modules.append(name)
 
     return target_modules
 
@@ -183,8 +228,13 @@ def inject_lora_into_dit(
             "PEFT library is required for LoRA training. Install with: pip install peft"
         )
 
-    decoder = _unwrap_decoder(model.decoder)
-    model.decoder = decoder
+    # Unwrap torch.compile OptimizedModule from the outer model so that PEFT
+    # injection (which runs torch.nn.Linear weight init via kaiming_uniform_)
+    # never touches a compiled-graph RNG context.
+    raw_model = _unwrap_compiled(model)
+
+    decoder = _unwrap_decoder(raw_model.decoder)
+    raw_model.decoder = decoder
 
     if hasattr(decoder, "enable_input_require_grads"):
         orig = decoder.enable_input_require_grads
@@ -209,14 +259,14 @@ def inject_lora_into_dit(
     )
 
     peft_decoder = get_peft_model(decoder, peft_lora_config)
-    model.decoder = peft_decoder
+    raw_model.decoder = peft_decoder
 
-    for name, param in model.named_parameters():
+    for name, param in raw_model.named_parameters():
         if "lora_" not in name:
             param.requires_grad = False
 
-    total_params = sum(p.numel() for p in model.parameters())
-    trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    total_params = sum(p.numel() for p in raw_model.parameters())
+    trainable_params = sum(p.numel() for p in raw_model.parameters() if p.requires_grad)
 
     info = {
         "total_params": total_params,
@@ -234,4 +284,4 @@ def inject_lora_into_dit(
     )
     logger.info(f"  LoRA rank: {lora_config.r}, alpha: {lora_config.alpha}")
 
-    return model, info
+    return raw_model, info

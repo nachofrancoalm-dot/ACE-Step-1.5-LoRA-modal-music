@@ -12,6 +12,7 @@ import torch
 from loguru import logger
 
 from acestep.training.configs import LoKRConfig
+from acestep.training.lora_injection import _unwrap_compiled
 from acestep.training.path_safety import safe_path
 
 try:
@@ -63,10 +64,15 @@ def inject_lokr_into_dit(
             "Install with: pip install lycoris-lora"
         )
 
-    decoder = model.decoder
+    # Unwrap torch.compile OptimizedModule so that LyCORIS weight init
+    # (kaiming_uniform_ / random fill) does not conflict with an active
+    # CUDA-graph capture context.
+    raw_model = _unwrap_compiled(model)
+
+    decoder = raw_model.decoder
 
     # Freeze all existing params before creating adapter params.
-    for _, param in model.named_parameters():
+    for _, param in raw_model.named_parameters():
         param.requires_grad = False
 
     LycorisNetwork.apply_preset(
@@ -158,7 +164,7 @@ def inject_lokr_into_dit(
 
     # De-duplicate possible shared params.
     unique_params = {id(p): p for p in lokr_param_list}
-    total_params = sum(p.numel() for p in model.parameters())
+    total_params = sum(p.numel() for p in raw_model.parameters())
     lokr_params = sum(p.numel() for p in unique_params.values())
     trainable_params = sum(p.numel() for p in unique_params.values() if p.requires_grad)
 
@@ -179,7 +185,7 @@ def inject_lokr_into_dit(
         f"LoKr trainable params: {trainable_params:,}/{total_params:,} "
         f"({info['trainable_ratio']:.2%})"
     )
-    return model, lycoris_net, info
+    return raw_model, lycoris_net, info
 
 
 def save_lokr_weights(

@@ -7,6 +7,7 @@ import sys
 import traceback
 import time
 import random
+import gc
 import warnings
 from typing import Optional, Dict, Any, Tuple, List, Union
 from contextlib import contextmanager
@@ -114,6 +115,52 @@ class LLMHandler:
         except Exception:
             pass
 
+    def release_gpu_for_dit(self, reason: str = "") -> None:
+        """Offload PyTorch LM weights to CPU to free VRAM for DiT generation.
+
+        Keeps tokenizer and initialization state intact so LM can be reused later.
+        No-op for non-PyTorch backends and CPU-only setups.
+        """
+        if self.llm_backend != "pt" or self.llm is None:
+            return
+
+        model = self.llm
+        try:
+            current_device = next(model.parameters()).device.type
+        except Exception:
+            current_device = None
+
+        if current_device in (None, "cpu"):
+            return
+
+        if reason:
+            logger.info(f"[LLM Runtime] Offloading PT LM to CPU before DiT ({reason})")
+        else:
+            logger.info("[LLM Runtime] Offloading PT LM to CPU before DiT")
+
+        if hasattr(model, "to"):
+            model.to("cpu")
+
+        try:
+            gc.collect()
+        except Exception:
+            pass
+
+        try:
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+                torch.cuda.synchronize()
+            elif hasattr(torch, "xpu") and torch.xpu.is_available():
+                torch.xpu.empty_cache()
+                torch.xpu.synchronize()
+            elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+                if hasattr(torch, "mps") and hasattr(torch.mps, "empty_cache"):
+                    torch.mps.empty_cache()
+                if hasattr(torch, "mps") and hasattr(torch.mps, "synchronize"):
+                    torch.mps.synchronize()
+        except Exception as exc:
+            logger.debug(f"[LLM Runtime] Failed to clear accelerator cache after LM offload: {exc}")
+
     def _cleanup_torch_distributed_state(self) -> None:
         """Destroy default torch distributed process group when already initialized."""
         try:
@@ -123,6 +170,45 @@ class LLMHandler:
                 dist.destroy_process_group()
         except Exception as exc:
             logger.warning(f"[LLM vLLM] Failed to clean torch distributed state: {exc}")
+
+    def _sanitize_torch_runtime_state(self, reason: str = "") -> None:
+        """Reset global torch/nano-vLLM runtime state before non-vLLM execution.
+
+        nano-vLLM sets global defaults (device/dtype) during initialization. If that
+        initialization fails before cleanup, later PyTorch generation can hit errors
+        such as "Offset increment outside graph capture" via stale device context.
+        """
+        if reason:
+            logger.debug(f"[LLM Runtime] Sanitizing runtime state: {reason}")
+
+        try:
+            from nanovllm.utils.context import reset_context
+
+            reset_context()
+        except Exception:
+            pass
+
+        try:
+            if hasattr(torch, "set_default_device"):
+                torch.set_default_device("cpu")
+        except Exception:
+            pass
+
+        try:
+            torch.set_default_dtype(torch.float32)
+        except Exception:
+            pass
+
+        try:
+            if torch.cuda.is_available():
+                torch.cuda.synchronize()
+            elif hasattr(torch, "xpu") and torch.xpu.is_available():
+                torch.xpu.synchronize()
+            elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+                if hasattr(torch, "mps") and hasattr(torch.mps, "synchronize"):
+                    torch.mps.synchronize()
+        except Exception:
+            pass
 
     def _get_checkpoint_dir(self) -> str:
         """Get checkpoint directory, prioritizing persistent storage"""
@@ -350,6 +436,7 @@ class LLMHandler:
     def _load_pytorch_model(self, model_path: str, device: str) -> Tuple[bool, str]:
         """Load PyTorch model from path and return (success, status_message)"""
         try:
+            self._sanitize_torch_runtime_state(reason="before PyTorch LM load")
             self.llm = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True)
             if not self.offload_to_cpu:
                 self.llm = self.llm.to(device).to(self.dtype)
@@ -394,7 +481,28 @@ class LLMHandler:
             # Upcast to float32 for stable softmax (critical for float16/MPS)
             logits = logits.float() / temperature
             probs = torch.softmax(logits, dim=-1)
-            return torch.multinomial(probs, num_samples=1).squeeze(1)
+            try:
+                return torch.multinomial(probs, num_samples=1).squeeze(1)
+            except RuntimeError as exc:
+                message = str(exc).lower()
+                capture_rng_error = (
+                    "offset increment outside graph capture" in message
+                    or "stream is capturing" in message
+                    or "cudaerrorstreamcapture" in message
+                )
+                if not capture_rng_error:
+                    raise
+
+                if not getattr(self, "_pt_cpu_sampling_fallback_logged", False):
+                    logger.warning(
+                        "Detected residual CUDA graph-capture RNG state during PyTorch sampling; "
+                        "falling back to CPU multinomial for token sampling."
+                    )
+                    self._pt_cpu_sampling_fallback_logged = True
+
+                cpu_probs = probs.detach().to("cpu")
+                sampled = torch.multinomial(cpu_probs, num_samples=1).squeeze(1)
+                return sampled.to(probs.device)
         else:
             return torch.argmax(logits, dim=-1)
 
@@ -649,18 +757,45 @@ class LLMHandler:
                     logger.info(f"5Hz LM status message: {status_msg}")
                     if status_msg.startswith("❌"):
                         if not self.llm_initialized:
-                            if device == "mps" and self._is_mlx_available():
-                                logger.warning("vllm failed on MPS, trying MLX backend...")
-                                mlx_success, mlx_status = self._load_mlx_model(full_lm_model_path)
-                                if mlx_success:
-                                    return mlx_status, True
-                                logger.warning(f"MLX also failed: {mlx_status}, falling back to PyTorch")
-                            logger.warning("Falling back to PyTorch backend")
-                            success, status_msg = self._load_pytorch_model(full_lm_model_path, device)
-                            if not success:
-                                return status_msg, False
-                            status_msg = f"✅ 5Hz LM initialized successfully (PyTorch fallback)\nModel: {full_lm_model_path}\nBackend: PyTorch"
+                            # If CUDA graph capture failed and we were not already
+                            # in eager mode, retry with enforce_eager=True before
+                            # falling all the way back to PyTorch.
+                            _cuda_graph_errs = (
+                                "graph capture",
+                                "stream is capturing",
+                                "cudaErrorStreamCapture",
+                                "outside graph capture",
+                                "previous error during capture",
+                            )
+                            _is_graph_capture_err = any(
+                                kw.lower() in status_msg.lower()
+                                for kw in _cuda_graph_errs
+                            )
+                            if not enforce_eager_for_vllm and _is_graph_capture_err:
+                                logger.warning(
+                                    "nano-vllm CUDA graph capture failed; retrying with enforce_eager=True"
+                                )
+                                torch.cuda.empty_cache()
+                                status_msg = self._initialize_5hz_lm_vllm(
+                                    full_lm_model_path,
+                                    enforce_eager=True,
+                                )
+                                logger.info(f"5Hz LM eager-retry status: {status_msg}")
+                            if not self.llm_initialized:
+                                if device == "mps" and self._is_mlx_available():
+                                    logger.warning("vllm failed on MPS, trying MLX backend...")
+                                    mlx_success, mlx_status = self._load_mlx_model(full_lm_model_path)
+                                    if mlx_success:
+                                        return mlx_status, True
+                                    logger.warning(f"MLX also failed: {mlx_status}, falling back to PyTorch")
+                                logger.warning("Falling back to PyTorch backend")
+                                self._sanitize_torch_runtime_state(reason="vLLM init failed; switching to PyTorch backend")
+                                success, status_msg = self._load_pytorch_model(full_lm_model_path, device)
+                                if not success:
+                                    return status_msg, False
+                                status_msg = f"✅ 5Hz LM initialized successfully (PyTorch fallback)\nModel: {full_lm_model_path}\nBackend: PyTorch"
             elif backend != "mlx":
+                self._sanitize_torch_runtime_state(reason="direct PyTorch backend initialization")
                 success, status_msg = self._load_pytorch_model(full_lm_model_path, device)
                 if not success:
                     return status_msg, False
@@ -2273,6 +2408,7 @@ class LLMHandler:
                 return output_text, f"✅ Generated successfully (mlx) | length={len(output_text)}"
 
             # PyTorch backend (fallback)
+            self._sanitize_torch_runtime_state(reason="before PyTorch generation")
             output_text = self._run_pt(
                 formatted_prompts=formatted_prompt,
                 temperature=temperature,
@@ -2316,6 +2452,7 @@ class LLMHandler:
                         self.llm.reset()
                 except Exception:
                     pass  # Ignore errors during cleanup
+            self._sanitize_torch_runtime_state(reason="after generation error")
             # Clear accelerator cache to release any corrupted memory
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()

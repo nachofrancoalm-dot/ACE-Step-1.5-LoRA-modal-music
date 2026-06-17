@@ -5,12 +5,54 @@ import os
 from typing import Any
 
 from loguru import logger
+import torch
+import torch.nn as nn
 
 from acestep.constants import DEBUG_MODEL_LOADING
 from acestep.debug_utils import debug_log
 from acestep.training.configs import LoKRConfig
 
 LOKR_WEIGHTS_FILENAME = "lokr_weights.safetensors"
+
+
+def _unwrap_compiled_module(module: Any) -> Any:
+    """Return underlying module when ``module`` is a ``torch.compile`` wrapper."""
+    if not isinstance(module, nn.Module):
+        return module
+
+    seen = {id(module)}
+    current = module
+    while True:
+        orig = getattr(current, "_orig_mod", None)
+        if orig is None or not isinstance(orig, nn.Module):
+            break
+        if id(orig) in seen:
+            break
+        seen.add(id(orig))
+        current = orig
+    return current
+
+
+def _sanitize_runtime_before_adapter_injection() -> None:
+    """Reset runtime state that can leak from failed nano-vLLM CUDA-graph init."""
+    try:
+        from nanovllm.utils.context import reset_context
+
+        reset_context()
+    except Exception:
+        pass
+
+    try:
+        if hasattr(torch, "set_default_device"):
+            torch.set_default_device("cpu")
+    except Exception:
+        pass
+
+    if torch.cuda.is_available():
+        try:
+            torch.cuda.synchronize()
+        except Exception:
+            pass
 
 
 def _is_lokr_safetensors(weights_path: str) -> bool:
@@ -209,7 +251,14 @@ def add_lora(self, lora_path: str, adapter_name: str | None = None) -> str:
         return f"❌ Adapter name already in use: {effective_name}. Use a different name or remove it first."
 
     try:
-        decoder = self.model.decoder
+        decoder = _unwrap_compiled_module(self.model.decoder)
+        if decoder is not self.model.decoder:
+            logger.info(
+                f"Unwrapped torch.compile decoder for LoRA load: "
+                f"{type(self.model.decoder).__name__} -> {type(decoder).__name__}"
+            )
+            self.model.decoder = decoder
+
         is_peft = PeftModel is not None and isinstance(decoder, PeftModel)
 
         if not is_peft:
@@ -236,6 +285,7 @@ def add_lora(self, lora_path: str, adapter_name: str | None = None) -> str:
                 self._adapter_type = "lokr"
             else:
                 logger.info(f"Loading LoRA adapter from {lora_path} as '{effective_name}'")
+                _sanitize_runtime_before_adapter_injection()
                 self.model.decoder = PeftModel.from_pretrained(
                     decoder, lora_path, adapter_name=effective_name, is_trainable=False
                 )
@@ -245,6 +295,7 @@ def add_lora(self, lora_path: str, adapter_name: str | None = None) -> str:
             if lokr_weights_path is not None:
                 return "❌ LoKr cannot be added as a second adapter when PEFT is already loaded."
             logger.info(f"Loading additional LoRA from {lora_path} as '{effective_name}'")
+            _sanitize_runtime_before_adapter_injection()
             self.model.decoder.load_adapter(lora_path, adapter_name=effective_name)
             self._adapter_type = "lora"
 
