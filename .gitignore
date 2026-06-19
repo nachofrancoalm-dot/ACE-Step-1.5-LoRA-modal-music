@@ -260,27 +260,10 @@ manual_eval_shortlist/**/*.wav
 lora_output/
 modal_run_*/
 
-# TFG - PDF compilado de la memoria (se entrega por separado)
-memoria/*.pdf
-memoria/*.aux
-memoria/*.log
-memoria/*.out
-memoria/*.toc
-memoria/*.bbl
-memoria/*.blg
-memoria/*.fls
-memoria/*.fdb_latexmk
-memoria/*.synctex.gz
-memoria/_minted*/
-memoria/*.glg
-memoria/*.glo
-memoria/*.gls
-memoria/*.acn
-memoria/*.acr
-memoria/*.alg
-memoria/*.ist
-memoria/*.bcf
-memoria/*.run.xml
+# TFG - memoria: ignorar todo excepto el PDF final entregado
+memoria/*
+memoria/**
+!memoria/Memoria_TFG_final.pdf
 
 # TFG - ficheros binarios de evaluación manual
 docs/*.xlsx
@@ -297,6 +280,15 @@ presentacion_assets/
 
 # TFG - anteproyecto (documento preliminar)
 ANTEPROYECTO.pdf
+
+# TFG - scripts auxiliares (no forman parte de la metodología)
+scripts/_one_shot/
+scripts/build_slides.py
+scripts/check_gpu.py
+scripts/generate_mode_figures.py
+scripts/new_pr_branch.ps1
+scripts/organize_audios.py
+scripts/profile_vram.py
 
 # TFG - checkpoints dentro del sweep (solo se conserva el CSV de resultados)
 hparam_sweep/exp_*/lora_output/
